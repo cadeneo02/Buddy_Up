@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="padding-bottom: 50px;">
+    <header>
+        <h1>RoomShake</h1>
+    <img src="https://via.placeholder.com/100" alt="Logo" style="position: absolute; top: 10px; right: 10px;">
+    <nav style="position: absolute; top: 10px; left: 10px;">
+        <a href="#favorites">My Favorites</a>
+        <a href="#account">Account</a>
+    </nav>
+    </header>
+    <div id="header">
+        <a href="#sectionA">A</a>
+        <a href="#sectionB">B</a>
+        <a href="#sectionC">C</a>
+        <a href="#sectionD">D</a>
+        <a href="#sectionE">E</a>
+    </div>
+    <section>
+        <div style="display: flex; justify-content: space-around; padding: 20px;">
+            <a href="https://example.com/link1"><img src="https://via.placeholder.com/150" alt="Image 1"></a>
+            <a href="https://example.com/link2"><img src="https://via.placeholder.com/150" alt="Image 2"></a>
+            <a href="https://example.com/link3"><img src="https://via.placeholder.com/150" alt="Image 3"></a>
+            <a href="https://example.com/link4"><img src="https://via.placeholder.com/150" alt="Image 4"></a>
+            <a href="https://example.com/link5"><img src="https://via.placeholder.com/150" alt="Image 5"></a>
+            <a href="https://example.com/link6"><img src="https://via.placeholder.com/150" alt="Image 6"></a>
+        </div>
+    </section>
+    <section>
+        <div style="display: flex; justify-content: space-around; padding: 20px;">
+            <a href="https://example.com/link7"><img src="https://via.placeholder.com/150" alt="Image 7"></a>
+            <a href="https://example.com/link8"><img src="https://via.placeholder.com/150" alt="Image 8"></a>
+            <a href="https://example.com/link9"><img src="https://via.placeholder.com/150" alt="Image 9"></a>
+            <a href="https://example.com/link10"><img src="https://via.placeholder.com/150" alt="Image 10"></a>
+            <a href="https://example.com/link11"><img src="https://via.placeholder.com/150" alt="Image 11"></a>
+            <a href="https://example.com/link12"><img src="https://via.placeholder.com/150" alt="Image 12"></a>
+        </div>
+    </section>
+    <script>
+        window.onscroll = function() {showSearchBar()};
+        document.getElementsByTagName("footer")[0].remove();
+        function showSearchBar() {
+            var header = document.getElementById("header");
+            var searchBar = document.getElementById("searchBar");
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                searchBar.style.display = "block";
+            } else {
+                searchBar.style.display = "none";
+            }
+        }
+    </script>
+    <div id="searchBar">
+        <input type="text" placeholder="Search...">
+    </div>
+</body>
+</html></div>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <div style="display: flex; justify-content: space-around; padding: 20px;">
+            <a href="https://example.com/link1"><img src="https://via.placeholder.com/150" alt="Image 1"></a>
+            <a href="https://example.com/link2"><img src="https://via.placeholder.com/150" alt="Image 2"></a>
+            <a href="https://example.com/link3"><img src="https://via.placeholder.com/150" alt="Image 3"></a>
+            <a href="https://example.com/link4"><img src="https://via.placeholder.com/150" alt="Image 4"></a>
+            <a href="https://example.com/link5"><img src="https://via.placeholder.com/150" alt="Image 5"></a>
+            <a href="https://example.com/link6"><img src="https://via.placeholder.com/150" alt="Image 6"></a>
+        </div>
+    </section>
+    <section>
+        <div style="display: flex; justify-content: space-around; padding: 20px;">
+            <a href="https://example.com/link7"><img src="https://via.placeholder.com/150" alt="Image 7"></a>
+            <a href="https://example.com/link8"><img src="https://via.placeholder.com/150" alt="Image 8"></a>
+            <a href="https://example.com/link9"><img src="https://via.placeholder.com/150" alt="Image 9"></a>
+            <a href="https://example.com/link10"><img src="https://via.placeholder.com/150" alt="Image 10"></a>
+            <a href="https://example.com/link11"><img src="https://via.placeholder.com/150" alt="Image 11"></a>
+            <a href="https://example.com/link12"><img src="https://via.placeholder.com/150" alt="Image 12"></a>
+        </div>
+    </section>
+</body>
+</html>
+<body>
+</div>
+<div style="display: flex; justify-content: space-around; padding: 20px;">
+    <a href="https://example.com/link1"><img src="https://via.placeholder.com/150" alt="Image 1"></a>
+    <a href="https://example.com/link2"><img src="https://via.placeholder.com/150" alt="Image 2"></a>
+    <a href="https://example.com/link3"><img src="https://via.placeholder.com/150" alt="Image 3"></a>
+    <a href="https://example.com/link4"><img src="https://via.placeholder.com/150" alt="Image 4"></a>
+    <a href="https://example.com/link5"><img src="https://via.placeholder.com/150" alt="Image 5"></a>
+    <a href="https://example.com/link6"><img src="https://via.placeholder.com/150" alt="Image 6"></a>
+</div></div>
+<div style="display: flex; justify-content: space-around; padding: 20px;">
+    <a href="https://example.com/link7"><img src="https://via.placeholder.com/150" alt="Image 7"></a>
+    <a href="https://example.com/link8"><img src="https://via.placeholder.com/150" alt="Image 8"></a>
+    <a href="https://example.com/link9"><img src="https://via.placeholder.com/150" alt="Image 9"></a>
+    <a href="https://example.com/link10"><img src="https://via.placeholder.com/150" alt="Image 10"></a>
+    <a href="https://example.com/link11"><img src="https://via.placeholder.com/150" alt="Image 11"></a>
+    <a href="https://example.com/link12"><img src="https://via.placeholder.com/150" alt="Image 12"></a>
+</div>
+</body>
+</html>
+<script>
+    window.onscroll = function() {showSearchBar()};
+
+    function showSearchBar() {
+        var header = document.getElementById("header");
+        var searchBar = document.getElementById("searchBar");
+        if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+            searchBar.style.display = "block";
+        } else {
+            searchBar.style.display = "none";
+        }
+    }
+</script>
+<div id="searchBar">
+    <input type="text" placeholder="Search...">
+    </div>
