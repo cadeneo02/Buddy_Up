@@ -1,1 +1,37 @@
+/* General Styling */
+body {
+    font-family: 'Sans Serif', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: hsl(0, 0%, 100%); /* White */
+    color: hsl(100, 100%, 0%); /* Black */
+}
 
+/* Header Styling */
+.header {
+    background-color: hsl(340, 55%, 26%); /* Maroon */
+    color: hsl(0, 0%, 100%); /* White */
+    text-align: center;
+    padding: 20px 0;
+    font-size: 20px;
+    font-weight: 600;
+    height: 60px;
+}
+
+/* Main Content */
+.main-section {
+    padding: 20px;
+    text-align: center;
+    font-size: 18px; /* Paragraph size */
+}
+
+/* Footer Styling */
+.footer {
+    background-color: hsl(340, 55%, 26%); /* Maroon */
+    color: hsl(0, 0%, 100%); /* White */
+    text-align: center;
+    padding: 20px 0;
+    font-size: 18px;
+    font-weight: 400;
+    height: 60px;
+}
