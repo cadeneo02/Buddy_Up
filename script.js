@@ -4,7 +4,7 @@ document.querySelectorAll('.footer-socials a').forEach(icon => {
         event.preventDefault(); // Prevent default navigation
         let url = icon.getAttribute('href');
         if (url) {
-            window.open(url, '_blank'); // Open link
+            window.open(url, 'new'); // Open link
         }
     });
 });
