@@ -7,65 +7,61 @@ body {
     color: hsl(100, 100%, 0%); /* Black */
 }
 
-/* Header styling */
+/* Header Styling */
 .header {
     background-color: hsl(340, 55%, 26%); /* Maroon */
     color: hsl(0, 0%, 100%); /* White */
     padding: 10px 0;
     text-align: center;
-    width: 100%; /* Full-width of screen */
-    position: relative; /* Ensures relative positioning on every screen */
+    width: 100%;
+    position: relative;
 }
 
-/* Container for header (logo & navigation) */
 .header-container {
-    display: flex; /* Uses flexbox for layout */
-    justify-content: space-between; /* This moves logo and nav to opposite sides */
-    align-items: center; /* Centers items on vertical plane */
-    max-width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1500px;
     margin: auto;
     padding: 0 20px;
 }
 
-/* Logo styling */
+/* Logo Styling */
 .header-logo {
-    display: flex; /* Aligns logo and text */
+    display: flex;
     align-items: center;
 }
 
-/* Logo image */
 .header-logo img {
-    width: 50px; /* Logo size */
-    margin-right: 20px; /* Spacing between logo/text */
+    width: 60px;
+    margin-right: 10px;
 }
 
-/* Logo text */
 .header-logo p {
     font-size: 20px;
     font-weight: 600;
-    margin: 0; /* Removes default margin */
+    margin: 0;
 }
 
 /* Navigation styling */
 .header-nav {
     display: flex;
-    gap: 25px; /* Adds spacing between items */
-    padding-right: 5px;
+    gap: 25px;
 }
 
-/* Navigation links */
 .header-nav a {
-    color: hsl(0, 0%, 100%); /* White */
+    color: hsl(0, 0%, 100%);
     font-size: 15px;
-    transition: color 0.3s linear; /* Adds hover transition from our styling guide */
+    text-decoration: none;
+    transition: color 0.3s linear;
 }
 
-/* Hover effect for header */
+/* Hover effect for header navigation */
 .header-nav a:hover {
     color: hsl(44, 100%, 46%); /* Gold */
 }
 
-/* Footer styling */
+/* Footer Styling */
 .footer {
     background-color: hsl(340, 55%, 26%); /* Maroon */
     color: hsl(0, 0%, 100%); /* White */
@@ -75,12 +71,11 @@ body {
     position: relative;
 }
 
-/* Container for footer content */
 .footer-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    flex-wrap: wrap;
     max-width: 1000px;
     margin: auto;
 }
@@ -89,14 +84,14 @@ body {
 .footer-info {
     display: flex;
     gap: 25px;
-    padding-left: 60px; /* Moves links away from the left edge */
+    padding-left: 20px;
 }
 
-/* Footer links */
 .footer-info a {
     color: hsl(0, 0%, 100%); /* White */
     font-size: 15px;
-    transition: color 0.3s linear; /* Adds transition */
+    text-decoration: none;
+    transition: color 0.3s linear;
 }
 
 /* Hover effect for footer links */
@@ -107,39 +102,85 @@ body {
 /* Footer logo */
 .footer-logo {
     align-items: center;
-    text-align: center;
 }
 
 /* Footer logo image */
 .footer-logo img {
-    width: 80px; /* Logo size */
+    width: 60px;
 }
 
-/* Footer logo text */
 .footer-logo p {
     font-size: 20px;
     font-weight: 600;
+    margin-top: 6px;
 }
 
-/* Social media icons */
+/* Social icons */
 .footer-socials {
     display: flex;
-    gap: 20px; /* Adds spacing between icons */
-    padding-right: 60px; /* Moves icons away from edge */
+    gap: 20px;
+    padding-right: 20px;
 }
 
-/* Social media icons */
 .footer-socials img {
-    width: 35px; /* Sets size */
-    height: 35px;
+    width: 32px;
+    height: 32px;
 }
 
-/* Copyright styling */
+/* Move copyright to bottom right */
 .footer-copyright {
     font-size: 15px;
     position: absolute;
-    bottom: 5px; /* Moves to the bottom */
-    right: 20px; /* Moves it from edge */
+    bottom: 5px;
+    right: 20px;
+}
+
+/* Popup window styles */
+.popup-window {
+    display: none; /* Hides the windows by default */
+    position: fixed; /* Same position no matter the screen dimensions */
+    top: 0; /* Fixes window in the center of the screen */
+    left: 0;
+    width: 100%; /* Sets window sizing */
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark, semi transparent backround to bring focus to popup window */
+    justify-content: center; /* Keeps window centered */
+    align-items: center;
+}
+
+.popup-contents {
+    background: hsl(0, 0%, 100%); /* White */
+    padding: 20px;
+    border-radius: 10px; /* Rounds corners of window */
+    text-align: center;
+    position: relative;
+    max-width: 400px; /* Sets limit for content width, keeps window size at 400 px max */
+}
+
+/* Header of popup */
+.popup-contents h2 {
+    margin: 0 0 10px; /* Spaces our text from edges */
+    font-size: 20px;
+    color: hsl(340, 55%, 26%); /* Maroon */
+    font-weight: 600;
+}
+
+.popup-contents p {
+    font-size: 15px;
+    color: hsl(100, 100%, 0%); /* Black */
+}
+
+.close-popup {
+    position: absolute; /* Fixed position */
+    top: 8px;
+    right: 15px; /* Positioned in top right corner */
+    font-size: 22px;
+    color: hsl(340, 55%, 26%); /* Maroon */
+    transition: color 0.3s linear; /* Transition based on our style guide */
+}
+
+.close-popup:hover {
+    color: hsl(44, 100%, 46%); /* Gold */
 }
 
 ection {
