@@ -1,67 +1,71 @@
-/* General Styles */
+/* General styles */
 body {
-    font-family: 'Sans Serif', sans-serif;
-    margin: 0;
-    padding: 0;
+    font-family: 'Sans Serif', sans-serif; /* Sets font family */
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
     background-color: hsl(0, 0%, 100%); /* White */
     color: hsl(100, 100%, 0%); /* Black */
 }
 
-/* Header Styling */
+/* Header styling */
 .header {
     background-color: hsl(340, 55%, 26%); /* Maroon */
     color: hsl(0, 0%, 100%); /* White */
     padding: 10px 0;
     text-align: center;
-    width: 100%;
-    position: relative;
+    width: 100%; /* Full-width of screen */
+    position: relative; /* Ensures relative positioning on every screen */
 }
 
+/* Container for header (logo & navigation) */
 .header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: flex; /* Uses flexbox for layout */
+    justify-content: space-between; /* This moves logo and nav to opposite sides */
+    align-items: center; /* Centers items on vertical plane */
     max-width: 1000px;
     margin: auto;
     padding: 0 20px;
 }
 
-/* Logo Styling */
+/* Logo styling */
 .header-logo {
-    display: flex;
+    display: flex; /* Aligns logo and text */
     align-items: center;
 }
 
+/* Logo image */
 .header-logo img {
-    width: 60px;
-    margin-right: 10px;
+    width: 50px; /* Logo size */
+    margin-right: 20px; /* Spacing between logo/text */
 }
 
+/* Logo text */
 .header-logo p {
-    font-size: 20px;
-    font-weight: bold;
-    margin: 0;
+    font-size: 20px
+    font-weight: 600;
+    margin: 0; /* Removes default margin */
 }
 
 /* Navigation styling */
 .header-nav {
     display: flex;
-    gap: 25px;
+    gap: 25px; /* Adds spacing between items */
+    padding-right: 5px;
 }
 
+/* Navigation links */
 .header-nav a {
-    color: hsl(0, 0%, 100%);
+    color: hsl(0, 0%, 100%); /* White */
     font-size: 15px;
-    text-decoration: none;
-    transition: color 0.3s linear;
+    transition: color 0.3s linear; /* Adds hover transition from our styling guide */
 }
 
-/* Hover effect for header navigation */
+/* Hover effect for header */
 .header-nav a:hover {
     color: hsl(44, 100%, 46%); /* Gold */
 }
 
-/* Footer Styling */
+/* Footer styling */
 .footer {
     background-color: hsl(340, 55%, 26%); /* Maroon */
     color: hsl(0, 0%, 100%); /* White */
@@ -71,11 +75,12 @@ body {
     position: relative;
 }
 
+/* Container for footer content */
 .footer-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
     max-width: 1000px;
     margin: auto;
 }
@@ -84,13 +89,14 @@ body {
 .footer-info {
     display: flex;
     gap: 25px;
-    padding-left: 20px;
+    padding-left: 60px; /* Moves links away from the left edge */
 }
 
+/* Footer links */
 .footer-info a {
     color: hsl(0, 0%, 100%); /* White */
     font-size: 15px;
-    transition: color 0.3s linear;
+    transition: color 0.3s linear; /* Adds transition */
 }
 
 /* Hover effect for footer links */
@@ -106,30 +112,32 @@ body {
 
 /* Footer logo image */
 .footer-logo img {
-    width: 60px;
+    width: 80px; /* Logo size */
 }
 
+/* Footer logo text */
 .footer-logo p {
     font-size: 20px;
-    font-weight: bold;
+    font-weight: 600;
 }
 
-/* Social icons */
+/* Social media icons */
 .footer-socials {
     display: flex;
-    gap: 20px;
-    padding-right: 20px;
+    gap: 20px; /* Adds spacing between icons */
+    padding-right: 60px; /* Moves icons away from edge */
 }
 
+/* Social media icons */
 .footer-socials img {
-    width: 32px;
-    height: 32px;
+    width: 35px; /* Sets size */
+    height: 35px;
 }
 
-/* Move copyright to bottom right */
+/* Copyright styling */
 .footer-copyright {
     font-size: 15px;
     position: absolute;
-    bottom: 5px;
-    right: 20px;
+    bottom: 5px; /* Moves to the bottom */
+    right: 20px; /* Moves it from edge */
 }
