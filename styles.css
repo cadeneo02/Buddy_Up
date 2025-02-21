@@ -1,4 +1,4 @@
-/* General Styling */
+/* Footer Styling */
 body {
     font-family: 'Sans Serif', sans-serif;
     margin: 0;
@@ -10,28 +10,100 @@ body {
 /* Header Styling */
 .header {
     background-color: hsl(340, 55%, 26%); /* Maroon */
-    color: hsl(0, 0%, 100%); /* White */
+    color: white;
+    padding: 10px 0;
     text-align: center;
-    padding: 20px 0;
+    position: relative;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: auto;
+    padding: 10px 0;
+}
+
+/* Logo Styling */
+.header-logo {
+    display: flex;
+    align-items: center;
+}
+
+.header-logo img {
+    width: 60px;
+    margin-right: 10px;
+}
+
+.header-logo p {
     font-size: 20px;
-    font-weight: 600;
-    height: 60px;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Navigation Styling */
+.header-nav {
+    display: flex;
+    gap: 20px;
+}
+
+.header-nav a {
+    color: hsl(0, 0%, 100%);
+    font-size: 15px;
+    text-decoration: none;
 }
 
 /* Main Content */
-.main-section {
+.main-content {
     padding: 20px;
     text-align: center;
-    font-size: 18px; /* Paragraph size */
+    font-size: 18px;
 }
 
-/* Footer Styling */
 .footer {
     background-color: hsl(340, 55%, 26%); /* Maroon */
-    color: hsl(0, 0%, 100%); /* White */
+    color: white;
+    padding: 5px 0;
     text-align: center;
+    width: 100%;
+    position: relative;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: auto;
     padding: 20px 0;
-    font-size: 18px;
-    font-weight: 400;
-    height: 60px;
+}
+
+/* Center the logo */
+.footer-logo {
+    align-items: center;
+    text-align: center;
+}
+
+.footer-logo img {
+    width: 60px;
+}
+
+.footer-logo p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.footer-social img {
+    width: 32px;
+    height: 32px;
+}
+
+/* Move Copyright to Bottom Right */
+.footer-copyright {
+    font-size: 15px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
 }
