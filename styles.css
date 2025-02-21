@@ -1,4 +1,4 @@
-/* Footer Styling */
+/* General Styles */
 body {
     font-family: 'Sans Serif', sans-serif;
     margin: 0;
@@ -10,9 +10,10 @@ body {
 /* Header Styling */
 .header {
     background-color: hsl(340, 55%, 26%); /* Maroon */
-    color: white;
+    color: hsl(0, 0%, 100%); /* White */
     padding: 10px 0;
     text-align: center;
+    width: 100%;
     position: relative;
 }
 
@@ -49,18 +50,18 @@ body {
 }
 
 .header-nav a {
-    color: hsl(0, 0%, 100%);
+    color: white;
     font-size: 15px;
     text-decoration: none;
+    transition: color 0.3s linear;
 }
 
-/* Main Content */
-.main-content {
-    padding: 20px;
-    text-align: center;
-    font-size: 18px;
+/* Hover Effect for Header Navigation */
+.header-nav a:hover {
+    color: hsl(44, 100%, 46%); /* Gold */
 }
 
+/* Footer Styling */
 .footer {
     background-color: hsl(340, 55%, 26%); /* Maroon */
     color: white;
@@ -80,7 +81,26 @@ body {
     padding: 20px 0;
 }
 
-/* Center the logo */
+/* Footer Links */
+.footer-info {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-info a {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s linear;
+}
+
+/* Hover Effect for Footer Links */
+.footer-info a:hover {
+    color: hsl(44, 100%, 46%); /* Gold */
+}
+
+/* Footer Logo */
 .footer-logo {
     align-items: center;
     text-align: center;
@@ -95,7 +115,8 @@ body {
     font-weight: bold;
 }
 
-.footer-social img {
+/* Social Icons */
+.footer-socials img {
     width: 32px;
     height: 32px;
 }
