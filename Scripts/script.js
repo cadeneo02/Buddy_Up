@@ -85,13 +85,36 @@ function nextMonth() {
 }
 
 generateCalendar(currentMonth, currentYear);
+
+// Function to show popup when a footer info is clicked
+document.querySelectorAll('.popup-trigger').forEach(trigger => {
+    trigger.addEventListener('click', (event) => { //Sets listener to monitor for click bu user
+        event.preventDefault(); // Prevents default link behavior
+        let popupId = trigger.getAttribute('data-popup'); //attatches popuo function
+        let popup = document.getElementById(popupId);
+        if (popup) {
+            popup.style.display = 'flex'; // Shows the popup
+        }
+    });
+});
+
+// Function to close popup when 'X' is clicked
+document.querySelectorAll('.close-popup').forEach(closeBtn => { // Same functionality as the last function, but for close instead of open
+    closeBtn.addEventListener('click', () => {
+        let popup = closeBtn.closest('.popup-window');
+        if (popup) {
+            popup.style.display = 'none'; // Hides popup
+        }
+    });
+});
+
 // Social media links open in new tab
 document.socialSelector('.footer-socials a').forEach(icon => {
-    icon.addEventListener('click', (event) => { // Adds listener to look for user's click
+    icon.addEventListener('click', (event) => {
         event.preventDefault(); // Prevent default navigation
-        let url = icon.getAttribute('href'); // This directs attatches the link from the href of the icon clicked to the function
+        let url = icon.getAttribute('href');
         if (url) {
-            window.open(url, 'new_window'); // Opens link
+            window.open(url, 'new_window'); // Open link
         }
     });
 });
