@@ -1,112 +1,141 @@
+document.addEventListener("DOMContentLoaded", function () {
+    initCalendar();
+    handlePopups();
+    setupNavigation();
+    loadAppointments();
+});
+
 let currentMonth = new Date().getMonth();
 let currentYear = new Date().getFullYear();
-let appointments = {}; // Store appointments in { "YYYY-MM-DD": ["time1", "time2"] }
+const monthYearDisplay = document.getElementById("month-year");
+const calendarBody = document.querySelector("#calendar tbody");
 
-function generateCalendar(month, year) {
-    const tbody = document.querySelector("#calendar tbody");
-    tbody.innerHTML = "";
-    document.getElementById("month-year").innerText = new Date(year, month).toLocaleString('default', { month: 'long', year: 'numeric' });
+// Store appointments
+let appointments = JSON.parse(localStorage.getItem("appointments")) || {};
+
+function initCalendar() {
+    updateCalendar(currentMonth, currentYear);
+}
+
+function updateCalendar(month, year) {
+    monthYearDisplay.textContent = new Date(year, month).toLocaleString("default", { month: "long", year: "numeric" });
 
     let firstDay = new Date(year, month, 1).getDay();
     let daysInMonth = new Date(year, month + 1, 0).getDate();
-    let date = 1;
 
-    for (let i = 0; i < 6; i++) {
-        let row = document.createElement("tr");
-        for (let j = 0; j < 7; j++) {
-            let cell = document.createElement("td");
+    calendarBody.innerHTML = ""; // Clear old calendar
 
-            if (i === 0 && j < firstDay) {
-                cell.innerHTML = "";
-            } else if (date > daysInMonth) {
-                break;
-            } else {
-                let cellDate = `${year}-${String(month + 1).padStart(2, '0')}-${String(date).padStart(2, '0')}`;
-                cell.innerHTML = `<strong>${date}</strong>`;
-                cell.dataset.date = cellDate;
+    let row = document.createElement("tr");
 
-                // Show existing appointments
-                if (appointments[cellDate]) {
-                    appointments[cellDate].forEach(time => {
-                        let eventDiv = document.createElement("div");
-                        eventDiv.classList.add("event");
-                        eventDiv.innerText = time;
-                        cell.appendChild(eventDiv);
-                    });
-                }
+    for (let i = 0; i < firstDay; i++) {
+        let emptyCell = document.createElement("td");
+        row.appendChild(emptyCell);
+    }
 
-                // Click event to select date
-                cell.onclick = function() {
-                    document.querySelectorAll("td").forEach(td => td.classList.remove("selected"));
-                    cell.classList.add("selected");
-                    document.getElementById("event-date").value = cellDate;
-                };
-
-                date++;
-            }
-            row.appendChild(cell);
+    for (let day = 1; day <= daysInMonth; day++) {
+        if ((firstDay + day - 1) % 7 === 0 && day !== 1) {
+            calendarBody.appendChild(row);
+            row = document.createElement("tr");
         }
-        tbody.appendChild(row);
-    }
-}
 
-function bookAppointment() {
-    let eventDate = document.getElementById("event-date").value;
-    let eventTime = document.getElementById("event-time").value;
+        let cell = document.createElement("td");
+        let dateStr = `${year}-${(month + 1).toString().padStart(2, "0")}-${day.toString().padStart(2, "0")}`;
 
-    if (!eventDate || !eventTime) {
-        alert("Please select a date and time!");
-        return;
-    }
+        cell.textContent = day;
+        cell.dataset.date = dateStr;
+        cell.classList.add("calendar-day");
 
-    if (!appointments[eventDate]) {
-        appointments[eventDate] = [];
+        if (appointments[dateStr]) {
+            cell.classList.add("booked");
+        }
+
+        cell.addEventListener("click", function () {
+            document.getElementById("event-date").value = this.dataset.date;
+        });
+
+        row.appendChild(cell);
     }
-    appointments[eventDate].push(eventTime);
-    generateCalendar(currentMonth, currentYear);
+    calendarBody.appendChild(row);
 }
 
 function prevMonth() {
-    currentMonth--;
-    if (currentMonth < 0) {
+    if (currentMonth === 0) {
         currentMonth = 11;
         currentYear--;
+    } else {
+        currentMonth--;
     }
-    generateCalendar(currentMonth, currentYear);
+    updateCalendar(currentMonth, currentYear);
 }
 
 function nextMonth() {
-    currentMonth++;
-    if (currentMonth > 11) {
+    if (currentMonth === 11) {
         currentMonth = 0;
         currentYear++;
+    } else {
+        currentMonth++;
     }
-    generateCalendar(currentMonth, currentYear);
+    updateCalendar(currentMonth, currentYear);
 }
 
-generateCalendar(currentMonth, currentYear);
+function bookAppointment() {
+    let selectedDate = document.getElementById("event-date").value;
+    let selectedTime = document.getElementById("event-time").value;
 
-// Function to show popup when a footer info is clicked
-document.querySelectorAll('.popup-trigger').forEach(trigger => {
-    trigger.addEventListener('click', (event) => { //Sets listener to monitor for click bu user
-        event.preventDefault(); // Prevents default link behavior
-        let popupId = trigger.getAttribute('data-popup'); //attatches popuo function
-        let popup = document.getElementById(popupId);
-        if (popup) {
-            popup.style.display = 'flex'; // Shows the popup
+    if (!selectedDate || !selectedTime) {
+        alert("Please select a valid date and time for your appointment.");
+        return;
+    }
+
+    if (appointments[selectedDate]) {
+        alert("This date is already booked. Please select another date.");
+        return;
+    }
+
+    appointments[selectedDate] = selectedTime;
+    localStorage.setItem("appointments", JSON.stringify(appointments));
+
+    alert(`Your appointment is booked for ${selectedDate} at ${selectedTime}.`);
+    updateCalendar(currentMonth, currentYear);
+}
+
+// Load appointments when page refreshed
+function loadAppointments() {
+    let storedAppointments = JSON.parse(localStorage.getItem("appointments")) || {};
+    appointments = storedAppointments;
+    updateCalendar(currentMonth, currentYear);
+}
+
+// Popups handling
+function handlePopups() {
+    document.querySelectorAll(".popup-trigger").forEach(trigger => {
+        trigger.addEventListener("click", function (event) {
+            event.preventDefault();
+            let targetPopup = document.getElementById(this.dataset.popup);
+            if (targetPopup) targetPopup.style.display = "block";
+        });
+    });
+
+    document.querySelectorAll(".close-popup").forEach(closeBtn => {
+        closeBtn.addEventListener("click", function () {
+            this.closest(".popup-window").style.display = "none";
+        });
+    });
+
+    window.addEventListener("click", function (event) {
+        if (event.target.classList.contains("popup-window")) {
+            event.target.style.display = "none";
         }
     });
-});
+}
 
-// Function to close popup when 'X' is clicked
-document.querySelectorAll('.close-popup').forEach(closeBtn => { // Same functionality as the last function, but for close instead of open
-    closeBtn.addEventListener('click', () => {
-        let popup = closeBtn.closest('.popup-window');
-        if (popup) {
-            popup.style.display = 'none'; // Hides popup
-        }
+// Navigation links are clickable
+function setupNavigation() {
+    document.querySelectorAll(".header-nav a").forEach(navLink => {
+        navLink.href = "#";
     });
-});
+}
+
 
 // Social media links open in new tab
 document.socialSelector('.footer-socials a').forEach(icon => {
