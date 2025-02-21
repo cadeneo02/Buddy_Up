@@ -23,7 +23,7 @@ body {
     align-items: center;
     max-width: 1000px;
     margin: auto;
-    padding: 10px 0;
+    padding: 0 20px;
 }
 
 /* Logo Styling */
@@ -43,20 +43,20 @@ body {
     margin: 0;
 }
 
-/* Navigation Styling */
+/* Navigation styling */
 .header-nav {
     display: flex;
-    gap: 20px;
+    gap: 25px;
 }
 
 .header-nav a {
-    color: white;
+    color: hsl(0, 0%, 100%);
     font-size: 15px;
     text-decoration: none;
     transition: color 0.3s linear;
 }
 
-/* Hover Effect for Header Navigation */
+/* Hover effect for header navigation */
 .header-nav a:hover {
     color: hsl(44, 100%, 46%); /* Gold */
 }
@@ -64,8 +64,8 @@ body {
 /* Footer Styling */
 .footer {
     background-color: hsl(340, 55%, 26%); /* Maroon */
-    color: white;
-    padding: 5px 0;
+    color: hsl(0, 0%, 100%); /* White */
+    padding: 20px 0;
     text-align: center;
     width: 100%;
     position: relative;
@@ -78,34 +78,33 @@ body {
     flex-wrap: wrap;
     max-width: 1000px;
     margin: auto;
-    padding: 20px 0;
 }
 
-/* Footer Links */
+/* Footer links */
 .footer-info {
     display: flex;
-    gap: 20px;
+    gap: 25px;
+    padding-left: 20px;
 }
 
 .footer-info a {
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    text-decoration: none;
+    color: hsl(0, 0%, 100%); /* White */
+    font-size: 15px;
     transition: color 0.3s linear;
 }
 
-/* Hover Effect for Footer Links */
+/* Hover effect for footer links */
 .footer-info a:hover {
     color: hsl(44, 100%, 46%); /* Gold */
 }
 
-/* Footer Logo */
+/* Footer logo */
 .footer-logo {
     align-items: center;
     text-align: center;
 }
 
+/* Footer logo image */
 .footer-logo img {
     width: 60px;
 }
@@ -115,16 +114,22 @@ body {
     font-weight: bold;
 }
 
-/* Social Icons */
+/* Social icons */
+.footer-socials {
+    display: flex;
+    gap: 20px;
+    padding-right: 20px;
+}
+
 .footer-socials img {
     width: 32px;
     height: 32px;
 }
 
-/* Move Copyright to Bottom Right */
+/* Move copyright to bottom right */
 .footer-copyright {
     font-size: 15px;
     position: absolute;
-    bottom: 10px;
-    right: 10px;
+    bottom: 5px;
+    right: 20px;
 }
