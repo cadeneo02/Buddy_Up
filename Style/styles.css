@@ -41,7 +41,7 @@ body {
 
 /* Logo text */
 .header-logo p {
-    font-size: 20px
+    font-size: 20px;
     font-weight: 600;
     margin: 0; /* Removes default margin */
 }
@@ -140,4 +140,65 @@ body {
     position: absolute;
     bottom: 5px; /* Moves to the bottom */
     right: 20px; /* Moves it from edge */
+}
+
+ection {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.listings {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+article {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+article img {
+    width: 100%;
+    border-radius: 5px;
+}
+.cal {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+th, td {
+    border: 1px solid black;
+    width: 14.28%;
+    height: 80px;
+    vertical-align: top;
+    position: relative;
+    cursor: pointer;
+}
+.event {
+    background-color: lightblue;
+    padding: 5px;
+    margin: 3px;
+    font-size: 12px;
+}
+.selected {
+    background-color: lightgreen !important;
 }
