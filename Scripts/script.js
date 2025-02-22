@@ -147,3 +147,56 @@ document.socialSelector('.footer-socials a').forEach(icon => {
         }
     });
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    loadFavorites();
+});
+
+// Function to toggle favorite listings
+function toggleFavorite(listingId) {
+    let favorites = JSON.parse(localStorage.getItem("favoriteListings")) || [];
+
+    if (favorites.includes(listingId)) {
+        // Remove from favorites
+        favorites = favorites.filter(id => id !== listingId);
+    } else {
+        // Add to favorites
+        favorites.push(listingId);
+    }
+
+    localStorage.setItem("favoriteListings", JSON.stringify(favorites));
+    loadFavorites(); // Refresh favorite listings section
+}
+
+// Function to load favorites into the Favorites section
+function loadFavorites() {
+    let favorites = JSON.parse(localStorage.getItem("favoriteListings")) || [];
+    let favoriteContainer = document.getElementById("favorite-listings");
+    favoriteContainer.innerHTML = "";
+
+    if (favorites.length === 0) {
+        favoriteContainer.innerHTML = "<p>No favorites yet.</p>";
+        return;
+    }
+
+    const listings = {
+        1: { title: "Luxury Villa", price: "$500,000", image: "Media/image1.jpg" },
+        2: { title: "Modern Apartment", price: "$300,000", image: "Media/image2.jpg" },
+        3: { title: "Cozy Cottage", price: "$250,000", image: "Media/image3.jpg" }
+    };
+
+    favorites.forEach(id => {
+        if (listings[id]) {
+            let listing = listings[id];
+            let listingElement = document.createElement("div");
+            listingElement.classList.add("favorite-item");
+            listingElement.innerHTML = `
+                <img src="${listing.image}" alt="${listing.title}">
+                <h4>${listing.title}</h4>
+                <p>${listing.price}</p>
+                <button onclick="toggleFavorite(${id})">❌ Remove</button>
+            `;
+            favoriteContainer.appendChild(listingElement);
+        }
+    });
+}
