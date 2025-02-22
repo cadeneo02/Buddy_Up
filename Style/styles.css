@@ -508,3 +508,19 @@ button:hover {
 .favorite-item button:hover {
     background: darkred;
 }
+
+/* Copy Link Button */
+.copy-btn {
+    background: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.copy-btn:hover {
+    background: #218838;
+}
