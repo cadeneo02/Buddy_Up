@@ -35,7 +35,7 @@
 
     <!-- Main Content -->
     <main class="main">
-     <section class="section-container">
+    <section class="section-container">
     <h2>Featured Listings</h2>
     <div class="listings">
         <article>
@@ -44,6 +44,9 @@
                 <h3>Luxury Villa</h3>
                 <p>$500,000 - 4 Beds, 3 Baths</p>
             </a>
+            <button class="favorite-btn" data-id="1" onclick="toggleFavorite(1)">
+                ⭐ Save
+            </button>
         </article>
         <article>
             <a href="listing-detail.html?id=2" class="listing-link">
@@ -51,6 +54,9 @@
                 <h3>Modern Apartment</h3>
                 <p>$300,000 - 2 Beds, 2 Baths</p>
             </a>
+            <button class="favorite-btn" data-id="2" onclick="toggleFavorite(2)">
+                ⭐ Save
+            </button>
         </article>
         <article>
             <a href="listing-detail.html?id=3" class="listing-link">
@@ -58,9 +64,13 @@
                 <h3>Cozy Cottage</h3>
                 <p>$250,000 - 3 Beds, 2 Baths</p>
             </a>
+            <button class="favorite-btn" data-id="3" onclick="toggleFavorite(3)">
+                ⭐ Save
+            </button>
         </article>
     </div>
 </section>
+
       
       <section class="section-container">
         <h2>Book An Appointment</h2>
