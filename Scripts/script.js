@@ -150,34 +150,78 @@ document.socialSelector('.footer-socials a').forEach(icon => {
 
 document.addEventListener("DOMContentLoaded", function() {
     loadFavorites();
+    updateFavoriteButtons();
+    updateFavoriteCounts();
 });
 
 // Function to toggle favorite listings
 function toggleFavorite(listingId) {
     let favorites = JSON.parse(localStorage.getItem("favoriteListings")) || [];
+    let favoriteCounts = JSON.parse(localStorage.getItem("favoriteCounts")) || {};
 
     if (favorites.includes(listingId)) {
-        // Remove from favorites
-        favorites = favorites.filter(id => id !== listingId);
+        favorites = favorites.filter(id => id !== listingId); // Remove from favorites
+        favoriteCounts[listingId] = (favoriteCounts[listingId] || 1) - 1;
     } else {
-        // Add to favorites
-        favorites.push(listingId);
+        favorites.push(listingId); // Add to favorites
+        favoriteCounts[listingId] = (favoriteCounts[listingId] || 0) + 1;
     }
 
     localStorage.setItem("favoriteListings", JSON.stringify(favorites));
-    loadFavorites(); // Refresh favorite listings section
+    localStorage.setItem("favoriteCounts", JSON.stringify(favoriteCounts));
+
+    loadFavorites();
+    updateFavoriteButtons();
+    updateFavoriteCounts();
 }
 
-// Function to load favorites into the Favorites section
-function loadFavorites() {
-    let favorites = JSON.parse(localStorage.getItem("favoriteListings")) || [];
-    let favoriteContainer = document.getElementById("favorite-listings");
-    favoriteContainer.innerHTML = "";
+// Function to update favorite counts
+function updateFavoriteCounts() {
+    let favoriteCounts = JSON.parse(localStorage.getItem("favoriteCounts")) || {};
+    Object.keys(favoriteCounts).forEach(id => {
+        let countElement = document.getElementById(`fav-count-${id}`);
+        if (countElement) {
+            countElement.innerHTML = `❤️ ${favoriteCounts[id]} Favorites`;
+        }
+    });
+}
 
-    if (favorites.length === 0) {
-        favoriteContainer.innerHTML = "<p>No favorites yet.</p>";
-        return;
+// Function to sort favorites
+function sortFavorites() {
+    let sortOption = document.getElementById("sort-favorites").value;
+    let favorites = JSON.parse(localStorage.getItem("favoriteListings")) || [];
+    let favoriteCounts = JSON.parse(localStorage.getItem("favoriteCounts")) || {};
+
+    const listings = {
+        1: { title: "Luxury Villa", price: 500000, image: "Media/image1.jpg", count: favoriteCounts[1] || 0 },
+        2: { title: "Modern Apartment", price: 300000, image: "Media/image2.jpg", count: favoriteCounts[2] || 0 },
+        3: { title: "Cozy Cottage", price: 250000, image: "Media/image3.jpg", count: favoriteCounts[3] || 0 }
+    };
+
+    let favoriteList = favorites.map(id => ({ id, ...listings[id] }));
+
+    if (sortOption === "title") {
+        favoriteList.sort((a, b) => a.title.localeCompare(b.title));
+    } else if (sortOption === "price") {
+        favoriteList.sort((a, b) => a.price - b.price);
+    } else if (sortOption === "most-favorited") {
+        favoriteList.sort((a, b) => b.count - a.count); // Sort by most favorited
+    } else {
+        favoriteList.reverse(); // Newest first (default order)
     }
+
+    displayFavorites(favoriteList);
+}
+
+// Function to copy listing link
+function copyLink(listingId) {
+    const url = window.location.origin + `/listing-detail.html?id=${listingId}`;
+    navigator.clipboard.writeText(url).then(() => {
+        alert("📋 Link copied to clipboard!");
+    }).catch(err => {
+        console.error("Failed to copy link: ", err);
+    });
+}
 
     const listings = {
         1: { title: "Luxury Villa", price: "$500,000", image: "Media/image1.jpg" },
