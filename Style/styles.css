@@ -17,6 +17,9 @@ body {
   position: relative;
 }
 
+.section-container {
+  padding: 2rem;
+}
 .header-container {
   display: flex;
   justify-content: space-between;
@@ -56,13 +59,62 @@ body {
   transition: color 0.3s linear;
 }
 
+/* heading */
+h2 {
+  text-align: center;
+  font-size: 1.75rem;
+}
+
 /* Hover effect for header navigation */
 .header-nav a:hover {
   color: hsl(44, 100%, 46%); /* Gold */
 }
 
 /* Reviews Styling */
+.review-container {
+  padding-top: 2rem;
+  position: relative;
+}
 
+.review-box {
+  width: 17rem;
+  height: 14rem;
+  position: relative;
+}
+.review-img-container {
+  width: 4rem;
+  height: 4rem;
+  border: 3px solid #ebac00;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.article-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.review-heading {
+  text-align: left;
+  margin-top: 1.5rem;
+}
+.review-stars {
+  text-align: left;
+  display: flex;
+  gap: 1rem;
+}
+
+.star {
+  font-size: 1.25rem;
+  height: 100%;
+  color: #ebac00;
+}
+.review-para {
+  text-align: left;
+}
 /* Footer Styling */
 .footer-line {
   width: 100%;
