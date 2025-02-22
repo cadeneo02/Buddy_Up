@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
     <!-- Defines character encoding for text -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
     <!-- Responsive mobile design -->
-    <title>Buddy Up</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Sets webpage title -->
-    <link rel="stylesheet" href="./Style/styles.css" />
+    <title>Buddy Up</title>
     <!-- Linking stylesheet -->
-    <script defer src="./Scripts/script.js"></script>
-    <!-- Loads js -->
+    <link rel="stylesheet" href="./Style/styles.css" />
+    <!--Font-awesome link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
   </head>
   <body>
     <!-- Header section -->
@@ -32,7 +35,7 @@
 
     <!-- Main Content -->
     <main class="main">
-      <section>
+      <section class="section-container">
         <h2>Featured Listings</h2>
         <div class="listings">
           <article>
@@ -52,7 +55,7 @@
           </article>
         </div>
       </section>
-      <section>
+      <section class="section-container">
         <h2>Book An Appointment</h2>
         <div class="Appointment">
           <div>
@@ -88,9 +91,32 @@
           <button onclick="bookAppointment()">Reserve</button>
         </div>
       </section>
-      <section>
-        <h2>Testimonials</h2>
-        <div class="Testimonial"></div>
+      <section class="section-container">
+        <h2>Reviews</h2>
+        <div class="review-container">
+          <article class="review-box">
+            <div class="review-img-container">
+              <img
+                src="./Media/stock-image-one.jpg"
+                alt="headshot image of a student"
+                class="article-img"
+              />
+            </div>
+            <h4 class="review-heading">Great! No payment for utilities!</h4>
+            <div class="review-stars">
+              <div class="stars"><i class="star fa-solid fa-star"></i></div>
+              <div class="stars"><i class="star fa-solid fa-star"></i></div>
+              <div class="stars"><i class="star fa-solid fa-star"></i></div>
+              <div class="stars"><i class="star fa-solid fa-star"></i></div>
+              <div class="stars"><i class="star fa-solid fa-star"></i></div>
+            </div>
+            <p class="review-para">
+              I rented a studio in one of their buildings and it has been one of
+              my best experiences so far. The utilities are embedded in the rent
+              so you don't have to worry about unexpected expense.
+            </p>
+          </article>
+        </div>
       </section>
     </main>
 
@@ -167,5 +193,7 @@
         <p>Email: support@buddyup.com<br />Phone: (111) 222-3333</p>
       </div>
     </div>
+    <!-- Loads js -->
+    <script type="text/javascript" src="./Scripts/script.js"></script>
   </body>
 </html>
