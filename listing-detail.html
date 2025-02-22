@@ -5,18 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Listing Detail</title>
     <link rel="stylesheet" href="./Style/styles.css">
-    <script defer src="./Scripts/script.js"></script>
 </head>
 <body>
+
     <header class="header">
         <div class="header-container">
             <div class="header-logo">
-                <img src="./HomeShake_Logo.png.PNG" alt="HomeShake Logo">
+                <img src="Media/Buddy_Up_Logo.PNG" alt="Buddy Up Logo">
                 <p>Buddy Up</p>
             </div>
         </div>
     </header>
-    
+
     <main class="main">
         <section id="listing-detail-section">
             <h2 id="listing-title">Listing Title</h2>
@@ -26,58 +26,30 @@
             <p id="listing-price"></p>
             <p id="listing-description"></p>
         </section>
+
+        <!-- Schedule a Visit Form -->
+        <section id="schedule-visit">
+            <h2>Schedule a Visit</h2>
+            <label for="visit-date">Select Date:</label>
+            <input type="date" id="visit-date" required>
+
+            <label for="visit-time">Select Time:</label>
+            <input type="time" id="visit-time" required>
+
+            <button onclick="bookVisit()">Book Visit</button>
+
+            <div id="visit-confirmation"></div>
+        </section>
+
+        <button onclick="window.history.back()">⬅ Back to Listings</button>
     </main>
 
     <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-info">
-                <a href="#" class="popup-trigger" data-popup="about-popup">About</a>
-                <a href="#" class="popup-trigger" data-popup="hours-popup">Hours</a>
-                <a href="#" class="popup-trigger" data-popup="contact-popup">Contact</a>
-            </div>
-        </div>
-        <p class="footer-copyright">©2025 Buddy Up</p>
+        <p>©2025 Buddy Up</p>
     </footer>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const urlParams = new URLSearchParams(window.location.search);
-            const listingId = urlParams.get("id");
+    <script src="./Scripts/listing-script.js"></script>
 
-            // Example listing data
-            const listings = {
-                1: {
-                    title: "Luxury Villa",
-                    price: "$500,000",
-                    description: "A beautiful luxury villa with 4 beds, 3 baths, and a private pool.",
-                    image: "Media/image1.jpg"
-                },
-                2: {
-                    title: "Modern Apartment",
-                    price: "$300,000",
-                    description: "A stylish modern apartment with 2 beds, 2 baths, and a city view.",
-                    image: "Media/image2.jpg"
-                },
-                3: {
-                    title: "Cozy Cottage",
-                    price: "$250,000",
-                    description: "A cozy cottage perfect for a small family with 3 beds and 2 baths.",
-                    image: "Media/image3.jpg"
-                }
-            };
-
-            // Fetch the listing based on the id from URL
-            const listing = listings[listingId];
-
-            if (listing) {
-                document.getElementById("listing-title").textContent = listing.title;
-                document.getElementById("listing-price").textContent = listing.price;
-                document.getElementById("listing-description").textContent = listing.description;
-                document.getElementById("listing-img").src = listing.image;
-            } else {
-                document.getElementById("listing-title").textContent = "Listing not found";
-            }
-        });
-    </script>
 </body>
 </html>
+
