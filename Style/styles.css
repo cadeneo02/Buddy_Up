@@ -25,7 +25,9 @@ body {
 }
 
 .section-container {
-  padding: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  min-width: 95vw;
 }
 .header-container {
   display: flex;
@@ -81,12 +83,17 @@ h2 {
 .review-container {
   padding-top: 2rem;
   position: relative;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .review-box {
-  width: 17rem;
-  height: 14rem;
+  width: 100%;
   position: relative;
+  margin-bottom: 4rem;
+  margin-right: auto;
+  margin-left: auto;
 }
 .review-img-container {
   width: 4rem;
@@ -113,7 +120,6 @@ h2 {
   text-align: left;
   display: flex;
   gap: 0.75rem;
-  /* border: 2px solid red; */
 }
 
 .star {
@@ -124,6 +130,40 @@ h2 {
 .review-para {
   text-align: left;
 }
+@media screen and (min-width: 425px) {
+  .review-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+  .review-box {
+    flex: 0 0 calc(33.33% - 1rem);
+  }
+}
+@media screen and (min-width: 768px) {
+  .review-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .review-box {
+    flex: 0 0 calc(25% - 1rem);
+  }
+}
+
+@media screen and (min-width: 920px) {
+  .review-box {
+    flex: 0 0 calc(20% - 1rem);
+  }
+
+  .review-container {
+    max-width: 1170px;
+    justify-content: center;
+  }
+}
+
 /* Footer Styling */
 .footer-line {
   width: 100%;
@@ -424,112 +464,112 @@ button:hover {
 
 /* Listing Detail Page */
 #listing-detail-section {
-    text-align: center;
-    padding: 20px;
-    max-width: 600px;
-    margin: auto;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 20px;
+  max-width: 600px;
+  margin: auto;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 #listing-image img {
-    width: 100%;
-    border-radius: 10px;
-    margin-top: 10px;
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 10px;
 }
 
 button {
-    display: block;
-    margin: 20px auto;
-    padding: 10px 15px;
-    background: #007BFF;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
+  display: block;
+  margin: 20px auto;
+  padding: 10px 15px;
+  background: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
 button:hover {
-    background: #0056b3;
+  background: #0056b3;
 }
 
 /* Favorite Button */
 .favorite-btn {
-    background: #ffcc00;
-    border: none;
-    cursor: pointer;
-    padding: 5px 10px;
-    margin-top: 5px;
-    font-weight: bold;
-    border-radius: 5px;
+  background: #ffcc00;
+  border: none;
+  cursor: pointer;
+  padding: 5px 10px;
+  margin-top: 5px;
+  font-weight: bold;
+  border-radius: 5px;
 }
 
 .favorite-btn:hover {
-    background: #ff9900;
+  background: #ff9900;
 }
 
 /* Favorite Listings Section */
 #favorite-listings {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    padding: 15px;
-    border-radius: 10px;
-    background: white;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 15px;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .favorite-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 10px;
-    background: #f9f9f9;
-    border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  background: #f9f9f9;
+  border-radius: 10px;
 }
 
 .favorite-item img {
-    width: 80px;
-    height: 80px;
-    border-radius: 5px;
+  width: 80px;
+  height: 80px;
+  border-radius: 5px;
 }
 
 .favorite-item h4 {
-    margin: 0;
-    font-size: 16px;
+  margin: 0;
+  font-size: 16px;
 }
 
 .favorite-item p {
-    margin: 0;
-    color: #777;
+  margin: 0;
+  color: #777;
 }
 
 .favorite-item button {
-    background: red;
-    color: white;
-    border: none;
-    padding: 5px;
-    cursor: pointer;
-    border-radius: 5px;
+  background: red;
+  color: white;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
 .favorite-item button:hover {
-    background: darkred;
+  background: darkred;
 }
 
 /* Copy Link Button */
 .copy-btn {
-    background: #28a745;
-    color: white;
-    border: none;
-    cursor: pointer;
-    padding: 5px 10px;
-    font-weight: bold;
-    border-radius: 5px;
-    margin-top: 5px;
+  background: #28a745;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 5px 10px;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-top: 5px;
 }
 
 .copy-btn:hover {
-    background: #218838;
+  background: #218838;
 }
