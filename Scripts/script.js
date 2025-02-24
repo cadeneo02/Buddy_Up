@@ -243,4 +243,4 @@ function copyLink(listingId) {
             favoriteContainer.appendChild(listingElement);
         }
     });
-}
+
