@@ -35,71 +35,91 @@
 
     <!-- Main Content -->
     <main class="main">
- <section class="section-container">
-    <h2>Featured Listings</h2>
-    <div class="listings">
-        <article>
+      <section class="section-container">
+        <h2>Featured Listings</h2>
+        <div class="listings">
+          <article>
             <a href="listing-detail.html?id=1" class="listing-link">
-                <img src="Media/image1.jpg" data-id="1" alt="Luxury Villa">
-                <h3>Luxury Villa</h3>
-                <p>$500,000 - 4 Beds, 3 Baths</p>
+              <img src="Media/image1.jpg" data-id="1" alt="Luxury Villa" />
+              <h3>Luxury Villa</h3>
+              <p>$500,000 - 4 Beds, 3 Baths</p>
             </a>
-            <button class="favorite-btn" data-id="1" onclick="toggleFavorite(1)">
-                ⭐ <span>Save</span>
+            <button
+              class="favorite-btn"
+              data-id="1"
+              onclick="toggleFavorite(1)"
+            >
+              ⭐ <span>Save</span>
             </button>
             <p class="favorite-count" id="fav-count-1">❤️ 0 Favorites</p>
-            <button class="share-btn" onclick="shareListing(1)">🔗 Share</button>
+            <button class="share-btn" onclick="shareListing(1)">
+              🔗 Share
+            </button>
             <button class="copy-btn" onclick="copyLink(1)">Copy Link</button>
-        </article>
+          </article>
 
-        <article>
+          <article>
             <a href="listing-detail.html?id=2" class="listing-link">
-                <img src="Media/image2.jpg" data-id="2" alt="Modern Apartment">
-                <h3>Modern Apartment</h3>
-                <p>$300,000 - 2 Beds, 2 Baths</p>
+              <img src="Media/image2.jpg" data-id="2" alt="Modern Apartment" />
+              <h3>Modern Apartment</h3>
+              <p>$300,000 - 2 Beds, 2 Baths</p>
             </a>
-            <button class="favorite-btn" data-id="2" onclick="toggleFavorite(2)">
-                ⭐ <span>Save</span>
+            <button
+              class="favorite-btn"
+              data-id="2"
+              onclick="toggleFavorite(2)"
+            >
+              ⭐ <span>Save</span>
             </button>
             <p class="favorite-count" id="fav-count-2">❤️ 0 Favorites</p>
-            <button class="share-btn" onclick="shareListing(2)">🔗 Share</button>
+            <button class="share-btn" onclick="shareListing(2)">
+              🔗 Share
+            </button>
             <button class="copy-btn" onclick="copyLink(2)">Copy Link</button>
-        </article>
+          </article>
 
-        <article>
+          <article>
             <a href="listing-detail.html?id=3" class="listing-link">
-                <img src="Media/image3.jpg" data-id="3" alt="Cozy Cottage">
-                <h3>Cozy Cottage</h3>
-                <p>$250,000 - 3 Beds, 2 Baths</p>
+              <img src="Media/image3.jpg" data-id="3" alt="Cozy Cottage" />
+              <h3>Cozy Cottage</h3>
+              <p>$250,000 - 3 Beds, 2 Baths</p>
             </a>
-            <button class="favorite-btn" data-id="3" onclick="toggleFavorite(3)">
-                ⭐ <span>Save</span>
+            <button
+              class="favorite-btn"
+              data-id="3"
+              onclick="toggleFavorite(3)"
+            >
+              ⭐ <span>Save</span>
             </button>
             <p class="favorite-count" id="fav-count-3">❤️ 0 Favorites</p>
-            <button class="share-btn" onclick="shareListing(3)">🔗 Share</button>
+            <button class="share-btn" onclick="shareListing(3)">
+              🔗 Share
+            </button>
             <button class="copy-btn" onclick="copyLink(3)">Copy Link</button>
-        </article>
-    </div>
-</section>
+          </article>
+        </div>
+      </section>
 
-    <section class="section-container">
-    <h2>Your Favorite Listings</h2>
+      <section class="section-container">
+        <h2>Your Favorite Listings</h2>
 
-    <label for="sort-favorites">Sort By:</label>
-    <select id="sort-favorites" onchange="sortFavorites()">
-        <option value="newest">Newest</option>
-        <option value="title">Title (A-Z)</option>
-        <option value="price">Price (Low to High)</option>
-        <option value="most-favorited">Most Favorited</option>
-    </select>
+        <label for="sort-favorites">Sort By:</label>
+        <select id="sort-favorites" onchange="sortFavorites()">
+          <option value="newest">Newest</option>
+          <option value="title">Title (A-Z)</option>
+          <option value="price">Price (Low to High)</option>
+          <option value="most-favorited">Most Favorited</option>
+        </select>
 
-    <button id="clear-favorites" onclick="clearAllFavorites()">❌ Remove All Favorites</button>
+        <button id="clear-favorites" onclick="clearAllFavorites()">
+          ❌ Remove All Favorites
+        </button>
 
-    <div id="favorite-listings">
-        <p>No favorites yet.</p>
-    </div>
-</section>
-      
+        <div id="favorite-listings">
+          <p>No favorites yet.</p>
+        </div>
+      </section>
+
       <section class="section-container">
         <h2>Book An Appointment</h2>
         <div class="Appointment">
@@ -136,9 +156,75 @@
           <button onclick="bookAppointment()">Reserve</button>
         </div>
       </section>
-      <section class="section-container">
+      <section class="section-container box">
         <h2>Reviews</h2>
         <div class="review-container">
+          <article class="review-box">
+            <div class="review-img-container">
+              <img
+                src="./Media/stock-image-one.jpg"
+                alt="headshot image of a student"
+                class="article-img"
+              />
+            </div>
+            <h4 class="review-heading">Great! No payment for utilities!</h4>
+            <div class="review-stars">
+              <div class="stars"><i class="star fa-solid fa-star"></i></div>
+              <div class="stars"><i class="star fa-solid fa-star"></i></div>
+              <div class="stars"><i class="star fa-solid fa-star"></i></div>
+              <div class="stars"><i class="star fa-solid fa-star"></i></div>
+              <div class="stars"><i class="star fa-solid fa-star"></i></div>
+            </div>
+            <p class="review-para">
+              I rented a studio in one of their buildings and it has been one of
+              my best experiences so far. The utilities are embedded in the rent
+              so you don't have to worry about unexpected expense.
+            </p>
+          </article>
+          <article class="review-box">
+            <div class="review-img-container">
+              <img
+                src="./Media/stock-image-one.jpg"
+                alt="headshot image of a student"
+                class="article-img"
+              />
+            </div>
+            <h4 class="review-heading">Great! No payment for utilities!</h4>
+            <div class="review-stars">
+              <div class="stars"><i class="star fa-solid fa-star"></i></div>
+              <div class="stars"><i class="star fa-solid fa-star"></i></div>
+              <div class="stars"><i class="star fa-solid fa-star"></i></div>
+              <div class="stars"><i class="star fa-solid fa-star"></i></div>
+              <div class="stars"><i class="star fa-solid fa-star"></i></div>
+            </div>
+            <p class="review-para">
+              I rented a studio in one of their buildings and it has been one of
+              my best experiences so far. The utilities are embedded in the rent
+              so you don't have to worry about unexpected expense.
+            </p>
+          </article>
+          <article class="review-box">
+            <div class="review-img-container">
+              <img
+                src="./Media/stock-image-one.jpg"
+                alt="headshot image of a student"
+                class="article-img"
+              />
+            </div>
+            <h4 class="review-heading">Great! No payment for utilities!</h4>
+            <div class="review-stars">
+              <div class="stars"><i class="star fa-solid fa-star"></i></div>
+              <div class="stars"><i class="star fa-solid fa-star"></i></div>
+              <div class="stars"><i class="star fa-solid fa-star"></i></div>
+              <div class="stars"><i class="star fa-solid fa-star"></i></div>
+              <div class="stars"><i class="star fa-solid fa-star"></i></div>
+            </div>
+            <p class="review-para">
+              I rented a studio in one of their buildings and it has been one of
+              my best experiences so far. The utilities are embedded in the rent
+              so you don't have to worry about unexpected expense.
+            </p>
+          </article>
           <article class="review-box">
             <div class="review-img-container">
               <img
