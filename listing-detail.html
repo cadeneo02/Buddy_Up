@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listing Detail</title>
+    <link rel="stylesheet" href="./Style/styles.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-container">
+            <div class="header-logo">
+                <img src="Media/Buddy_Up_Logo.PNG" alt="Buddy Up Logo">
+                <p>Buddy Up</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <section id="listing-detail-section">
+            <h2 id="listing-title">Listing Title</h2>
+            <div id="listing-image">
+                <img src="" alt="Listing Image" id="listing-img">
+            </div>
+            <p id="listing-price"></p>
+            <p id="listing-description"></p>
+        </section>
+
+        <!-- Schedule a Visit Form -->
+        <section id="schedule-visit">
+            <h2>Schedule a Visit</h2>
+            <label for="visit-date">Select Date:</label>
+            <input type="date" id="visit-date" required>
+
+            <label for="visit-time">Select Time:</label>
+            <input type="time" id="visit-time" required>
+
+            <button onclick="bookVisit()">Book Visit</button>
+
+            <div id="visit-confirmation"></div>
+        </section>
+
+        <button onclick="window.history.back()">⬅ Back to Listings</button>
+    </main>
+
+    <footer class="footer">
+        <p>©2025 Buddy Up</p>
+    </footer>
+
+    <script src="./Scripts/listing-script.js"></script>
+
+</body>
+</html>
+
