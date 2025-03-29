@@ -54,9 +54,6 @@ body {
 .header-nav {
     display: flex;
     gap: 25px;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
 }
 
 .header-nav a {
@@ -189,10 +186,8 @@ h2 {
 /* Footer links */
 .footer-info {
     display: flex;
-    gap: 20px;
+    gap: 25px;
     padding-left: 20px;
-    flex-direction: column;
-    align-items: center;
 }
 
 .footer-info a {
@@ -210,7 +205,6 @@ h2 {
 /* Footer logo */
 .footer-logo {
     align-items: center;
-    order: -1; /* Moves the logo to top of footer */
 }
 
 /* Footer logo image */
@@ -229,8 +223,6 @@ h2 {
     display: flex;
     gap: 20px;
     padding-right: 20px;
-    flex-direction: column;
-    align-items: center;
 }
 
 .footer-socials img {
@@ -241,7 +233,7 @@ h2 {
 /* Move copyright to bottom right */
 .footer-copyright {
     font-size: 15px;
-    position: relative;
+    position: absolute;
     bottom: 5px;
     right: 20px;
 }
