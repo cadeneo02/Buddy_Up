@@ -162,7 +162,6 @@ h2 {
   }
 }
 
-
 /* Footer */
 .footer {
   background-color: hsl(340, 55%, 26%);
@@ -239,6 +238,7 @@ h2 {
   bottom: 5px;
   right: 20px;
   font-style: italic;
+  text-align: right;
 }
 
 /* Popup Overlays */
@@ -309,7 +309,6 @@ h2 {
   }
 
   .footer-copyright {
-    position: static;
     margin-top: 20px;
     text-align: center;
   }
