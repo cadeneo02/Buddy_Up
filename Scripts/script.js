@@ -106,28 +106,38 @@ function loadAppointments() {
     updateCalendar(currentMonth, currentYear);
 }
 
-// Popups handling
-function handlePopups() {
-    document.querySelectorAll(".popup-trigger").forEach(trigger => {
-        trigger.addEventListener("click", function (event) {
-            event.preventDefault();
-            let targetPopup = document.getElementById(this.dataset.popup);
-            if (targetPopup) targetPopup.style.display = "block";
-        });
-    });
-
-    document.querySelectorAll(".close-popup").forEach(closeBtn => {
-        closeBtn.addEventListener("click", function () {
-            this.closest(".popup-window").style.display = "none";
-        });
-    });
-
-    window.addEventListener("click", function (event) {
-        if (event.target.classList.contains("popup-window")) {
-            event.target.style.display = "none";
+// Function to show popup when a footer info is clicked
+document.querySelectorAll('.popup-trigger').forEach(trigger => {
+    trigger.addEventListener('click', (event) => { //Sets listener to monitor for click bu user
+        event.preventDefault(); // Prevents default link behavior
+        let popupId = trigger.getAttribute('data-popup'); //attatches popuo function
+        let popup = document.getElementById(popupId);
+        if (popup) {
+            popup.style.display = 'flex'; // Shows the popup
         }
     });
-}
+});
+
+// Function to close popup when 'X' is clicked
+document.querySelectorAll('.close-popup').forEach(closeBtn => { // Same functionality as the last function, but for close instead of open
+    closeBtn.addEventListener('click', () => {
+        let popup = closeBtn.closest('.popup-window');
+        if (popup) {
+            popup.style.display = 'none'; // Hides popup
+        }
+    });
+});
+
+// Social media links open in new tab
+document.socialSelector('.footer-socials a').forEach(icon => {
+    icon.addEventListener('click', (event) => {
+        event.preventDefault(); // Prevent default navigation
+        let url = icon.getAttribute('href');
+        if (url) {
+            window.open(url, 'new_window'); // Open link
+        }
+    });
+});
 
 // Navigation links are clickable
 function setupNavigation() {
