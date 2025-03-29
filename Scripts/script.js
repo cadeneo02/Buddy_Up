@@ -106,35 +106,34 @@ function loadAppointments() {
     updateCalendar(currentMonth, currentYear);
 }
 
-  // Open popup
-  document.querySelectorAll(".popup-trigger").forEach(trigger => {
-    trigger.addEventListener("click", event => {
-      event.preventDefault();
-      const popupId = trigger.getAttribute("data-popup");
-      const popup = document.getElementById(popupId);
-      if (popup) {
-        popup.style.display = "flex";
-      }
-    });
-  });
-
-  // Close popup via close button
-  document.querySelectorAll(".close-popup").forEach(btn => {
-    btn.addEventListener("click", () => {
-      const popup = btn.closest(".popup-overlay");
-      popup.style.display = "none";
-    });
-  });
-
- // Close popup by clicking outside
-  document.querySelectorAll(".popup-overlay").forEach(overlay => {
-    overlay.addEventListener("click", e => {
-      if (e.target === overlay) {
-        overlay.style.display = "none";
-      }
-    });
+// Open popup
+document.querySelectorAll('.popup-trigger').forEach(trigger => {
+  trigger.addEventListener('click', (event) => {
+    event.preventDefault();
+    const popupId = trigger.getAttribute('data-popup');
+    const popup = document.getElementById(popupId);
+    if (popup) {
+      popup.style.display = 'flex';
+    }
   });
 });
+
+// Close popup by clicking the close button
+document.querySelectorAll('.close-popup').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const overlay = btn.closest('.popup-overlay');
+    overlay.style.display = 'none';
+  });
+});
+
+// Close popup by clicking outside the popup content
+document.querySelectorAll('.popup-overlay').forEach(overlay => {
+  overlay.addEventListener('click', (event) => {
+    // Only close if the overlay (not popup box) was clicked
+    if (event.target.classList.contains('popup-overlay')) {
+      overlay.style.display = 'none';
+    }
+  });
 
 // Social media links open in new tab
 document.socialSelector('.footer-socials a').forEach(icon => {
