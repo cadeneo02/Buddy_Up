@@ -14,58 +14,56 @@ body {
   color: hsl(100, 100%, 0%); /* Black */
 }
 
-/* Header Styling */
+ /* Header */
 .header {
-    background-color: hsl(340, 55%, 26%); /* Maroon */
-    color: hsl(0, 0%, 100%); /* White */
-    padding: 10px 0;
-    text-align: center;
-    width: 100%;
-    position: relative;
+  background-color: hsl(340, 55%, 26%);
+  color: white;
+  padding: 20px 0;
+  width: 100%;
 }
 
 .header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1500px;
-    margin: auto;
-    padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Allows slight wrapping on narrow screens */
+  max-width: 1500px;
+  margin: auto;
+  padding: 0 20px;
 }
 
-/* Logo Styling */
 .header-logo {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .header-logo img {
-    width: 60px;
-    margin-right: 10px;
+  width: 60px;
 }
 
 .header-logo p {
-    font-size: 20px;
-    font-weight: 600;
-    margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
 }
 
-/* Navigation styling */
 .header-nav {
-    display: flex;
-    gap: 25px;
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  padding-right: 10px;
 }
 
 .header-nav a {
-    color: hsl(0, 0%, 100%);
-    font-size: 15px;
-    text-decoration: none;
-    transition: color 0.3s linear;
+  color: white;
+  font-size: 15px;
+  text-decoration: none;
+  transition: color 0.3s linear;
 }
 
-/* Hover effect for header navigation */
 .header-nav a:hover {
-    color: hsl(44, 100%, 46%); /* Gold */
+  color: hsl(44, 100%, 46%);
 }
 
 /* heading */
@@ -164,104 +162,93 @@ h2 {
   }
 }
 
-/* Footer Styling */
+
+/* Footer */
 .footer {
-    background-color: hsl(340, 55%, 26%); /* Maroon */
-    color: hsl(0, 0%, 100%); /* White */
-    padding: 20px 0;
-    text-align: center;
-    width: 100%;
-    position: relative;
+  background-color: hsl(340, 55%, 26%);
+  color: white;
+  padding: 30px 0;
+  text-align: center;
+  width: 100%;
+  position: relative;
 }
 
 .footer-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    max-width: 1000px;
-    margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Prevents stacking allows wrapping if needed */
+  max-width: 1000px;
+  margin: auto;
+  padding: 0 20px;
 }
 
-/* Footer links */
 .footer-info {
-    display: flex;
-    gap: 25px;
-    padding-left: 20px;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
 .footer-info a {
   color: white;
-  margin: 0 10px;
   text-decoration: none;
+  font-size: 15px;
+  transition: color 0.3s linear;
   cursor: pointer;
 }
 
-/* Hover effect for footer links */
 .footer-info a:hover {
-    color: hsl(44, 100%, 46%); /* Gold */
+  color: hsl(44, 100%, 46%);
 }
 
 .footer-logo {
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  flex: 1 1 100%;
 }
 
-/* Footer logo image */
 .footer-logo img {
-    width: 60px;
+  width: 60px;
 }
 
 .footer-logo p {
-    font-size: 20px;
-    font-weight: 600;
-    margin-top: 6px;
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 6px;
 }
 
-/* Social icons */
 .footer-socials {
-    display: flex;
-    gap: 20px;
-    padding-right: 20px;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
 }
 
 .footer-socials img {
-    width: 32px;
-    height: 32px;
+  width: 32px;
+  height: 32px;
 }
 
-/* Move copyright to bottom right */
 .footer-copyright {
-    font-size: 15px;
-    position: absolute;
-    bottom: 5px;
-    right: 20px;
+  font-size: 15px;
+  position: absolute;
+  bottom: 5px;
+  right: 20px;
+  font-style: italic;
 }
 
-/* Popup window styles */
-.popup-window {
-    display: none; /* Hides the windows by default */
-    position: fixed; /* Same position no matter the screen dimensions */
-    top: 0; /* Fixes window in the center of the screen */
-    left: 0;
-    width: 100%; /* Sets window sizing */
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Dark, semi transparent backround to bring focus to popup window */
-    justify-content: center; /* Keeps window centered */
-    align-items: center;
-}
-
+/* Popup Overlays */
 .popup-overlay {
-  display: none; /* Hidden by default */
+  display: none;
   position: fixed;
   top: 0; left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6); /* Dim background */
+  background: rgba(0, 0, 0, 0.6);
   justify-content: center;
   align-items: center;
   z-index: 1000;
@@ -273,15 +260,15 @@ h2 {
   padding: 25px;
   width: 90%;
   max-width: 400px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
   position: relative;
   text-align: center;
 }
 
-/* Header of popup */
 .popup-content h2 {
   margin-top: 0;
   color: hsl(340, 55%, 26%);
+  font-size: 24px;
 }
 
 .popup-content p {
@@ -299,7 +286,33 @@ h2 {
 }
 
 .close-popup:hover {
-    color: hsl(44, 100%, 46%); /* Gold */
+  color: hsl(44, 100%, 46%);
+}
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+  .header-container,
+  .footer-container {
+    flex-wrap: wrap; /* Keep horizontal flow */
+    justify-content: space-between;
+    padding: 0 10px;
+  }
+
+  .header-nav,
+  .footer-info,
+  .footer-socials {
+    gap: 15px;
+  }
+
+  .footer-logo {
+    margin-top: 10px;
+  }
+
+  .footer-copyright {
+    position: static;
+    margin-top: 20px;
+    text-align: center;
+  }
 }
 
 ection {
