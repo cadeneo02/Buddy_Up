@@ -202,9 +202,13 @@ h2 {
     color: hsl(44, 100%, 46%); /* Gold */
 }
 
-/* Footer logo */
 .footer-logo {
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex: 1 1 100%;
 }
 
 /* Footer logo image */
