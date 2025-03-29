@@ -106,26 +106,34 @@ function loadAppointments() {
     updateCalendar(currentMonth, currentYear);
 }
 
-// Function to show popup when a footer info is clicked
-document.querySelectorAll('.popup-trigger').forEach(trigger => {
-    trigger.addEventListener('click', (event) => { //Sets listener to monitor for click bu user
-        event.preventDefault(); // Prevents default link behavior
-        let popupId = trigger.getAttribute('data-popup'); //attatches popuo function
-        let popup = document.getElementById(popupId);
-        if (popup) {
-            popup.style.display = 'flex'; // Shows the popup
-        }
+  // Open popup
+  document.querySelectorAll(".popup-trigger").forEach(trigger => {
+    trigger.addEventListener("click", event => {
+      event.preventDefault();
+      const popupId = trigger.getAttribute("data-popup");
+      const popup = document.getElementById(popupId);
+      if (popup) {
+        popup.style.display = "flex";
+      }
     });
-});
+  });
 
-// Function to close popup when 'X' is clicked
-document.querySelectorAll('.close-popup').forEach(closeBtn => { // Same functionality as the last function, but for close instead of open
-    closeBtn.addEventListener('click', () => {
-        let popup = closeBtn.closest('.popup-window');
-        if (popup) {
-            popup.style.display = 'none'; // Hides popup
-        }
+  // Close popup via close button
+  document.querySelectorAll(".close-popup").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const popup = btn.closest(".popup-overlay");
+      popup.style.display = "none";
     });
+  });
+
+ // Close popup by clicking outside
+  document.querySelectorAll(".popup-overlay").forEach(overlay => {
+    overlay.addEventListener("click", e => {
+      if (e.target === overlay) {
+        overlay.style.display = "none";
+      }
+    });
+  });
 });
 
 // Social media links open in new tab
@@ -145,18 +153,6 @@ function setupNavigation() {
         navLink.href = "#";
     });
 }
-
-
-// Social media links open in new tab
-document.socialSelector('.footer-socials a').forEach(icon => {
-    icon.addEventListener('click', (event) => {
-        event.preventDefault(); // Prevent default navigation
-        let url = icon.getAttribute('href');
-        if (url) {
-            window.open(url, 'new_window'); // Open link
-        }
-    });
-});
 
 document.addEventListener("DOMContentLoaded", function() {
     loadFavorites();
