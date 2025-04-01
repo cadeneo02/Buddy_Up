@@ -250,3 +250,28 @@ function copyLink(listingId) {
             favoriteContainer.appendChild(listingElement);
         }
     });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const toggleButton = document.getElementById("theme-toggle");
+  const body = document.body;
+
+  // Check user preference from localStorage
+  if (localStorage.getItem("theme") === "dark") {
+    body.classList.add("dark-mode");
+    toggleButton.textContent = "☀️ Light Mode";
+  }
+
+  // Toggle theme on button click
+  toggleButton.addEventListener("click", function () {
+    body.classList.toggle("dark-mode");
+
+    // Save preference to localStorage
+    if (body.classList.contains("dark-mode")) {
+      localStorage.setItem("theme", "dark");
+      toggleButton.textContent = "☀️ Light Mode";
+    } else {
+      localStorage.setItem("theme", "light");
+      toggleButton.textContent = "🌙 Dark Mode";
+    }
+  });
+});
