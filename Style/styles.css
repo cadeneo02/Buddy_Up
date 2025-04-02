@@ -103,6 +103,12 @@ h2 {
   margin: 0 auto;
 }
 
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  .search-hero {
+    padding: 2rem 1rem; /* Further reduced padding */
+  }
+
 .search-box {
   display: flex;
   align-items: center;
