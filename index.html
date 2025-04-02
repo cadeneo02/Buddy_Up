@@ -18,25 +18,125 @@
     />
   </head>
   <body>
-    
- <!-- Header Section -->
-  <header class="header">
-    <div class="header-container">
-      <div class="header-logo">
-        <img src="Media/Buddy_Up_Logo.PNG" alt="Buddy Up Logo">
-        <p>Buddy Up</p>
-      </div>
-      <nav class="header-nav">
-        <button id="theme-toggle">🌙 Dark Mode</button>
-        <a href="#">Home</a>
-        <a href="#">Roommates</a>
-        <a href="#">Account</a>
-      </nav>
+
+    <!-- Header Section -->
+<header class="header">
+  <div class="header-container">
+    <div class="header-logo">
+      <img src="Media/Buddy_Up_Logo.PNG" alt="Buddy Up Logo">
+      <p>Buddy Up</p>
     </div>
-  </header>
-    
+    <nav class="header-nav">
+      <a href="index.html">Home</a>
+      <a href="roomates.html">Roommates</a>
+      <a href="housing.html">Housing</a>
+      <a href="account.html">Account</a>
+      <button id="theme-toggle">☼</button>
+    </nav>
+  </div>
+</header>
+
     <!-- Main Content -->
     <main class="main">
+      <section class="search-hero">
+        <div class="search-container">
+          <h1>Find Roommates & Housing</h1>
+          <div class="search-wrapper">
+            <div class="search-box">
+              <input 
+                type="text" 
+                id="search-input" 
+                placeholder="Enter location, university, or housing type..."
+                aria-label="Search for roommates and housing"
+              >
+              <button class="search-button">
+                <i class="fas fa-search"></i>
+                Search
+              </button>
+            </div>
+            <div class="search-filters">
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-container box">
+        <h2>Featured People</h2>
+        <div class="review-container">
+          <article class="review-box">
+            <div class="review-img-container">
+              <img
+                src="./Media/stock-image-one.jpg"
+                alt="headshot image of a student"
+                class="article-img"
+              />
+            </div>
+            <h4 class="review-heading">Person 1</h4>
+            <div class="review-stars">
+            </div>
+            <p class="review-para">
+              I rented a studio in one of their buildings and it has been one of
+              my best experiences so far. The utilities are embedded in the rent
+              so you don't have to worry about unexpected expense.
+            </p>
+          </article>
+          <article class="review-box">
+            <div class="review-img-container">
+              <img
+                src="./Media/stock-image-one.jpg"
+                alt="headshot image of a student"
+                class="article-img"
+              />
+            </div>
+            <h4 class="review-heading">Person 2</h4>
+            <div class="review-stars">
+            </div>
+            <p class="review-para">
+              I rented a studio in one of their buildings and it has been one of
+              my best experiences so far. The utilities are embedded in the rent
+              so you don't have to worry about unexpected expense.
+            </p>
+          </article>
+          <article class="review-box">
+            <div class="review-img-container">
+              <img
+                src="./Media/stock-image-one.jpg"
+                alt="headshot image of a student"
+                class="article-img"
+              />
+            </div>
+            <h4 class="review-heading">Person 3</h4>
+            <div class="review-stars">
+            </div>
+            <p class="review-para">
+              I rented a studio in one of their buildings and it has been one of
+              my best experiences so far. The utilities are embedded in the rent
+              so you don't have to worry about unexpected expense.
+            </p>
+          </article>
+          <article class="review-box">
+            <div class="review-img-container">
+              <img
+                src="./Media/stock-image-one.jpg"
+                alt="headshot image of a student"
+                class="article-img"
+              />
+            </div>
+            <h4 class="review-heading">Person 4</h4>
+            <div class="review-stars">
+            </div>
+            <p class="review-para">
+              I rented a studio in one of their buildings and it has been one of
+              my best experiences so far. The utilities are embedded in the rent
+              so you don't have to worry about unexpected expense.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+
       <section class="section-container">
         <h2>Featured Listings</h2>
         <div class="listings">
@@ -114,144 +214,13 @@
         </select>
 
         <button id="clear-favorites" onclick="clearAllFavorites()">
-          ❌ Remove All Favorites
+          Remove All Favorites
         </button>
 
         <div id="favorite-listings">
           <p>No favorites yet.</p>
         </div>
       </section>
-
-      <section class="section-container">
-        <h2>Book An Appointment</h2>
-        <div class="Appointment">
-          <div>
-            <button onclick="prevMonth()">Previous</button>
-            <span id="month-year"></span>
-            <button onclick="nextMonth()">Next</button>
-          </div>
-
-          <!-- Calendar Table -->
-          <table id="calendar">
-            <thead>
-              <tr>
-                <th>Sun</th>
-                <th>Mon</th>
-                <th>Tue</th>
-                <th>Wed</th>
-                <th>Thu</th>
-                <th>Fri</th>
-                <th>Sat</th>
-              </tr>
-            </thead>
-            <tbody></tbody>
-          </table>
-
-          <!-- Appointment Booking Form -->
-          <h2>Book an Appointment</h2>
-          <label for="event-date">Selected Date:</label>
-          <input type="text" id="event-date" readonly />
-
-          <label for="event-time">Select Time:</label>
-          <input type="time" id="event-time" />
-
-          <button onclick="bookAppointment()">Reserve</button>
-        </div>
-      </section>
-      <section class="section-container box">
-        <h2>Reviews</h2>
-        <div class="review-container">
-          <article class="review-box">
-            <div class="review-img-container">
-              <img
-                src="./Media/stock-image-one.jpg"
-                alt="headshot image of a student"
-                class="article-img"
-              />
-            </div>
-            <h4 class="review-heading">Great! No payment for utilities!</h4>
-            <div class="review-stars">
-              <div class="stars"><i class="star fa-solid fa-star"></i></div>
-              <div class="stars"><i class="star fa-solid fa-star"></i></div>
-              <div class="stars"><i class="star fa-solid fa-star"></i></div>
-              <div class="stars"><i class="star fa-solid fa-star"></i></div>
-              <div class="stars"><i class="star fa-solid fa-star"></i></div>
-            </div>
-            <p class="review-para">
-              I rented a studio in one of their buildings and it has been one of
-              my best experiences so far. The utilities are embedded in the rent
-              so you don't have to worry about unexpected expense.
-            </p>
-          </article>
-          <article class="review-box">
-            <div class="review-img-container">
-              <img
-                src="./Media/stock-image-one.jpg"
-                alt="headshot image of a student"
-                class="article-img"
-              />
-            </div>
-            <h4 class="review-heading">Great! No payment for utilities!</h4>
-            <div class="review-stars">
-              <div class="stars"><i class="star fa-solid fa-star"></i></div>
-              <div class="stars"><i class="star fa-solid fa-star"></i></div>
-              <div class="stars"><i class="star fa-solid fa-star"></i></div>
-              <div class="stars"><i class="star fa-solid fa-star"></i></div>
-              <div class="stars"><i class="star fa-solid fa-star"></i></div>
-            </div>
-            <p class="review-para">
-              I rented a studio in one of their buildings and it has been one of
-              my best experiences so far. The utilities are embedded in the rent
-              so you don't have to worry about unexpected expense.
-            </p>
-          </article>
-          <article class="review-box">
-            <div class="review-img-container">
-              <img
-                src="./Media/stock-image-one.jpg"
-                alt="headshot image of a student"
-                class="article-img"
-              />
-            </div>
-            <h4 class="review-heading">Great! No payment for utilities!</h4>
-            <div class="review-stars">
-              <div class="stars"><i class="star fa-solid fa-star"></i></div>
-              <div class="stars"><i class="star fa-solid fa-star"></i></div>
-              <div class="stars"><i class="star fa-solid fa-star"></i></div>
-              <div class="stars"><i class="star fa-solid fa-star"></i></div>
-              <div class="stars"><i class="star fa-solid fa-star"></i></div>
-            </div>
-            <p class="review-para">
-              I rented a studio in one of their buildings and it has been one of
-              my best experiences so far. The utilities are embedded in the rent
-              so you don't have to worry about unexpected expense.
-            </p>
-          </article>
-          <article class="review-box">
-            <div class="review-img-container">
-              <img
-                src="./Media/stock-image-one.jpg"
-                alt="headshot image of a student"
-                class="article-img"
-              />
-            </div>
-            <h4 class="review-heading">Great! No payment for utilities!</h4>
-            <div class="review-stars">
-              <div class="stars"><i class="star fa-solid fa-star"></i></div>
-              <div class="stars"><i class="star fa-solid fa-star"></i></div>
-              <div class="stars"><i class="star fa-solid fa-star"></i></div>
-              <div class="stars"><i class="star fa-solid fa-star"></i></div>
-              <div class="stars"><i class="star fa-solid fa-star"></i></div>
-            </div>
-            <p class="review-para">
-              I rented a studio in one of their buildings and it has been one of
-              my best experiences so far. The utilities are embedded in the rent
-              so you don't have to worry about unexpected expense.
-            </p>
-          </article>
-        </div>
-      </section>
-    </main>
 
  <!-- Footer Section -->
   <footer class="footer">
