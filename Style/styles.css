@@ -135,6 +135,7 @@ h2 {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  transition: color 0.3s linear;
 }
 
 .search-button:hover {
@@ -346,6 +347,7 @@ h2 {
   font-size: 24px;
   cursor: pointer;
   color: hsl(340, 85%, 29%);
+  transition: color 0.3s linear;
 }
 
 .close-popup:hover {
@@ -511,6 +513,7 @@ button {
   border: none;
   cursor: pointer;
   border-radius: 5px;
+  transition: color 0.3s linear;
 }
 
 button:hover {
@@ -569,6 +572,7 @@ button {
   border: none;
   cursor: pointer;
   border-radius: 5px;
+  transition: color 0.3s linear;
 }
 
 button:hover {
@@ -584,6 +588,7 @@ button:hover {
   margin-top: 5px;
   font-weight: bold;
   border-radius: 5px;
+  transition: color 0.3s linear;
 }
 
 .favorite-btn:hover {
@@ -633,6 +638,7 @@ button:hover {
   padding: 5px;
   cursor: pointer;
   border-radius: 5px;
+  transition: color 0.3s linear;
 }
 
 .favorite-item button:hover {
