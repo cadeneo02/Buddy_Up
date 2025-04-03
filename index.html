@@ -40,30 +40,24 @@
     <main class="main">
       <section class="search-hero">
         <div class="search-container">
-          <h1>Find Roommates & Housing</h1>
+          <h1>Find Roomates & Housing</h1>
+          <div class="subtext-container">
+            <p class="subtext">Connect with other Loyola students and find your ideal home.</p>
+          </div>
           <div class="search-wrapper">
             <div class="search-box">
               <input 
                 type="text" 
                 id="search-input" 
-                placeholder="Enter location, university, or housing type..."
-                aria-label="Search for roommates and housing"
-              >
-              <button class="search-button">
-                <i class="fas fa-search"></i>
-                Search
-              </button>
-            </div>
-            <div class="search-filters">
-
+                placeholder="Enter a location, price, or housing type..."
+                />
               </div>
-            </div>
           </div>
         </div>
       </section>
 
       <section class="section-container box">
-        <h2>Featured People</h2>
+        <h2>Student Community</h2>
         <div class="review-container">
           <article class="review-box">
             <div class="review-img-container">
@@ -77,9 +71,9 @@
             <div class="review-stars">
             </div>
             <p class="review-para">
-              I rented a studio in one of their buildings and it has been one of
-              my best experiences so far. The utilities are embedded in the rent
-              so you don't have to worry about unexpected expense.
+              Looking for a roomate! I have a 2 bedroom in Rogers Park, 
+              about a 5 minute walk to Lake Shore campus. 
+              If anyone here is interested, feel free to DM me!
             </p>
           </article>
           <article class="review-box">
@@ -94,9 +88,9 @@
             <div class="review-stars">
             </div>
             <p class="review-para">
-              I rented a studio in one of their buildings and it has been one of
-              my best experiences so far. The utilities are embedded in the rent
-              so you don't have to worry about unexpected expense.
+              Looking for a roomate! I have a 2 bedroom in Rogers Park, 
+              about a 5 minute walk to Lake Shore campus. 
+              If anyone here is interested, feel free to DM me!
             </p>
           </article>
           <article class="review-box">
@@ -111,9 +105,9 @@
             <div class="review-stars">
             </div>
             <p class="review-para">
-              I rented a studio in one of their buildings and it has been one of
-              my best experiences so far. The utilities are embedded in the rent
-              so you don't have to worry about unexpected expense.
+              Looking for a roomate! I have a 2 bedroom in Rogers Park, 
+              about a 5 minute walk to Lake Shore campus. 
+              If anyone here is interested, feel free to DM me!
             </p>
           </article>
           <article class="review-box">
@@ -128,12 +122,13 @@
             <div class="review-stars">
             </div>
             <p class="review-para">
-              I rented a studio in one of their buildings and it has been one of
-              my best experiences so far. The utilities are embedded in the rent
-              so you don't have to worry about unexpected expense.
+              Looking for a roomate! I have a 2 bedroom in Rogers Park, 
+              about a 5 minute walk to Lake Shore campus. 
+              If anyone here is interested, feel free to DM me!
             </p>
           </article>
         </div>
+        <button id="see-more-button" class="see-more-button">See More</button>
       </section>
     </main>
 
@@ -153,7 +148,6 @@
             >
               ⭐ <span>Save</span>
             </button>
-            <p class="favorite-count" id="fav-count-1">❤️ 0 Favorites</p>
             <button class="share-btn" onclick="shareListing(1)">
               🔗 Share
             </button>
@@ -173,7 +167,6 @@
             >
               ⭐ <span>Save</span>
             </button>
-            <p class="favorite-count" id="fav-count-2">❤️ 0 Favorites</p>
             <button class="share-btn" onclick="shareListing(2)">
               🔗 Share
             </button>
@@ -193,33 +186,13 @@
             >
               ⭐ <span>Save</span>
             </button>
-            <p class="favorite-count" id="fav-count-3">❤️ 0 Favorites</p>
             <button class="share-btn" onclick="shareListing(3)">
               🔗 Share
             </button>
             <button class="copy-btn" onclick="copyLink(3)">Copy Link</button>
           </article>
         </div>
-      </section>
-
-      <section class="section-container">
-        <h2>Your Favorite Listings</h2>
-
-        <label for="sort-favorites">Sort By:</label>
-        <select id="sort-favorites" onchange="sortFavorites()">
-          <option value="newest">Newest</option>
-          <option value="title">Title (A-Z)</option>
-          <option value="price">Price (Low to High)</option>
-          <option value="most-favorited">Most Favorited</option>
-        </select>
-
-        <button id="clear-favorites" onclick="clearAllFavorites()">
-          ❌ Remove All Favorites
-        </button>
-
-        <div id="favorite-listings">
-          <p>No favorites yet.</p>
-        </div>
+        <button id="see-more-button" class="see-more-button">See More</button>
       </section>
 
  <!-- Footer Section -->
@@ -251,7 +224,7 @@
     <div class="popup-content">
       <span class="close-popup">&times;</span>
       <h2>About Buddy Up</h2>
-      <p>Buddy Up is a platform that helps you find housing and roommates tailored to your lifestyle, interests, and education status.</p>
+      <p>Buddy Up is a platform that helps you connect with other Loyola students & find the home that is best tailored to your needs.</p>
     </div>
   </div>
 
