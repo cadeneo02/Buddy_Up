@@ -1396,3 +1396,123 @@
   .header-nav a.active {
     color: hsl(44, 100%, 46%);
   }
+
+ /* Scroll Effect Styles */
+
+/* Fade In Animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Header Scroll Effects */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: all 0.4s ease;
+}
+
+.header-scrolled {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+.header-hidden {
+  transform: translateY(-100%);
+}
+
+/* Back to Top Button */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #333;
+  color: white;
+  font-size: 24px;
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease, background-color 0.3s ease;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back-to-top:hover {
+  background-color: #555;
+}
+
+.back-to-top.show {
+  opacity: 1;
+}
+
+/* Scroll Progress Bar */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(to right, #4CAF50, #8BC34A);
+  z-index: 9999;
+  width: 0%;
+  transition: width 0.1s ease;
+}
+
+/* Image hover effect in listings */
+.listings article img {
+  transition: transform 0.3s ease, filter 0.3s ease;
+  backface-visibility: hidden;
+}
+
+.listings article:hover img {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+/* Animation for review boxes */
+.review-box {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.review-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark mode transition */
+body {
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Section container reveal animation */
+.section-container {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  .fade-in {
+    transform: translateY(15px);
+  }
+  
+  .back-to-top {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    bottom: 20px;
+    right: 20px;
+  }
+}
