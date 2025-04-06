@@ -105,9 +105,14 @@
  .search-hero h1 {
    color: black;
    font-size: 2.5rem;
-   margin-bottom: 3rem;
+   margin-bottom: 1rem;
  }
  
+ .search-hero p {
+  font-size: 1rem;
+  margin-bottom: 3rem;
+}
+
  .search-wrapper {
    max-width: 800px;
    margin: 0 auto;
@@ -133,7 +138,7 @@
    min-width: 300px;
    border-radius: 20px;
  }
- 
+
  /* Reviews Styling */
  .review-container {
    padding-top: 2rem;
@@ -160,6 +165,7 @@
    left: 50%;
    transform: translate(-50%, -50%);
  }
+
  .article-img {
    width: 100%;
    height: 100%;
@@ -362,15 +368,6 @@
    }
  }
  
- ection {
-   max-width: 800px;
-   margin: 20px auto;
-   padding: 20px;
-   background: white;
-   border-radius: 8px;
-   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
- }
- 
  input[type="text"] {
    width: 100%;
    padding: 10px;
@@ -405,8 +402,8 @@
    border-collapse: collapse;
    margin-top: 20px;
  }
- th,
- td {
+
+ th,td {
    border: 1px solid black;
    width: 14.28%;
    height: 80px;
@@ -414,6 +411,7 @@
    position: relative;
    cursor: pointer;
  }
+
  .event {
    background-color: hsl(340, 55%, 26%);
    padding: 5px;
@@ -531,8 +529,8 @@
  
  /* Listing Detail Page */
  #listing-detail-section {
-   text-align: center;
-   padding: 20px;
+   text-align: left;
+   padding: 20020px;
    max-width: 600px;
    margin: auto;
    background: white;
@@ -690,70 +688,6 @@
     color: hsl(44, 100%, 46%); /* Gold */
   }
   
-  .search-hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.1)),
-                url('../Media/housing-bg.jpg');
-    background-size: cover;
-    background-position: center;
-    padding: 30px;
-    text-align: center;
-  }
-  
-  .search-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding-bottom: 2rem;
-  }
-  
-  .search-hero h1 {
-    color: black;
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
-  }
-  
-  .search-wrapper {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
-  .search-box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    background: white;
-    padding: 0.5rem;
-    border-radius: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  #search-input {
-    flex: 1;
-    padding: 1rem 1.5rem;
-    border: none;
-    font-size: 1rem;
-    outline: none;
-    min-width: 300px;
-    border-radius: 10px;
-  }
-  
-  .search-button {
-    background-color: hsl(340, 55%, 26%);
-    color: white;
-    border: none;
-    padding: 1rem 2rem;
-    border-radius: 15px;
-    cursor: pointer;
-    font-size: 15px;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-  
-  .search-button:hover {
-    background-color: hsl(44, 100%, 46%)
-  }
-  
   /* Reviews Styling */
   .review-container {
     padding-top: 2rem;
@@ -766,7 +700,7 @@
   .review-box {
     width: 100%;
     position: relative;
-    margin-bottom: 4rem;
+    margin-bottom: 0rem;
     margin-right: auto;
     margin-left: auto;
   }
@@ -790,11 +724,6 @@
     text-align: left;
     margin-top: 1.5rem;
     padding: 0;
-  }
-  .review-stars {
-    text-align: left;
-    display: flex;
-    gap: 0.75rem;
   }
 
   .review-para {
@@ -835,13 +764,14 @@
   }
   
   .see-more-button {
-    font-size: 1.2em; /* Increase the font size */
-    padding: 10px 20px; /* Add padding to make the button bigger */
-    margin-top: 10px; /* Reduce the spacing between the button and the content above it */
-    display: block; /* Make the button a block element */
-    width: fit-content; /* Adjust the width to fit the content */
-    margin-left: auto; /* Center the button horizontally */
-    margin-right: auto; /* Center the button horizontally */
+    font-size: 1.2em;
+    padding: 10px 20px;
+    margin-top: 25px;
+    margin-bottom: 40px;
+    display: block;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto
   }
 
   /* Footer */
@@ -996,15 +926,6 @@
     }
   }
   
-  ection {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
   input[type="text"] {
     width: 100%;
     padding: 10px;
@@ -1018,6 +939,7 @@
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
   }
+
   article {
     background: white;
     padding: 15px;
@@ -1396,6 +1318,18 @@
 .listings article img {
   transition: transform 0.3s ease, filter 0.3s ease;
   backface-visibility: hidden;
+}
+
+.listings article h3 {
+  color: black;
+  text-align: center;
+  text-decoration: none;
+}
+
+.listings article p {
+  color: black;
+  text-align: center;
+  text-decoration: none;
 }
 
 .listings article:hover img {
