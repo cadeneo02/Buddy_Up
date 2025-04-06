@@ -50,10 +50,13 @@
                 type="text" 
                 id="search-input" 
                 placeholder="Enter a location, price, or housing type..."
-                />
-              </div>
+                onkeydown="if(event.key === 'Enter') searchListings()"
+              />
+            </div>
           </div>
         </div>
+        <!-- Search bar section in index.html -->
+</div>
       </section>
 
       <section class="section-container box">
@@ -62,12 +65,12 @@
           <article class="review-box">
             <div class="review-img-container">
               <img
-                src="./Media/stock-image-one.jpg"
+                src="./Media/Alyssa.jpg"
                 alt="headshot image of a student"
                 class="article-img"
               />
             </div>
-            <h4 class="review-heading">Person 1</h4>
+            <h4 class="review-heading">Alyssa</h4>
             <div class="review-stars">
             </div>
             <p class="review-para">
@@ -79,56 +82,53 @@
           <article class="review-box">
             <div class="review-img-container">
               <img
-                src="./Media/stock-image-one.jpg"
+                src="./Media/John.jpg"
                 alt="headshot image of a student"
                 class="article-img"
               />
             </div>
-            <h4 class="review-heading">Person 2</h4>
+            <h4 class="review-heading">John</h4>
             <div class="review-stars">
             </div>
             <p class="review-para">
-              Looking for a roomate! I have a 2 bedroom in Rogers Park, 
-              about a 5 minute walk to Lake Shore campus. 
-              If anyone here is interested, feel free to DM me!
+              Me and my friend are looking for one more roomate for our 3 bedroom apartment.
+              We are right by Granville Station, 5 minutes from campus.
             </p>
           </article>
           <article class="review-box">
             <div class="review-img-container">
               <img
-                src="./Media/stock-image-one.jpg"
+                src="./Media/Mason.jpg"
                 alt="headshot image of a student"
                 class="article-img"
               />
             </div>
-            <h4 class="review-heading">Person 3</h4>
+            <h4 class="review-heading">Mason</h4>
             <div class="review-stars">
             </div>
             <p class="review-para">
-              Looking for a roomate! I have a 2 bedroom in Rogers Park, 
-              about a 5 minute walk to Lake Shore campus. 
-              If anyone here is interested, feel free to DM me!
+              I found an apartment in Edgewater and am looking for two roomates.  
+              If anyone is interested, please let me know and I can send you the listing.
             </p>
           </article>
           <article class="review-box">
             <div class="review-img-container">
               <img
-                src="./Media/stock-image-one.jpg"
+                src="./Media/Katie.jpg"
                 alt="headshot image of a student"
                 class="article-img"
               />
             </div>
-            <h4 class="review-heading">Person 4</h4>
+            <h4 class="review-heading">Katie</h4>
             <div class="review-stars">
             </div>
             <p class="review-para">
-              Looking for a roomate! I have a 2 bedroom in Rogers Park, 
-              about a 5 minute walk to Lake Shore campus. 
-              If anyone here is interested, feel free to DM me!
+              Hello! I just transferred to Loyola and am looking for a roomate and apartment. 
+              If you would like to connect, feel to send me a message!
             </p>
           </article>
+          <button id="see-more-community" class="see-more-button" onclick="window.location.href='community.html'">See More</button>
         </div>
-        <button id="see-more-button" class="see-more-button">See More</button>
       </section>
     </main>
 
@@ -139,7 +139,7 @@
             <a href="listing-detail.html?id=1" class="listing-link">
               <img src="Media/image1.jpg" data-id="1" alt="Luxury Villa" />
               <h3>Luxury Villa</h3>
-              <p>$500,000 - 4 Beds, 3 Baths</p>
+              <p>4 Beds, 3 Baths - $500,000</p>
             </a>
             <button
               class="favorite-btn"
@@ -192,7 +192,7 @@
             <button class="copy-btn" onclick="copyLink(3)">Copy Link</button>
           </article>
         </div>
-        <button id="see-more-button" class="see-more-button">See More</button>
+        <button id="see-more-listings" class="see-more-button" onclick="window.location.href='listings.html'">See More</button>
       </section>
 
  <!-- Footer Section -->
