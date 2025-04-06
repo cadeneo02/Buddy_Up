@@ -1,51 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Defines character encoding for text -->
-    <meta charset="UTF-8" />
-    <!-- Responsive mobile design -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Sets webpage title -->
-    <title>Buddy Up</title>
-    <!-- Linking stylesheet -->
-    <link rel="stylesheet" href="./Style/styles.css" />
-    <!-- Link js -->
-    <script defer src="script.js"></script>
-    <!--Font-awesome link  -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    />
-  </head>
-  <body>
+<head>
+  <!-- Defines character encoding for text -->
+  <meta charset="UTF-8" />
+  <!-- Responsive mobile design -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Sets webpage title -->
+  <title>Buddy Up</title>
+  <!-- Linking stylesheet -->
+  <link rel="stylesheet" href="./Style/styles.css" />
+  <!-- Link js -->
+  <script defer src="script.js"></script>
+  <!--Font-awesome link  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+</head>
+<body>
 
-    <!-- Header Section -->
-<header class="header">
-  <div class="header-container">
-    <div class="header-logo">
-      <img src="Media/Buddy_Up_Logo.PNG" alt="Buddy Up Logo">
-      <p>Buddy Up</p>
+  <!-- Header Section -->
+  <header class="header">
+    <div class="header-container">
+      <div class="header-logo">
+        <img src="Media/Buddy_Up_Logo.PNG" alt="Buddy Up Logo">
+        <p>Buddy Up</p>
+      </div>
+      <nav class="header-nav">
+        <a href="index.html">Home</a>
+        <a href="listings.html">Listings</a>
+        <a href="community.html">Community</a>
+        <a href="account.html">Account</a>
+        <button id="theme-toggle">☼</button>
+      </nav>
     </div>
-    <nav class="header-nav">
-      <a href="index.html">Home</a>
-      <a href="listings.html">Listings</a>
-      <a href="community.html">Community</a>
-      <a href="account.html">Account</a>
-      <button id="theme-toggle">☼</button>
-    </nav>
-  </div>
-</header>
+  </header>
 
-    <!-- Main Content -->
-    <main class="main">
-      <section class="section-container">
-        <h1>Find Your Perfect House</h1>
-        <p>Content coming soon...</p>
+  <!-- Main Content -->
+  <main class="main">
+    <section class="filters-section">
+        <h2>Filter Listings</h2>
+        <div class="filter-group">
+          <label for="sort-price">Sort by Price:</label>
+          <select id="sort-price" onchange="sortListings()">
+            <option value="low-high">Low to High</option>
+            <option value="high-low">High to Low</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="filter-rooms">Room Amount:</label>
+          <input type="number" id="filter-rooms" oninput="filterListings()" placeholder="Enter room amount">
+        </div>
+        <div class="filter-group">
+          <label for="filter-bathrooms">Bathroom Amount:</label>
+          <input type="number" id="filter-bathrooms" oninput="filterListings()" placeholder="Enter bathroom amount">
+        </div>
+        <div class="filter-group">
+          <label for="filter-student-type">Student Type:</label>
+          <select id="filter-student-type" onchange="filterListings()">
+            <option value="">All</option>
+            <option value="undergraduate">Undergraduate</option>
+            <option value="graduate">Graduate</option>
+          </select>
+        </div>
       </section>
-    </main>
+    <section class="listings-container">
+      <h1>Find Your Perfect House</h1>
+      <div class="listings">
+        <article class="listing-item" data-price="500000" data-rooms="4" data-bathrooms="3" data-student-type="undergraduate">
+          <a href="listing-detail.html?id=1" class="listing-link">
+            <img src="Media/image1.jpg" data-id="1" alt="Luxury Villa" class="listing-img"/>
+            <h3>Luxury Villa</h3>
+            <p>4 Beds, 3 Baths</p>
+            <p>Undergraduate</p>
+            <p>$500,000</p>
+          </a>
+        </article>
+        <article class="listing-item" data-price="300000" data-rooms="2" data-bathrooms="2" data-student-type="graduate">
+          <a href="listing-detail.html?id=2" class="listing-link">
+            <img src="Media/image2.jpg" data-id="2" alt="Modern Apartment" class="listing-img"/>
+            <h3>Modern Apartment</h3>
+            <p>2 Beds, 2 Baths</p>
+            <p>Graduate</p>
+            <p>$300,000</p>
+          </a>
+        </article>
+        <article class="listing-item" data-price="250000" data-rooms="3" data-bathrooms="2" data-student-type="undergraduate">
+          <a href="listing-detail.html?id=3" class="listing-link">
+            <img src="Media/image3.jpg" data-id="3" alt="Cozy Cottage" class="listing-img"/>
+            <h3>Cozy Cottage</h3>
+            <p>3 Beds, 2 Baths</p>
+            <p>Undergraduate</p>
+            <p>$250,000</p>
+          </a>
+        </article>
+      </div>
+    </section>
+  </main>
 
-<!-- Footer Section -->
-<footer class="footer">
+  <!-- Footer Section -->
+  <footer class="footer">
     <div class="footer-container">
       <div class="footer-info">
         <a href="#" class="popup-trigger" data-popup="about-popup">About</a>
@@ -68,7 +119,7 @@
     <p class="footer-copyright">©2025 Buddy Up</p>
   </footer>
 
- <!-- Popup Overlays -->
+  <!-- Popup Overlays -->
   <div class="popup-overlay" id="about-popup">
     <div class="popup-content">
       <span class="close-popup">&times;</span>
@@ -92,8 +143,8 @@
       <p>Email: support@buddyup.com<br>Phone: (123) 456-7890</p>
     </div>
   </div>
-    
-    <!-- Loads js -->
-    <script type="text/javascript" src="./Scripts/script.js"></script>
-  </body>
+
+  <!-- Loads js -->
+  <script type="text/javascript" src="./Scripts/script.js"></script>
+</body>
 </html>
