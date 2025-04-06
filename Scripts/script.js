@@ -293,3 +293,16 @@ function setActiveNavLink() {
 document.addEventListener('DOMContentLoaded', () => {
     setActiveNavLink();
 });
+
+function searchListings() {
+    const searchInput = document.getElementById("search-input").value.toLowerCase();
+    const listings = document.querySelectorAll(".listing-item");
+    listings.forEach(listing => {
+      const listingText = listing.innerText.toLowerCase();
+      if (listingText.includes(searchInput)) {
+        listing.style.display = "block";
+      } else {
+        listing.style.display = "none";
+      }
+    });
+  }
