@@ -3,6 +3,10 @@ document.addEventListener("DOMContentLoaded", function () {
     handlePopups();
     setupNavigation();
     loadAppointments();
+    loadFavorites();
+    updateFavoriteButtons();
+    updateFavoriteCounts();
+    setActiveNavLink();
 });
 
 let currentMonth = new Date().getMonth();
@@ -155,12 +159,6 @@ function setupNavigation() {
     });
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-    loadFavorites();
-    updateFavoriteButtons();
-    updateFavoriteCounts();
-});
-
 // Function to toggle favorite listings
 function toggleFavorite(listingId) {
     let favorites = JSON.parse(localStorage.getItem("favoriteListings")) || [];
@@ -193,33 +191,6 @@ function updateFavoriteCounts() {
     });
 }
 
-// Function to sort favorites
-function sortFavorites() {
-    let sortOption = document.getElementById("sort-favorites").value;
-    let favorites = JSON.parse(localStorage.getItem("favoriteListings")) || [];
-    let favoriteCounts = JSON.parse(localStorage.getItem("favoriteCounts")) || {};
-
-    const listings = {
-        1: { title: "Luxury Villa", price: 500000, image: "Media/image1.jpg", count: favoriteCounts[1] || 0 },
-        2: { title: "Modern Apartment", price: 300000, image: "Media/image2.jpg", count: favoriteCounts[2] || 0 },
-        3: { title: "Cozy Cottage", price: 250000, image: "Media/image3.jpg", count: favoriteCounts[3] || 0 }
-    };
-
-    let favoriteList = favorites.map(id => ({ id, ...listings[id] }));
-
-    if (sortOption === "title") {
-        favoriteList.sort((a, b) => a.title.localeCompare(b.title));
-    } else if (sortOption === "price") {
-        favoriteList.sort((a, b) => a.price - b.price);
-    } else if (sortOption === "most-favorited") {
-        favoriteList.sort((a, b) => b.count - a.count); // Sort by most favorited
-    } else {
-        favoriteList.reverse(); // Newest first (default order)
-    }
-
-    displayFavorites(favoriteList);
-}
-
 // Function to copy listing link
 function copyLink(listingId) {
     const url = window.location.origin + `/listing-detail.html?id=${listingId}`;
@@ -230,10 +201,36 @@ function copyLink(listingId) {
     });
 }
 
+function displayFavorites(favorites) {
+    const favoriteContainer = document.getElementById("favorite-container");
+    favoriteContainer.innerHTML = "";
+
+    favorites.forEach(favorite => {
+        let listingElement = document.createElement("div");
+        listingElement.classList.add("favorite-item");
+        listingElement.innerHTML = `
+            <img src="${favorite.image}" alt="${favorite.title}">
+            <h4>${favorite.title}</h4>
+            <p>${favorite.price}</p>
+            <button onclick="toggleFavorite(${favorite.id})">❌ Remove</button>
+        `;
+        favoriteContainer.appendChild(listingElement);
+    });
+}
+
+function loadFavorites() {
+    const favoriteContainer = document.getElementById("favorite-container");
+    if (!favoriteContainer) return;
+
+    let favorites = JSON.parse(localStorage.getItem("favoriteListings")) || [];
+    let favoriteCounts = JSON.parse(localStorage.getItem("favoriteCounts")) || {};
+
     const listings = {
-        1: { title: "Luxury Villa", price: "$500,000", image: "Media/image1.jpg" },
-        2: { title: "Modern Apartment", price: "$300,000", image: "Media/image2.jpg" },
-        3: { title: "Cozy Cottage", price: "$250,000", image: "Media/image3.jpg" }
+        1: { title: "1400 W. Devon Avenue", price: "$1,175 /mo", image: "Media/1400WDevonAvenue.jpg" },
+        2: { title: "1135 W Sheridan Rd", price: "$2,599", image: "Media/1135WSheridanRd.jpg" },
+        3: { title: "6401 N Sheridan Rd, Chicago", price: "$2,355", image: "Media/6401NSheridanRd.jpg" },
+        4: { title: "6725 N Sheridan Rd", price: "$1,566", image: "Media/6725NSheridanRd.jpg" },
+        5: { title: "6565 N Lakewood Ave", price: "$1,650", image: "Media/6565NLakewoodAve.jpg" }
     };
 
     favorites.forEach(id => {
@@ -250,30 +247,63 @@ function copyLink(listingId) {
             favoriteContainer.appendChild(listingElement);
         }
     });
+}
 
-document.addEventListener("DOMContentLoaded", function () {
-  const toggleButton = document.getElementById("theme-toggle");
-  const body = document.body;
+document.addEventListener("DOMContentLoaded", function() {
+    const listings = [
+      {
+        id: 1,
+        title: "1400 W. Devon Avenue",
+        image: "Media/1400WDevonAvenue.jpg",
+        price: "$1,175 /mo",
+        description: "1 Bed, 1 Bath - Undergraduate",
+        address: "1400 W Devon Ave, Chicago, IL 60660"
+      },
+      {
+        id: 2,
+        title: "1135 W Sheridan Rd",
+        image: "Media/1135WSheridanRd.jpg",
+        price: "$2,599",
+        description: "2 Bed, 2 Bath - Graduate",
+        address: "1135 W Sheridan Rd, Chicago, IL 60660"
+      },
+      {
+        id: 3,
+        title: "6401 N Sheridan Rd, Chicago",
+        image: "Media/6401NSheridanRd.jpg",
+        price: "$2,355",
+        description: "2 Bed, 1 Bath - Undergraduate",
+        address: "6401 N Sheridan Rd, Chicago, IL 60626"
+      },
+      {
+        id: 4,
+        title: "6725 N Sheridan Rd",
+        image: "Media/6725NSheridanRd.jpg",
+        price: "$1,566",
+        description: "1 Bed, 1 Bath - Undergraduate",
+        address: "6725 N Sheridan Rd, Chicago, IL 60626"
+      },
+      {
+        id: 5,
+        title: "6565 N Lakewood Ave",
+        image: "Media/6565NLakewoodAve.jpg",
+        price: "$1,650",
+        description: "1 Bed, 1 Bath - Undergraduate",
+        address: "6725 N Sheridan Rd, Chicago, IL 60626"
+      }
+    ];
 
-  // Check user preference from localStorage
-  if (localStorage.getItem("theme") === "dark") {
-    body.classList.add("dark-mode");
-    toggleButton.textContent = "☀️ Light Mode";
-  }
+    const urlParams = new URLSearchParams(window.location.search);
+    const listingId = parseInt(urlParams.get("id"));
+    const listing = listings.find(listing => listing.id === listingId);
 
-  // Toggle theme on button click
-  toggleButton.addEventListener("click", function () {
-    body.classList.toggle("dark-mode");
-
-    // Save preference to localStorage
-    if (body.classList.contains("dark-mode")) {
-      localStorage.setItem("theme", "dark");
-      toggleButton.textContent = "☀️ Light Mode";
-    } else {
-      localStorage.setItem("theme", "light");
-      toggleButton.textContent = "🌙 Dark Mode";
+    if (listing) {
+      document.getElementById("listing-title").textContent = listing.title;
+      document.getElementById("listing-img").src = listing.image;
+      document.getElementById("listing-price").textContent = listing.price;
+      document.getElementById("listing-description").textContent = listing.description;
+      document.getElementById("listing-address").textContent = listing.address;
     }
-  });
 });
 
 function setActiveNavLink() {
@@ -293,16 +323,3 @@ function setActiveNavLink() {
 document.addEventListener('DOMContentLoaded', () => {
     setActiveNavLink();
 });
-
-function searchListings() {
-    const searchInput = document.getElementById("search-input").value.toLowerCase();
-    const listings = document.querySelectorAll(".listing-item");
-    listings.forEach(listing => {
-      const listingText = listing.innerText.toLowerCase();
-      if (listingText.includes(searchInput)) {
-        listing.style.display = "block";
-      } else {
-        listing.style.display = "none";
-      }
-    });
-  }
