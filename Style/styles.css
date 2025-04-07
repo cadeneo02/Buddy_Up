@@ -156,16 +156,15 @@
    margin-left: auto;
  }
  .review-img-container {
-   width: 4rem;
-   height: 4rem;
-   border: 3px solid #ebac00;
-   border-radius: 50%;
-   position: absolute;
-   top: 0;
-   left: 50%;
-   transform: translate(-50%, -50%);
- }
-
+  width: 4rem;
+  height: 4rem;
+  border: 3px solid #ebac00;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
  .article-img {
    width: 100%;
    height: 100%;
@@ -704,6 +703,12 @@
     margin-right: auto;
     margin-left: auto;
   }
+  .article-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+  }
   .review-img-container {
     width: 4rem;
     height: 4rem;
@@ -713,12 +718,6 @@
     top: 0;
     left: 50%;
     transform: translate(-50%, -50%);
-  }
-  .article-img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    object-fit: cover;
   }
   .review-heading {
     text-align: left;
@@ -1371,4 +1370,192 @@ body {
     bottom: 20px;
     right: 20px;
   }
+}
+
+.filters-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #ddd;
+}
+
+.filters-section h2 {
+  font-size: 20px;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.filter-group label {
+  margin-bottom: 5px;
+}
+
+.filter-group select, .filter-group input {
+  padding: 5px;
+  font-size: 14px;
+}
+
+.filter-group button {
+  margin-top: 10px;
+  padding: 10px 15px;
+  background-color: hsl(340, 55%, 26%);
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.filter-group button:hover {
+  background-color: hsl(44, 100%, 46%);
+}
+
+.listings-section {
+  padding: 20px;
+  background-color: #fff;
+}
+
+.listing-item {
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.listing-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.listing-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.filters-section, .listings-section {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .filters-section, .listings-section {
+      padding: 10px;
+  }
+}
+
+.listings-container {
+  padding: 20px;
+}
+
+.listings-container h1 {
+  font-size: 30px;
+  text-align: center;
+}
+
+
+.listings {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.listing-item {
+  display: flex;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.listing-link {
+  display: flex;
+  width: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+
+.listing-img {
+  width: 30%;
+  object-fit: cover;
+}
+
+.listing-details {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.featured-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem; /* Adjust the gap value as needed to reduce the space */
+  justify-content: center; /* Center-align the listings */
+}
+
+.featured-box {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  width: calc(29% - 0.5rem);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.featured-box:hover {
+  transform: translateY(-5px);
+}
+
+.featured-img-container {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.article-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0; /* Keep images squared */
+}
+
+.featured-content {
+  padding: 1rem;
+  text-align: center; /* Center-align the text content */
+}
+
+.featured-heading {
+  font-size: 1.25rem;
+  margin: 0.5rem 0;
+  color: black;
+}
+
+.featured-para {
+  font-size: 1rem;
+  color: #777;
+}
+
+.listing-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: black;
+  text-decoration: none;
+}
+
+.listing-link:hover {
+  text-decoration: underline;
 }
