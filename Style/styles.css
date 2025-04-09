@@ -1491,7 +1491,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 3rem; /* Adjust the gap value as needed to reduce the space */
-  justify-content: center; /* Center-align the listings */
+  justify-content: center;
 }
 
 .featured-box {
@@ -1626,7 +1626,7 @@ body {
 
 /* Listing Detail Page Enhancements */
 #listing-detail-section {
-  max-width: 1200px; /* Increase width for better screen utilization */
+  max-width: 1200px;
   margin: 20px auto;
   padding: 20px;
   background: #fff;
@@ -1733,21 +1733,21 @@ footer.footer {
   .featured-container {
     display: flex;
     justify-content: left;
-    flex-wrap: nowrap; /* Disable wrapping for horizontal scroll */
-    overflow-x: auto; /* Enable horizontal scrolling */
-    gap: 1.5rem; /* Adjust spacing to match mobile design */
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 1.5rem;
   }
 
   .featured-box {
-    flex: 0 0 90%; /* Show one box at a time */
-    scroll-snap-align: center; /* Snap to center for better UX */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Retain desktop effects */
+    flex: 0 0 90%;
+    scroll-snap-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     margin-bottom: 3%;
   }
 
   .featured-img-container {
-    height: auto; /* Ensure image scales appropriately */
+    height: auto; 
   }
 }
 
@@ -1756,22 +1756,22 @@ footer.footer {
   .review-container {
     display: flex;
     justify-content: left;
-    flex-wrap: nowrap; /* Disable wrapping for horizontal scroll */
-    overflow-x: auto; /* Enable horizontal scrolling */
-    gap: 1.5rem; /* Adjust spacing to match mobile design */
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 1.5rem;
   }
 
   .review-box {
-    flex: 0 0 90%; /* Show one box at a time */
-    scroll-snap-align: center; /* Snap to center for better UX */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Retain desktop effects */
+    flex: 0 0 90%;
+    scroll-snap-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     margin-top: 3%;
     margin-bottom: 3%;
   }
 
   .review-img-container {
-    height: auto; /* Ensure image scales appropriately */
+    height: auto;
   }
 }
 
@@ -1783,8 +1783,8 @@ body {
 }
 
 .search-hero {
-  padding: 0px 0; /* Adjust padding for better spacing */
-  width: 100%; /* Ensure it spans the full width of the screen */
+  padding: 0px 0;
+  width: 100%;
   background: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.1)),
               url('../Media/housing-bg.jpg');
   background-size: cover;
@@ -1794,13 +1794,12 @@ body {
 /* Improve Search Bar for Mobile */
 @media (max-width: 768px) {
   .search-wrapper {
-    padding: 0 20px; /* Add padding to prevent the search bar from touching edges */
+    padding: 0 20px;
   }
 
   #search-input {
-    width: 100%; /* Make the search bar occupy full width */
-    padding: 15px 1px; /* Improve padding for better usability */
-    font-size: 1rem; /* Adjust font size for readability */
+    width: 100%;
+    font-size: 1rem;
   }
 }
 
@@ -1820,16 +1819,17 @@ body {
     font-size: 1.5rem;
     cursor: pointer;
     color: white;
-
-    /* Move to the right end */
-    margin-left: auto;
+    position: absolute;
+    right: 10px;
+    top: 35%;
+    transform: translateY(-50%);
   }
 
   .mobile-menu {
     position: fixed;
     top: 0;
-    right: -100%; /* Initially off-screen on the right */
-    width: 250px;
+    right: -100%;
+    width: 150px;
     height: 100%;
     background-color: hsl(340, 55%, 26%);
     display: flex;
@@ -1867,4 +1867,27 @@ body {
   .menu-close {
     display: none; /* Hide the buttons on larger screens */
   }
+}
+
+.section-container {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.mobile-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  text-align: right; /* Align text to the right */
+}
+
+.menu-close {
+  align-self: flex-end; /* Align the close button to the right */
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: white;
+  margin-bottom: 20px; /* Add spacing below the close button */
 }
