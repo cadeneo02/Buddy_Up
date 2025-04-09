@@ -17,23 +17,6 @@
   </head>
   <body>
 
-    <!-- Header Section -->
-    <header class="header">
-      <div class="header-container">
-        <div class="header-logo">
-          <img src="Media/Buddy_Up_Logo.PNG" alt="Buddy Up Logo">
-          <p>Buddy Up</p>
-        </div>
-        <nav class="header-nav">
-          <a href="index.html">Home</a>
-          <a href="listings.html">Listings</a>
-          <a href="community.html">Community</a>
-          <a href="account.html">Account</a>
-          <button id="theme-toggle">☼</button>
-        </nav>
-      </div>
-    </header>
-
     <!-- Main Content -->
     <main class="main">
       <section class="search-hero">
@@ -102,93 +85,46 @@
               If you would like to connect, feel free to send me a message!
             </p>
           </article>
-          <button id="see-more-community" class="see-more-button" onclick="window.location.href='community.html'">See More</button>
         </div>
+        <button id="see-more-community" class="see-more-button" onclick="window.location.href='community.html'">See More</button>
       </section>
 
       <section class="section-container box">
         <h2>Featured Listings</h2>
-        <div class="featured-container">
-          <a href="listing-detail.html?id=1" class="featured-box">
-            <div class="featured-img-container">
-              <img src="Media/1400WDevonAvenue.jpg" data-id="1" alt="1400 W. Devon Avenue" class="article-img"/>
-            </div>
-            <div class="featured-content">
-              <h4 class="featured-heading">1400 W. Devon Avenue</h4>
-              <p class="featured-para">1 Bed, 1 Bath - $1,175 /mo</p>
-            </div>
-          </a>
-          <a href="listing-detail.html?id=2" class="featured-box">
-            <div class="featured-img-container">
-              <img src="Media/1135WSheridanRd.jpg" data-id="2" alt="1135 W Sheridan Rd" class="article-img"/>
-            </div>
-            <div class="featured-content">
-              <h4 class="featured-heading">1135 W Sheridan Rd</h4>
-              <p class="featured-para">2 Bed, 2 Bath - $2,599</p>
-            </div>
-          </a>
-          <a href="listing-detail.html?id=4" class="featured-box">
-            <div class="featured-img-container">
-              <img src="Media/6725NSheridanRd.jpg" data-id="4" alt="6725 N Sheridan Rd" class="article-img"/>
-            </div>
-            <div class="featured-content">
-              <h4 class="featured-heading">6725 N Sheridan Rd</h4>
-              <p class="featured-para">1 Bed, 1 Bath - $1,566</p>
-            </div>
+      <div class="featured-container">
+        <a href="listing-detail.html?id=1" class="featured-box">
+          <div class="featured-img-container">
+            <img src="Media/1400WDevonAvenue.jpg" data-id="1" alt="1400 W. Devon Avenue" class="article-img"/>
+          </div>
+          <div class="featured-content">
+            <h4 class="featured-heading">1400 W. Devon Avenue</h4>
+            <p class="featured-para">1 Bed, 1 Bath - $1,175 /mo</p>
+          </div>
+        </a>
+        <a href="listing-detail.html?id=2" class="featured-box">
+          <div class="featured-img-container">
+            <img src="Media/1135WSheridanRd.jpg" data-id="2" alt="1135 W Sheridan Rd" class="article-img"/>
+          </div>
+          <div class="featured-content">
+            <h4 class="featured-heading">1135 W Sheridan Rd</h4>
+            <p class="featured-para">2 Bed, 2 Bath - $2,599</p>
+          </div>
+        </a>
+        <a href="listing-detail.html?id=4" class="featured-box">
+          <div class="featured-img-container">
+            <img src="Media/6725NSheridanRd.jpg" data-id="4" alt="6725 N Sheridan Rd" class="article-img"/>
+          </div>
+          <div class="featured-content">
+            <h4 class="featured-heading">6725 N Sheridan Rd</h4>
+            <p class="featured-para">1 Bed, 1 Bath - $1,566</p>
+          </div>
+        </a>
+      </div>
           </a>
         </div>
         <button id="see-more-listings" class="see-more-button" onclick="window.location.href='listings.html'">See More</button>
       </section>
     </main>
-
-    <!-- Footer Section -->
-    <footer class="footer">
-      <div class="footer-container">
-        <div class="footer-info">
-          <a href="#" class="popup-trigger" data-popup="about-popup">About</a>
-          <a href="#" class="popup-trigger" data-popup="hours-popup">Hours</a>
-          <a href="#" class="popup-trigger" data-popup="contact-popup">Contact</a>
-        </div>
-
-        <div class="footer-logo">
-          <img src="Media/Buddy_Up_Logo.PNG" alt="Buddy Up Logo">
-          <p>Buddy Up</p>
-        </div>
-
-        <div class="footer-socials">
-          <a href="https://facebook.com" target="_blank"><img src="Media/Facebook_Icon.PNG" alt="Facebook"></a>
-          <a href="https://instagram.com" target="_blank"><img src="Media/Instagram_Icon.PNG" alt="Instagram"></a>
-          <a href="https://tiktok.com" target="_blank"><img src="Media/Tik_Tok_Icon.PNG" alt="TikTok"></a>
-          <a href="https://twitter.com" target="_blank"><img src="Media/X_Icon.PNG" alt="Twitter"></a>
-        </div>
-      </div>
-      <p class="footer-copyright">©2025 Buddy Up</p>
-    </footer>
-
-    <!-- Popup Overlays -->
-    <div class="popup-overlay" id="about-popup">
-      <div class="popup-content">
-        <span class="close-popup">&times;</span>
-        <h2>About Buddy Up</h2>
-        <p>Buddy Up is a platform that helps you connect with other Loyola students & find the home that is best tailored to your needs.</p>
-      </div>
-    </div>
-
-    <div class="popup-overlay" id="hours-popup">
-      <div class="popup-content">
-        <span class="close-popup">&times;</span>
-        <h2>Operating Hours</h2>
-        <p>Monday - Friday: 9 AM - 6 PM<br>Saturday - Sunday: 10 AM - 4 PM</p>
-      </div>
-    </div>
-
-    <div class="popup-overlay" id="contact-popup">
-      <div class="popup-content">
-        <span class="close-popup">&times;</span>
-        <h2>Contact Us</h2>
-        <p>Email: support@buddyup.com<br>Phone: (123) 456-7890</p>
-      </div>
-    </div>
       
     <!-- Loads js -->
     <script type="text/javascript" src="./Scripts/script.js"></script>
