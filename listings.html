@@ -28,100 +28,104 @@
 
     <!-- Main Content -->
     <main class="main">
-      <section class="filters-section">
-        <h2>Filters</h2>
-        <div class="filter-group">
-          <label for="sort-price">Sort By:</label>
-          <select id="sort-price">
-            <option value="low-high">Price: Low to High</option>
-            <option value="high-low">Price: High to Low</option>
-          </select>
-        </div>
-        <div class="filter-group">
-          <label for="filter-price">Price:</label>
-          <input type="number" id="filter-price" placeholder="Enter Max Price">
-        </div>
-        <div class="filter-group">
-          <label for="filter-rooms">Rooms:</label>
-          <input type="number" id="filter-rooms" placeholder="Enter Room #">
-        </div>
-        <div class="filter-group">
-          <label for="filter-bathrooms">Bathrooms:</label>
-          <input type="number" id="filter-bathrooms" placeholder="Enter Bathroom #">
-        </div>
-        <div class="filter-group">
-          <label for="filter-student-type">Student Type:</label>
-          <select id="filter-student-type">
-            <option value="">All</option>
-            <option value="undergraduate">Undergraduate</option>
-            <option value="graduate">Graduate</option>
-          </select>
-        </div>
-        <div class="filter-group">
-          <button onclick="applyFilters()">Apply Filters</button>
-        </div>
-      </section>
+        <div class="listings-grid">
+            <!-- Filters Section -->
+            <section class="filters-section mini-filters">
+                <h2>Filters</h2>
+                <div class="filter-group">
+                    <label for="sort-price">Sort By</label>
+                    <select id="sort-price">
+                        <option value="low-high">Price: Low to High</option>
+                        <option value="high-low">Price: High to Low</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="filter-price">Price</label>
+                    <input type="number" id="filter-price" placeholder="Enter Max Price">
+                </div>
+                <div class="filter-group">
+                    <label for="filter-rooms">Rooms</label>
+                    <input type="number" id="filter-rooms" placeholder="Enter Room #">
+                </div>
+                <div class="filter-group">
+                    <label for="filter-bathrooms">Bathrooms</label>
+                    <input type="number" id="filter-bathrooms" placeholder="Enter Bathroom #">
+                </div>
+                <div class="filter-group">
+                    <label for="filter-student-type">Student Type</label>
+                    <select id="filter-student-type">
+                        <option value="">All</option>
+                        <option value="undergraduate">Undergraduate</option>
+                        <option value="graduate">Graduate</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <button onclick="applyFilters()">Apply Filters</button>
+                </div>
+            </section>
 
-      <section class="listings-container">
-        <h1>Listings</h1>
-        <div class="listings">
-          <article class="listing-item" data-price="1175" data-rooms="1" data-bathrooms="1" data-student-type="undergraduate">
-            <a href="listing-detail.html?id=1" class="listing-link">
-              <img src="Media/1400WDevonAvenue.jpg" data-id="1" alt="Listing Image" class="listing-img"/>
-              <div class="listing-details">
-                <h3>1400 W. Devon Avenue</h3>
-                <p>1 Bed, 1 Bath</p>
-                <p>Undergraduate</p>
-                <p>$1,175 /mo</p>
-              </div>
-            </a>
-          </article>
-          <article class="listing-item" data-price="2599" data-rooms="2" data-bathrooms="2" data-student-type="graduate">
-            <a href="listing-detail.html?id=2" class="listing-link">
-              <img src="Media/1135WSheridanRd.jpg" data-id="2" alt="Listing Image" class="listing-img"/>
-              <div class="listing-details">
-                <h3>1135 W Sheridan Rd</h3>
-                <p>2 Bed, 2 Bath</p>
-                <p>Graduate</p>
-                <p>$2,599</p>
-              </div>
-            </a>
-          </article>
-          <article class="listing-item" data-price="2355" data-rooms="2" data-bathrooms="1" data-student-type="undergraduate">
-            <a href="listing-detail.html?id=3" class="listing-link">
-              <img src="Media/6401NSheridanRd.jpg" data-id="3" alt="Listing Image" class="listing-img"/>
-              <div class="listing-details">
-                <h3>6401 N Sheridan Rd</h3>
-                <p>2 Bed, 1 Bath</p>
-                <p>Undergraduate</p>
-                <p>$2,355</p>
-              </div>
-            </a>
-          </article>
-          <article class="listing-item" data-price="1566" data-rooms="1" data-bathrooms="1" data-student-type="undergraduate">
-            <a href="listing-detail.html?id=4" class="listing-link">
-              <img src="Media/6725NSheridanRd.jpg" data-id="1" alt="Listing Image" class="listing-img"/>
-              <div class="listing-details">
-                <h3>6725 N Sheridan Rd</h3>
-                <p>1 Bed, 1 Bath</p>
-                <p>Undergraduate</p>
-                <p>$1,566</p>
-              </div>
-            </a>
-          </article>
-          <article class="listing-item" data-price="1650" data-rooms="1" data-bathrooms="1" data-student-type="undergraduate">
-            <a href="listing-detail.html?id=5" class="listing-link">
-              <img src="Media/6565NLakewoodAve.jpg" data-id="2" alt="Listing Image" class="listing-img"/>
-              <div class="listing-details">
-                <h3>6565 N Lakewood Ave</h3>
-                <p>1 Bed, 1 Bath</p>
-                <p>Undergraduate</p>
-                <p>$1,650</p>
-              </div>
-            </a>
-          </article>
+            <!-- Listings Section -->
+            <section class="listings-container">
+                <h1>Listings</h1>
+                <div class="listings">
+                    <div class="listing-box" data-price="1175" data-rooms="1" data-bathrooms="1" data-student-type="undergraduate">
+                        <a href="listing-detail.html?id=1">
+                            <div class="listing-img-container">
+                                <img src="Media/1400WDevonAvenue.jpg" alt="1400 W. Devon Avenue">
+                            </div>
+                            <div class="listing-content">
+                                <h4>1400 W. Devon Avenue</h4>
+                                <p>1 Bed, 1 Bath - $1,175 /mo</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="listing-box" data-price="2599" data-rooms="2" data-bathrooms="2" data-student-type="graduate">
+                        <a href="listing-detail.html?id=2">
+                            <div class="listing-img-container">
+                                <img src="Media/1135WSheridanRd.jpg" alt="1135 W Sheridan Rd">
+                            </div>
+                            <div class="listing-content">
+                                <h4>1135 W Sheridan Rd</h4>
+                                <p>2 Bed, 2 Bath - $2,599 /mo</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="listing-box" data-price="2355" data-rooms="2" data-bathrooms="1" data-student-type="undergraduate">
+                        <a href="listing-detail.html?id=3">
+                            <div class="listing-img-container">
+                                <img src="Media/6401NSheridanRd.jpg" alt="6401 N Sheridan Rd">
+                            </div>
+                            <div class="listing-content">
+                                <h4>6401 N Sheridan Rd</h4>
+                                <p>2 Bed, 1 Bath - $2,355 /mo</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="listing-box" data-price="1566" data-rooms="1" data-bathrooms="1" data-student-type="undergraduate">
+                        <a href="listing-detail.html?id=4">
+                            <div class="listing-img-container">
+                                <img src="Media/6725NSheridanRd.jpg" alt="6725 N Sheridan Rd">
+                            </div>
+                            <div class="listing-content">
+                                <h4>6725 N Sheridan Rd</h4>
+                                <p>1 Bed, 1 Bath - $1,566 /mo</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="listing-box" data-price="1650" data-rooms="1" data-bathrooms="1" data-student-type="undergraduate">
+                        <a href="listing-detail.html?id=5">
+                            <div class="listing-img-container">
+                                <img src="Media/6565NLakewoodAve.jpg" alt="6565 N Lakewood Ave">
+                            </div>
+                            <div class="listing-content">
+                                <h4>6565 N Lakewood Ave</h4>
+                                <p>1 Bed, 1 Bath - $1,650 /mo</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
         </div>
-      </section>
     </main>
 
     <!-- Footer Section -->
@@ -145,33 +149,5 @@
         </div>
         <p class="footer-copyright">©2025 Buddy Up</p>
     </footer>
-
-    <!-- Popup Overlays -->
-    <div class="popup-overlay" id="about-popup">
-        <div class="popup-content">
-            <span class="close-popup">&times;</span>
-            <h2>About Buddy Up</h2>
-            <p>Buddy Up is a platform that helps you find housing and roommates tailored to your lifestyle, interests, and education status.</p>
-        </div>
-    </div>
-
-    <div class="popup-overlay" id="hours-popup">
-        <div class="popup-content">
-            <span class="close-popup">&times;</span>
-            <h2>Operating Hours</h2>
-            <p>Monday - Friday: 9 AM - 6 PM<br>Saturday - Sunday: 10 AM - 4 PM</p>
-        </div>
-    </div>
-
-    <div class="popup-overlay" id="contact-popup">
-        <div class="popup-content">
-            <span class="close-popup">&times;</span>
-            <h2>Contact Us</h2>
-            <p>Email: support@buddyup.com<br>Phone: (123) 456-7890</p>
-        </div>
-    </div>
-
-    <!-- Loads js -->
-    <script type="text/javascript" src="./Scripts/script.js"></script>
 </body>
 </html>
