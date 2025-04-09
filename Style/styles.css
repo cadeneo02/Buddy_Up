@@ -1685,7 +1685,7 @@ footer.footer {
   text-align: center;
 }
 
-/* Ensure Responsiveness */
+/* Responsiveness */
 @media screen and (max-width: 768px) {
   #listing-detail-section {
     padding: 15px;
@@ -1694,5 +1694,177 @@ footer.footer {
   .action-buttons {
     flex-direction: column;
     gap: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-logo {
+    margin-top: 0PX;
+    order: 1;
+  }
+
+  .footer-socials {
+    order: 2;
+    margin-bottom: 20px;
+  }
+
+  .footer-info {
+    order: 3;
+    margin-bottom: 20px;
+  }
+
+  .footer-copyright {
+    order: 4;
+    align-self: flex-end;
+    margin-bottom: 0;
+    text-align: right;
+    width: 100%;
+  }
+}
+
+/* Mobile-specific updates */
+@media (max-width: 768px) {
+  .featured-container {
+    display: flex;
+    justify-content: left;
+    flex-wrap: nowrap; /* Disable wrapping for horizontal scroll */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    gap: 1.5rem; /* Adjust spacing to match mobile design */
+  }
+
+  .featured-box {
+    flex: 0 0 90%; /* Show one box at a time */
+    scroll-snap-align: center; /* Snap to center for better UX */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Retain desktop effects */
+    border-radius: 8px;
+    margin-bottom: 3%;
+  }
+
+  .featured-img-container {
+    height: auto; /* Ensure image scales appropriately */
+  }
+}
+
+/* Mobile-specific updates */
+@media (max-width: 768px) {
+  .review-container {
+    display: flex;
+    justify-content: left;
+    flex-wrap: nowrap; /* Disable wrapping for horizontal scroll */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    gap: 1.5rem; /* Adjust spacing to match mobile design */
+  }
+
+  .review-box {
+    flex: 0 0 90%; /* Show one box at a time */
+    scroll-snap-align: center; /* Snap to center for better UX */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Retain desktop effects */
+    border-radius: 8px;
+    margin-top: 3%;
+    margin-bottom: 3%;
+  }
+
+  .review-img-container {
+    height: auto; /* Ensure image scales appropriately */
+  }
+}
+
+/* General Reset */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.search-hero {
+  padding: 0px 0; /* Adjust padding for better spacing */
+  width: 100%; /* Ensure it spans the full width of the screen */
+  background: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.1)),
+              url('../Media/housing-bg.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Improve Search Bar for Mobile */
+@media (max-width: 768px) {
+  .search-wrapper {
+    padding: 0 20px; /* Add padding to prevent the search bar from touching edges */
+  }
+
+  #search-input {
+    width: 100%; /* Make the search bar occupy full width */
+    padding: 15px 1px; /* Improve padding for better usability */
+    font-size: 1rem; /* Adjust font size for readability */
+  }
+}
+
+/* General Header Styles */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Mobile Header Styles */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* Show the menu button on mobile */
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: white;
+
+    /* Move to the right end */
+    margin-left: auto;
+  }
+
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Initially off-screen on the right */
+    width: 250px;
+    height: 100%;
+    background-color: hsl(340, 55%, 26%);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
+  }
+
+  .mobile-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+  }
+
+  .mobile-menu.active {
+    right: 0; /* Slide the menu into view */
+  }
+
+  .menu-close {
+    display: block; /* Show the close button on mobile */
+    align-self: flex-end;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: white;
+  }
+}
+
+/* Hide Menu and Close Buttons on Larger Screens */
+@media (min-width: 769px) {
+  .menu-toggle,
+  .menu-close {
+    display: none; /* Hide the buttons on larger screens */
   }
 }
