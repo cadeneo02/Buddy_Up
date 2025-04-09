@@ -36,52 +36,23 @@
     </header>
 
     <main class="main">
-      <section id="listing-detail-section">
+      <section id="listing-detail-section" class="clean-layout">
         <h2 id="listing-title">Listing Title</h2>
         <div id="listing-image">
           <img src="" alt="Listing Image" id="listing-img">
         </div>
-        <p id="listing-price">Price: </p>
-        <p id="listing-room">Room: </p>
-        <p id="listing-bath">Bath: </p>
-        <p id="listing-description">Description: </p>
-        <p id="listing-address">Address: </p>
-      </section>
+        <p id="listing-price">Price</p>
 
-      <section class="section-container">
-        <h2>Book An Appointment</h2>
-        <div class="Appointment">
-          <div>
-            <button onclick="prevMonth()">Previous</button>
-            <span id="month-year"></span>
-            <button onclick="nextMonth()">Next</button>
-          </div>
 
-          <!-- Calendar Table -->
-          <table id="calendar">
-            <thead>
-              <tr>
-                <th>Sun</th>
-                <th>Mon</th>
-                <th>Tue</th>
-                <th>Wed</th>
-                <th>Thu</th>
-                <th>Fri</th>
-                <th>Sat</th>
-              </tr>
-            </thead>
-            <tbody></tbody>
-          </table>
-
-          <!-- Appointment Booking Form -->
-          <h2>Book an Appointment</h2>
-          <label for="event-date">Selected Date:</label>
-          <input type="text" id="event-date" readonly />
-
-          <label for="event-time">Select Time:</label>
-          <input type="time" id="event-time" />
-
-          <button onclick="bookAppointment()">Reserve</button>
+        <p id="listing-room"><strong>Room:</strong> </p>
+        <p id="listing-bath"><strong>Bath:</strong> </p>
+        <p id="listing-description"><strong>Description:</strong> </p>
+        <p id="listing-address"><strong>Address:</strong> </p>
+        
+        
+        <div class="action-buttons">
+          <button id="view-full-listing" class="btn btn-primary">View Full Listing</button>
+          <button id="save-listing" class="btn btn-secondary">Save</button>
         </div>
       </section>
     </main>
