@@ -1,55 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <!-- Defines character encoding for text -->
+    <meta charset="UTF-8" />
+    <!-- Responsive mobile design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Sets webpage title -->
     <title>Listing Detail</title>
-    <link rel="stylesheet" href="./Style/styles.css">
-</head>
-<body>
+    <!-- Linking stylesheet -->
+    <link rel="stylesheet" href="./Style/styles.css" />
+    <!-- Link js -->
+    <script defer src="script.js"></script>
+    <!--Font-awesome link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
 
-    <header class="header">
-        <div class="header-container">
-            <div class="header-logo">
-                <img src="Media/Buddy_Up_Logo.PNG" alt="Buddy Up Logo">
-                <p>Buddy Up</p>
-            </div>
-        </div>
-    </header>
-
+    <!--Main-->
     <main class="main">
-        <section id="listing-detail-section">
-            <h2 id="listing-title">Listing Title</h2>
-            <div id="listing-image">
-                <img src="" alt="Listing Image" id="listing-img">
-            </div>
-            <p id="listing-price"></p>
-            <p id="listing-description"></p>
-        </section>
+      <section id="listing-detail-section" class="clean-layout">
+        <h2 id="listing-title">Listing Title</h2>
+        <div id="listing-image">
+          <img src="" alt="Listing Image" id="listing-img">
+        </div>
+        <p id="listing-price">Price</p>
 
-        <!-- Schedule a Visit Form -->
-        <section id="schedule-visit">
-            <h2>Schedule a Visit</h2>
-            <label for="visit-date">Select Date:</label>
-            <input type="date" id="visit-date" required>
 
-            <label for="visit-time">Select Time:</label>
-            <input type="time" id="visit-time" required>
-
-            <button onclick="bookVisit()">Book Visit</button>
-
-            <div id="visit-confirmation"></div>
-        </section>
-
-        <button onclick="window.history.back()">⬅ Back to Listings</button>
+        <p id="listing-room"><strong>Room:</strong> </p>
+        <p id="listing-bath"><strong>Bath:</strong> </p>
+        <p id="listing-description"><strong>Description:</strong> </p>
+        <p id="listing-address"><strong>Address:</strong> </p>
+        
+        
+        <div class="action-buttons">
+          <button id="view-full-listing" class="btn btn-primary">View Full Listing</button>
+          <button id="save-listing" class="btn btn-secondary">Save</button>
+        </div>
+      </section>
     </main>
 
+    <!-- Footer Section -->
     <footer class="footer">
-        <p>©2025 Buddy Up</p>
+      <div class="footer-container">
+        <div class="footer-info">
+          <a href="#" class="popup-trigger" data-popup="about-popup">About</a>
+          <a href="#" class="popup-trigger" data-popup="hours-popup">Hours</a>
+          <a href="#" class="popup-trigger" data-popup="contact-popup">Contact</a>
+        </div>
+
+        <div class="footer-logo">
+          <img src="Media/Buddy_Up_Logo.PNG" alt="Buddy Up Logo">
+          <p>Buddy Up</p>
+        </div>
+
+        <div class="footer-socials">
+          <a href="https://facebook.com" target="_blank"><img src="Media/Facebook_Icon.PNG" alt="Facebook"></a>
+          <a href="https://instagram.com" target="_blank"><img src="Media/Instagram_Icon.PNG" alt="Instagram"></a>
+          <a href="https://tiktok.com" target="_blank"><img src="Media/Tik_Tok_Icon.PNG" alt="TikTok"></a>
+          <a href="https://twitter.com" target="_blank"><img src="Media/X_Icon.PNG" alt="Twitter"></a>
+        </div>
+      </div>
+      <p class="footer-copyright">©2025 Buddy Up</p>
     </footer>
 
-    <script src="./Scripts/listing-script.js"></script>
+    <!-- Popup Overlays -->
+    <div class="popup-overlay" id="about-popup">
+      <div class="popup-content">
+        <span class="close-popup">&times;</span>
+        <h2>About Buddy Up</h2>
+        <p>Buddy Up is a platform that helps you find housing and roommates tailored to your lifestyle, interests, and education status.</p>
+      </div>
+    </div>
 
-</body>
+    <div class="popup-overlay" id="hours-popup">
+      <div class="popup-content">
+        <span class="close-popup">&times;</span>
+        <h2>Operating Hours</h2>
+        <p>Monday - Friday: 9 AM - 6 PM<br>Saturday - Sunday: 10 AM - 4 PM</p>
+      </div>
+    </div>
+
+    <div class="popup-overlay" id="contact-popup">
+      <div class="popup-content">
+        <span class="close-popup">&times;</span>
+        <h2>Contact Us</h2>
+        <p>Email: support@buddyup.com<br>Phone: (123) 456-7890</p>
+      </div>
+    </div>
+
+    <!-- Loads js -->
+    <script src="./Scripts/script.js"></script>
+  </body>
 </html>
-
