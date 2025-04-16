@@ -9,6 +9,7 @@
     <title>Listing Detail</title>
     <!-- Linking stylesheet -->
     <link rel="stylesheet" href="./Style/styles.css" />
+    <link rel="stylesheet" href="./Style/listing.css" />
     <!-- Link js -->
     <script defer src="script.js"></script>
     <!--Font-awesome link  -->
@@ -18,25 +19,69 @@
     />
   </head>
   <body>
-
     <!--Main-->
     <main class="main">
       <section id="listing-detail-section" class="clean-layout">
-        <h2 id="listing-title">Listing Title</h2>
+        <!-- <img src="" alt="" class="listing-img-cont" /> -->
         <div id="listing-image">
-          <img src="" alt="Listing Image" id="listing-img">
+          <img src="" alt="Listing Image" id="listing-img" />
         </div>
-        <p id="listing-price">Price</p>
+        <div class="list-title-cont">
+          <h2 id="listing-title">Listing Title</h2>
 
+          <p id="listing-price">Price</p>
+        </div>
+        <p id="listing-address" class="list-address">Address:</p>
+        <ul class="list-button-cont">
+          <li class="list-small-desc" id="listing-room"></li>
+          <li class="list-small-desc" id="listing-size">450 sq ft</li>
+        </ul>
+        <div class="property-features">
+          <h4 class="list-prop">Property Features</h4>
+          <ul id="listing-features"></ul>
+        </div>
+        <div class="property-amenities">
+          <h4>Building Amenities</h4>
+          <ul id="listing-amenities"></ul>
+        </div>
 
-        <p id="listing-room"><strong>Room:</strong> </p>
-        <p id="listing-bath"><strong>Bath:</strong> </p>
-        <p id="listing-description"><strong>Description:</strong> </p>
-        <p id="listing-address"><strong>Address:</strong> </p>
-        
-        
+        <div class="listing-add-details">
+          <h4>Additional Details</h4>
+          <div class="lease-details">
+            <p class="lease">Lease Term</p>
+            <p id="listing-lease"></p>
+          </div>
+          <div class="lease-details">
+            <p class="lease-security">Security Deposit</p>
+            <p id="listing-security"></p>
+          </div>
+          <div class="lease-details">
+            <p class="lease-utilities">Utilities</p>
+            <p id="listing-utilities"></p>
+          </div>
+          <div class="lease-details">
+            <p class="leaseing-availability">Available From</p>
+            <p id="listing-availability">August 2025</p>
+          </div>
+          <div class="lease-details">
+            <p class="lease-pet-policy">Pet Policy</p>
+            <p id="list-pet-policy">Cats allowed</p>
+          </div>
+          <div class="lease-details">
+            <p class="lease-parking">Parking</p>
+            <p id="listing-parking">Available ($150/mo)</p>
+          </div>
+        </div>
+
+        <p id="listing-room"><strong>Room:</strong></p>
+        <p id="listing-bath"><strong>Bath:</strong></p>
+        <p id="listing-description"><strong>Description:</strong></p>
+        <p id="listing-address"><strong>Address:</strong></p>
+
         <div class="action-buttons">
-          <button id="view-full-listing" class="btn btn-primary">View Full Listing</button>
+          <button id="view-full-listing" class="btn btn-primary">
+            View Full Listing
+          </button>
           <button id="save-listing" class="btn btn-secondary">Save</button>
         </div>
       </section>
@@ -48,19 +93,29 @@
         <div class="footer-info">
           <a href="#" class="popup-trigger" data-popup="about-popup">About</a>
           <a href="#" class="popup-trigger" data-popup="hours-popup">Hours</a>
-          <a href="#" class="popup-trigger" data-popup="contact-popup">Contact</a>
+          <a href="#" class="popup-trigger" data-popup="contact-popup"
+            >Contact</a
+          >
         </div>
 
         <div class="footer-logo">
-          <img src="Media/Buddy_Up_Logo.PNG" alt="Buddy Up Logo">
+          <img src="Media/Buddy_Up_Logo.PNG" alt="Buddy Up Logo" />
           <p>Buddy Up</p>
         </div>
 
         <div class="footer-socials">
-          <a href="https://facebook.com" target="_blank"><img src="Media/Facebook_Icon.PNG" alt="Facebook"></a>
-          <a href="https://instagram.com" target="_blank"><img src="Media/Instagram_Icon.PNG" alt="Instagram"></a>
-          <a href="https://tiktok.com" target="_blank"><img src="Media/Tik_Tok_Icon.PNG" alt="TikTok"></a>
-          <a href="https://twitter.com" target="_blank"><img src="Media/X_Icon.PNG" alt="Twitter"></a>
+          <a href="https://facebook.com" target="_blank"
+            ><img src="Media/Facebook_Icon.PNG" alt="Facebook"
+          /></a>
+          <a href="https://instagram.com" target="_blank"
+            ><img src="Media/Instagram_Icon.PNG" alt="Instagram"
+          /></a>
+          <a href="https://tiktok.com" target="_blank"
+            ><img src="Media/Tik_Tok_Icon.PNG" alt="TikTok"
+          /></a>
+          <a href="https://twitter.com" target="_blank"
+            ><img src="Media/X_Icon.PNG" alt="Twitter"
+          /></a>
         </div>
       </div>
       <p class="footer-copyright">©2025 Buddy Up</p>
@@ -71,7 +126,10 @@
       <div class="popup-content">
         <span class="close-popup">&times;</span>
         <h2>About Buddy Up</h2>
-        <p>Buddy Up is a platform that helps you find housing and roommates tailored to your lifestyle, interests, and education status.</p>
+        <p>
+          Buddy Up is a platform that helps you find housing and roommates
+          tailored to your lifestyle, interests, and education status.
+        </p>
       </div>
     </div>
 
@@ -79,7 +137,7 @@
       <div class="popup-content">
         <span class="close-popup">&times;</span>
         <h2>Operating Hours</h2>
-        <p>Monday - Friday: 9 AM - 6 PM<br>Saturday - Sunday: 10 AM - 4 PM</p>
+        <p>Monday - Friday: 9 AM - 6 PM<br />Saturday - Sunday: 10 AM - 4 PM</p>
       </div>
     </div>
 
@@ -87,7 +145,7 @@
       <div class="popup-content">
         <span class="close-popup">&times;</span>
         <h2>Contact Us</h2>
-        <p>Email: support@buddyup.com<br>Phone: (123) 456-7890</p>
+        <p>Email: support@buddyup.com<br />Phone: (123) 456-7890</p>
       </div>
     </div>
 
