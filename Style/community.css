@@ -1,0 +1,883 @@
+.student-community {
+    display: inline-flex;
+    flex-direction: column;
+    height: 1829px;
+    align-items: flex-start;
+    position: relative;
+    background-color: #ffffff;
+    overflow: hidden;
+    border: 2px solid;
+    border-color: #ced4da;
+  }
+  
+  .student-community .body {
+    position: relative;
+    width: 1440px;
+    height: 3148px;
+    border: 0px none;
+  }
+  
+  .student-community .div {
+    position: relative;
+    height: 3209px;
+    background-color: #f9fafb;
+    border: 0px none;
+  }
+  
+  .student-community .section {
+    position: absolute;
+    width: 1440px;
+    height: 1324px;
+    top: 1540px;
+    left: 0;
+    background-color: #f9fafb;
+    border: 0px none;
+  }
+  
+  .student-community .div-2 {
+    position: absolute;
+    width: 1280px;
+    height: 1064px;
+    top: 199px;
+    left: 64px;
+    border: 0px none;
+  }
+  
+  .student-community .div-3 {
+    position: absolute;
+    width: 1248px;
+    height: 152px;
+    top: 32px;
+    left: 16px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    border: 0px none;
+    box-shadow: 0px 10px 15px #0000001a, 0px 4px 6px #0000001a;
+  }
+  
+  .student-community .div-4 {
+    position: absolute;
+    width: 1200px;
+    height: 48px;
+    top: 24px;
+    left: 24px;
+    border: 0px none;
+  }
+  
+  .student-community .img {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    top: 0;
+    left: 0;
+    border-radius: 9999px;
+    border: 0px none;
+    background-image: url(../Media/Katie.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+  
+  .student-community .input {
+    position: absolute;
+    width: 1136px;
+    height: 48px;
+    top: 0;
+    left: 64px;
+    background-color: #f3f4f6;
+    border-radius: 8px;
+    border: 0px none;
+  }img
+  
+  .student-community .text-wrapper {
+    position: absolute;
+    width: 295px;
+    height: 48px;
+    top: 0;
+    left: 12px;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #adaebc;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 24px;
+  }
+  
+  .student-community .div-5 {
+    position: absolute;
+    width: 1200px;
+    height: 40px;
+    top: 88px;
+    left: 24px;
+    border: 0px none;
+  }
+  
+  .student-community .div-6 {
+    position: absolute;
+    width: 170px;
+    height: 24px;
+    top: 8px;
+    left: 0;
+    border: 0px none;
+  }
+  
+  .student-community .button {
+    all: unset;
+    box-sizing: border-box;
+    width: 69px;
+    height: 24px;
+    top: 0;
+    left: 0;
+    position: absolute;
+    border: 0px none;
+  }
+  
+  .student-community .frame {
+    display: flex;
+    width: 16px;
+    height: 16px;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 4px;
+    left: 0;
+  }
+  
+  .student-community .frame-2 {
+    position: relative;
+    width: 16px;
+    height: 16px;
+  }
+  
+  .student-community .text-wrapper-2 {
+    position: absolute;
+    width: 45px;
+    top: 2px;
+    left: 24px;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #4b5563;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 16px;
+  }
+  
+  .student-community .button-2 {
+    all: unset;
+    box-sizing: border-box;
+    width: 86px;
+    height: 24px;
+    top: 0;
+    left: 85px;
+    position: absolute;
+    border: 0px none;
+  }
+  
+  .student-community .frame-wrapper {
+    display: flex;
+    width: 12px;
+    height: 16px;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 4px;
+    left: 0;
+  }
+  
+  .student-community .frame-3 {
+    position: relative;
+    width: 12px;
+    height: 16px;
+  }
+  
+  .student-community .text-wrapper-3 {
+    position: absolute;
+    width: 66px;
+    top: 2px;
+    left: 20px;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #4b5563;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 16px;
+  }
+  
+  .student-community .div-wrapper {
+    all: unset;
+    box-sizing: border-box;
+    width: 82px;
+    height: 40px;
+    top: 0;
+    left: 1118px;
+    background-color: #ebac00;
+    border-radius: 8px;
+    position: absolute;
+    border: 0px none;
+  }
+  
+  .student-community .text-wrapper-4 {
+    position: absolute;
+    width: 34px;
+    top: 10px;
+    left: 24px;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .student-community .div-7 {
+    position: absolute;
+    width: 1248px;
+    height: 40px;
+    top: 216px;
+    left: 16px;
+    border: 0px none;
+  }
+  
+  .student-community .button-3 {
+    all: unset;
+    box-sizing: border-box;
+    width: 98px;
+    height: 40px;
+    top: 0;
+    left: 0;
+    background-color: #671e36;
+    border-radius: 9999px;
+    position: absolute;
+    border: 0px none;
+  }
+  
+  .student-community .text-wrapper-5 {
+    position: absolute;
+    width: 65px;
+    top: 10px;
+    left: 16px;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .student-community .button-4 {
+    all: unset;
+    box-sizing: border-box;
+    width: 122px;
+    height: 40px;
+    top: 0;
+    left: 114px;
+    background-color: #ffffff;
+    border-radius: 9999px;
+    position: absolute;
+    border: 0px none;
+  }
+  
+  .student-community .text-wrapper-6 {
+    position: absolute;
+    width: 90px;
+    top: 10px;
+    left: 16px;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #4b5563;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .student-community .button-5 {
+    all: unset;
+    box-sizing: border-box;
+    width: 83px;
+    height: 40px;
+    top: 0;
+    left: 252px;
+    background-color: #ffffff;
+    border-radius: 9999px;
+    position: absolute;
+    border: 0px none;
+  }
+  
+  .student-community .text-wrapper-7 {
+    position: absolute;
+    width: 51px;
+    top: 10px;
+    left: 16px;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #4b5563;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .student-community .button-6 {
+    all: unset;
+    box-sizing: border-box;
+    width: 65px;
+    height: 40px;
+    top: 0;
+    left: 352px;
+    background-color: #ffffff;
+    border-radius: 9999px;
+    position: absolute;
+    border: 0px none;
+  }
+  
+  .student-community .text-wrapper-8 {
+    position: absolute;
+    width: 33px;
+    top: 10px;
+    left: 16px;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #4b5563;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .student-community .div-8 {
+    position: absolute;
+    width: 1248px;
+    height: 744px;
+    top: 288px;
+    left: 16px;
+    border: 0px none;
+  }
+  
+  .student-community .div-9 {
+    position: absolute;
+    width: 608px;
+    height: 200px;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    border-radius: 8px;
+    border: 0px none;
+    box-shadow: 0px 10px 15px #0000001a, 0px 4px 6px #0000001a;
+  }
+  
+  .student-community .div-10 {
+    position: absolute;
+    width: 560px;
+    height: 48px;
+    top: 24px;
+    left: 24px;
+    border: 0px none;
+  }
+  
+  .student-community .img-2 {
+    width: 48px;
+    height: 48px;
+    top: 0;
+    left: 0;
+    border-radius: 9999px;
+    position: absolute;
+    border: 0px none;
+    background-image: url(../Media/Alyssa.JPG);
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+  
+  .student-community .div-11 {
+    position: absolute;
+    width: 79px;
+    height: 44px;
+    top: 2px;
+    left: 64px;
+    border: 0px none;
+  }
+  
+  .student-community .text-wrapper-9 {
+    width: 32px;
+    position: absolute;
+    top: 2px;
+    left: 0;
+    font-family: "Inter-Bold", Helvetica;
+    font-weight: 700;
+    color: #1f2937;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 16px;
+  }
+  
+  .student-community .text-wrapper-10 {
+    position: absolute;
+    width: 79px;
+    top: 25px;
+    left: 0;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #6b7280;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: 14px;
+  }
+  
+  .student-community .button-7 {
+    position: absolute;
+    width: 14px;
+    height: 16px;
+    top: 16px;
+    left: 159px;
+    border: 0px none;
+  }
+  
+  .student-community .img-wrapper {
+    display: flex;
+    width: 14px;
+    height: 16px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .student-community .frame-4 {
+    position: relative;
+    width: 14px;
+    height: 16px;
+  }
+  
+  .student-community .p {
+    position: absolute;
+    width: 560px;
+    height: 48px;
+    top: 88px;
+    left: 24px;
+    border: 0px none;
+  }
+  
+  .student-community .text-wrapper-11 {
+    position: absolute;
+    width: 537px;
+    top: 2px;
+    left: 0;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #1f2937;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .student-community .text-wrapper-12 {
+    position: absolute;
+    width: 146px;
+    top: 26px;
+    left: 0;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #1f2937;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  
+  
+  .student-community .div-12 {
+    position: absolute;
+    width: 560px;
+    height: 24px;
+    top: 152px;
+    left: 24px;
+    border: 0px none;
+  }
+  
+  .student-community .button-8 {
+    all: unset;
+    box-sizing: border-box;
+    width: 55px;
+    height: 24px;
+    top: 0;
+    left: 0;
+    position: absolute;
+    border: 0px none;
+  }
+  
+  .student-community .text-wrapper-13 {
+    position: absolute;
+    width: 31px;
+    top: 2px;
+    left: 24px;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #6b7280;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 16px;
+  }
+  
+  .student-community .button-9 {
+    all: unset;
+    box-sizing: border-box;
+    width: 98px;
+    height: 24px;
+    top: 0;
+    left: 79px;
+    position: absolute;
+    border: 0px none;
+  }
+  
+  .student-community .text-wrapper-14 {
+    position: absolute;
+    width: 74px;
+    top: 2px;
+    left: 24px;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #6b7280;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 16px;
+  }
+  
+  .student-community .button-10 {
+    all: unset;
+    box-sizing: border-box;
+    width: 68px;
+    height: 24px;
+    top: 0;
+    left: 201px;
+    position: absolute;
+    border: 0px none;
+  }
+  
+  .student-community .text-wrapper-15 {
+    position: absolute;
+    width: 44px;
+    top: 2px;
+    left: 24px;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #6b7280;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 16px;
+  }
+  
+  .student-community .div-13 {
+    position: absolute;
+    width: 608px;
+    height: 200px;
+    top: 0;
+    left: 640px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    border: 0px none;
+    box-shadow: 0px 10px 15px #0000001a, 0px 4px 6px #0000001a;
+  }
+  
+  .student-community .img-4 {
+    width: 48px;
+    height: 48px;
+    top: 0;
+    left: 0;
+    border-radius: 9999px;
+    position: absolute;
+    border: 0px none;
+    background-image: url(../Media/Roger.JPG);
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+  
+  .student-community .text-wrapper-16 {
+    width: 35px;
+    position: absolute;
+    top: 2px;
+    left: 0;
+    font-family: "Inter-Bold", Helvetica;
+    font-weight: 700;
+    color: #1f2937;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 16px;
+  }
+  
+  .student-community .text-wrapper-17 {
+    position: absolute;
+    width: 542px;
+    top: 2px;
+    left: 0;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #1f2937;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .student-community .text-wrapper-18 {
+    position: absolute;
+    width: 130px;
+    top: 26px;
+    left: 0;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #1f2937;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .student-community .div-14 {
+    position: absolute;
+    width: 560px;
+    height: 24px;
+    top: 152px;
+    left: 24px;
+    border: 0px none;
+  }
+  
+  .student-community .div-15 {
+    position: absolute;
+    width: 608px;
+    height: 200px;
+    top: 232px;
+    left: 0;
+    background-color: #ffffff;
+    border-radius: 8px;
+    border: 0px none;
+    box-shadow: 0px 10px 15px #0000001a, 0px 4px 6px #0000001a;
+  }
+  
+  .student-community .img-5 {
+    width: 48px;
+    height: 48px;
+    top: 0;
+    left: 0;
+    border-radius: 9999px;
+    position: absolute;
+    border: 0px none;
+    background-image: url(../Media/Alyssa.JPG);
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+  
+  .student-community .div-16 {
+    position: absolute;
+    width: 67px;
+    height: 44px;
+    top: 2px;
+    left: 64px;
+    border: 0px none;
+  }
+  
+  .student-community .text-wrapper-19 {
+    width: 54px;
+    position: absolute;
+    top: 2px;
+    left: 0;
+    font-family: "Inter-Bold", Helvetica;
+    font-weight: 700;
+    color: #1f2937;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 16px;
+  }
+  
+  .student-community .text-wrapper-20 {
+    position: absolute;
+    width: 66px;
+    top: 25px;
+    left: 0;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #6b7280;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: 14px;
+  }
+  
+  .student-community .button-11 {
+    width: 14px;
+    height: 16px;
+    top: 16px;
+    left: 147px;
+    position: absolute;
+    border: 0px none;
+  }
+  
+  .student-community .hosting-a-study {
+    position: absolute;
+    width: 529px;
+    top: 2px;
+    left: 0;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #1f2937;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .student-community .text-wrapper-21 {
+    position: absolute;
+    width: 194px;
+    top: 26px;
+    left: 0;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #1f2937;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .student-community .div-17 {
+    position: absolute;
+    width: 608px;
+    height: 200px;
+    top: 232px;
+    left: 640px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    border: 0px none;
+    box-shadow: 0px 10px 15px #0000001a, 0px 4px 6px #0000001a;
+  }
+  
+  .student-community .img-6 {
+    width: 48px;
+    height: 48px;
+    top: 0;
+    left: 0;
+    border-radius: 9999px;
+    position: absolute;
+    border: 0px none;
+    background-image: url(../Media/John.JPG);
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+  
+  .student-community .div-18 {
+    position: absolute;
+    width: 73px;
+    height: 44px;
+    top: 2px;
+    left: 64px;
+    border: 0px none;
+  }
+  
+  .student-community .text-wrapper-22 {
+    position: absolute;
+    width: 45px;
+    top: 2px;
+    left: 0;
+    font-family: "Inter-Bold", Helvetica;
+    font-weight: 700;
+    color: #1f2937;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 16px;
+  }
+  
+  .student-community .text-wrapper-23 {
+    position: absolute;
+    width: 73px;
+    top: 25px;
+    left: 0;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #6b7280;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: 14px;
+  }
+  
+  .student-community .button-12 {
+    width: 14px;
+    height: 16px;
+    top: 16px;
+    left: 153px;
+    position: absolute;
+    border: 0px none;
+  }
+  
+  .student-community .text-wrapper-24 {
+    position: absolute;
+    width: 519px;
+    top: 2px;
+    left: 0;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #1f2937;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .student-community .text-wrapper-25 {
+    position: absolute;
+    width: 323px;
+    top: 26px;
+    left: 0;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #1f2937;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  
+  .student-community .div-20 {
+    position: absolute;
+    width: 1440px;
+    height: 180px;
+    top: 0;
+    left: 0;
+    background-color: #671e36;
+    border: 0px none;
+  }
+  
+  .student-community .div-21 {
+    position: relative;
+    width: 1280px;
+    height: 84px;
+    top: 48px;
+    left: 80px;
+    border: 0px none;
+  }
+  
+  .student-community .text-wrapper-26 {
+    position: absolute;
+    width: 354px;
+    top: -2px;
+    left: 16px;
+    font-family: "Inter-Bold", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 36px;
+    letter-spacing: 0;
+    line-height: 36px;
+  }
+  
+  .student-community .text-wrapper-27 {
+    position: absolute;
+    width: 625px;
+    top: 58px;
+    left: 16px;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: 20px;
+    white-space: nowrap;
+  }
+  
