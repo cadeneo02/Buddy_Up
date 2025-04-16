@@ -14,6 +14,9 @@
     <!-- Listing-detail stylesheet -->
     <link rel="stylesheet" href="./Style/listing-detail.css" />
 
+    <!-- Leaflet Stylesheet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
     <!-- Link js -->
     <script defer src="script.js"></script>
     <!--Font-awesome link  -->
@@ -76,10 +79,17 @@
             <p id="listing-parking">Available ($150/mo)</p>
           </div>
         </div>
+        <div class="description-cont">
+          <h4>Building Description</h4>
+          <p id="listing-description">Description:</p>
+        </div>
+
+        <div class="listing-location-cont">
+          <h4>location</h4>
+        </div>
 
         <p id="listing-room"><strong>Room:</strong></p>
         <p id="listing-bath"><strong>Bath:</strong></p>
-        <p id="listing-description"><strong>Description:</strong></p>
         <p id="listing-address"><strong>Address:</strong></p>
 
         <div class="action-buttons">
@@ -155,5 +165,9 @@
 
     <!-- Loads js -->
     <script src="./Scripts/script.js"></script>
+    <!-- Listing-detail JS -->
+    <script src="./Scripts/listing-detail.js"></script>
+    <!-- Leaflet JS Script for mapping -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   </body>
 </html>
