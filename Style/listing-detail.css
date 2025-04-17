@@ -11,3 +11,16 @@
   display: flex;
   justify-content: space-between;
 }
+
+/* Mapping Styling */
+
+#listing-map {
+  width: 90vw;
+  height: 200px;
+  border: 1px solid #dedede;
+  margin-right: auto;
+  margin-left: auto;
+}
+.btn-secondary {
+  background-color: hsl(43, 97%, 55%);
+}
