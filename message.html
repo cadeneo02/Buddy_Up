@@ -12,12 +12,17 @@
     <link rel="stylesheet" href="Style/global.css" />
     <!-- Link js -->
     <script defer src="Scripts/message.js"></script>
+    <script defer src="Scripts/script.js"></script>
     <!--Font-awesome link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    />
-    
+    />    
   </head>
 <body>
+ <!-- Navigation -->
+ <nav>
+  <a class="navlink" href="index.html">&larr; Home</a>
+  <span class="navmessage">Messages</span>
+</nav>
   <div class="messages">
     <div class="body">
       <div class="div-wrapper">
@@ -33,32 +38,35 @@
             </div>
           </div>
 
-          <!-- Chat User Card -->
           <div class="div-9">
-            <div class="div-10">
-              <div class="overlap-group-2">
-                <div class="img-2"></div>
-                <div class="div-11"></div>
+            <div class="chat-entry">
+              <div class="div-10">
+                <div class="overlap-group-2">
+                  <div class="img-2"></div>
+                  <div class="div-11"></div>
+                </div>
+              </div>
+              <div class="div-12">
+                <div class="text-wrapper-2">Mike Peters</div>
+                <p class="hey-i-m-interested">Hey, I'm interested in being your roommate...</p>
+                <div class="text-wrapper-3">2m ago</div>
               </div>
             </div>
-            <div class="div-12">
-              <div class="text-wrapper-2">Mike Peters</div>
-              <p class="hey-i-m-interested">Hey, I'm interested in being your roommate...</p>
-              <div class="text-wrapper-3">2m ago</div>
-            </div>
-          <div class="div-9">
-            <div class="div-10">
-              <div class="overlap-group-2">
-                <div class="img-3"></div>
-                <div class="div-11"></div>
+            <div class="chat-entry">
+              <div class="div-10">
+                <div class="overlap-group-2">
+                  <div class="img-3"></div>
+                  <div class="div-11"></div>
+                </div>
+              </div>
+              <div class="div-12">
+                <div class="text-wrapper-2">Emma Tompson</div>
+                <p class="hey-i-m-interested">Thank you...</p>
+                <div class="text-wrapper-3">2m ago</div>
               </div>
             </div>
-            <div class="div-12">
-              <div class="text-wrapper-2">Emma Tompson</div>
-              <p class="hey-i-m-interested">Thankyou...</p>
-              <div class="text-wrapper-3">2m ago</div>
-            </div>
-            <div class="div-10">
+            <div class="chat-entry">
+              <div class="div-10">
                 <div class="overlap-group-2">
                   <div class="img-4"></div>
                   <div class="div-11"></div>
@@ -69,36 +77,40 @@
                 <p class="hey-i-m-interested">Is the apartment still available?...</p>
                 <div class="text-wrapper-3">2 days</div>
               </div>
-          </div>
-          <div class="div-10">
-            <div class="overlap-group-2">
-              <div class="img-5"></div>
-              <div class="div-11"></div>
+            </div>
+            <div class="chat-entry">
+              <div class="div-10">
+                <div class="overlap-group-2">
+                  <div class="img-5"></div>
+                  <div class="div-11"></div>
+                </div>
+              </div>
+              <div class="div-12">
+                <div class="text-wrapper-2">Seth Rogers</div>
+                <p class="hey-i-m-interested">Hi!!! I saw your post regarding an apartment. Can I see it?</p>
+                <div class="text-wrapper-3">Yesterday</div>
+              </div>
             </div>
           </div>
-          <div class="div-12">
-            <div class="text-wrapper-2">Seth Rogers</div>
-            <p class="hey-i-m-interested">Hi!!! I saw your post regarding an apartment. Can I see it ?</p>
-            <div class="text-wrapper-3">Yesterday</div>
-          </div>
-      </div>
         </div>
+
 
         <!-- Right Panel: Chat Conversation -->
         <div class="div-19">
+          <div class = "chat-entry">
           <div class="div-10">
             <div class="overlap-group-2">
               <div class="img-6"></div>
               <div class="div-11"></div>
             </div>
           </div>
-          <div class="div-20">
+          <div class="div-12">
             <div class="div-21">
               <div class="text-wrapper-2">Mike Peters</div>
               <div class="text-wrapper-9">Online</div>
             </div>
           </div>
-
+        </div>
           <div class="div-22">
             <!-- Messages dynamically added here -->
           </div>

@@ -1,180 +1,208 @@
 /* message.css - Optimized and Responsive with Split View */
 
 .messages {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 16px;
-    background-color: #ffffff;
-    font-family: "Inter", sans-serif;
-  }
-  
-  .messages .body {
-    width: 100%;
-    max-width: 1440px;
-  }
-  
-  .div-wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 1024px;
-    margin: 0 auto;
-    gap: 16px;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+  background-color: #ffffff;
+  font-family: "Inter", sans-serif;
+}
 
-   .div-5 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+.messages .body {
+  width: 100%;
+  max-width: 1440px;
+}
+
+.nav{
+   width: 100%; 
+   background-color: #f9f9f9;
+   padding: 12px 24px; 
+   border-bottom: 1px solid #ddd; 
+   font-family: 'Inter', sans-serif;
+}
+
+.navlink{
+  text-decoration: none; 
+  color: #333; 
+  font-weight: 500;
+}
+
+.navmessage{
+  margin-left: 16px; 
+  color: #555; 
+  font-weight: 600;
+ 
+}
+
+.div-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1024px;
+  margin: 2px auto;
+  gap: 16px;
+}
+
+.div-3 {
+  width: 30%;
+  min-width: 280px;
+  background-color: #fff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  padding: 16px;
+  border: 2px solid #ccc;
+}
+
+.div-19 {
+  width: 68%;
+  background-color: #fff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  padding: 16px;
+  border: 2px solid #ccc;
+}
+
+.div-5 {
+  margin: 16px 0;
+}
+
+.text-wrapper {
+  margin-bottom: 12px;
+  font-weight: 600;
+  font-size: 20px;
+  color: #1f2937;
+}
+
+.div-9 {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.chat-entry {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.div-10 {
+  flex-shrink: 0;
+}
+
+.div-12 {
+  flex-grow: 1;
+}
+
+.input, .input-2 {
+  width: 100%;
+  padding: 10px 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.button {
+  background-color: #671e36;
+  border: none;
+  border-radius: 8px;
+  padding: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button img {
+  width: 16px;
+  height: 16px;
+}
+
+.text-wrapper-2,
+.text-wrapper-4,
+.text-wrapper-5,
+.text-wrapper-7 {
+  font-weight: 600;
+  color: #1f2937;
+  font-size: 16px;
+}
+
+.img-2, .img-3, .img-4, .img-5, .img-6 {
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  top: 4px;
+  left: 0;
+  border-radius: 9999px;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  border: none;
+}
+
+.img-2 { background-image: url(../Media/Mason.JPG); }
+.img-3 { background-image: url(../Media/Alyssa.JPG); }
+.img-4 { background-image: url(../Media/Katie.JPG); }
+.img-5 { background-image: url(../Media/Roger.JPG); }
+.img-6 { background-image: url(../Media/John.JPG); }
+
+.div-11, .div-15 {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 0;
+  left: 36px;
+  background-color: #ebac00;
+  border-radius: 9999px;
+  border: none;
+}
+
+.div-22 {
+  height: 300px;
+  overflow-y: auto;
+  padding-right: 10px;
+  margin: 16px 0;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+}
+.overlap-group-2,
+.overlap-group-3 {
+  position: relative;
+  width: 52px;
+  height: 52px;
+  top: -4px;
+}
+
+.frame, .frame-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 12px;
+  left: 12px;
+}
+
+.img {
+  width: 16px;
+  height: 16px;
+  position: relative;
+}
+
+@media screen and (max-width: 768px) {
+  .div-wrapper {
+    flex-direction: column;
+  }
+  .div-3, .div-19 {
     width: 100%;
-    max-width: 1024px;
-    margin: 0 auto;
-    gap: 16px;
+    border: 2px solid #ccc;
   }
-  
- .overlap-group-wrapper {
-    height: 42px;
-    border: 0px none;
+  .chat-entry {
+    flex-direction: column;
   }
-  
- .overlap-group {
-    position: relative;
-    width: 100%;
-    height: 42px;
-    border-radius: 8px;
-  }
-   .frame {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 12px;
-    left: 12px;
-    width: 16px;
-    height: 16px;
-  }
-  
-  
-  /* Left: Chat list panel */
-  .div-3 {
-    width: 30%;
-    min-width: 280px;
-    background-color: #fff;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-    border-radius: 8px;
-    padding: 16px;
-  }
-  
-  /* Right: Chat conversation */
-  .div-19 {
-    width: 68%;
-    background-color: #fff;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-    border-radius: 8px;
-    padding: 16px;
-  }
-  
-  .input, .input-2 {
-    width: 100%;
-    padding: 10px 16px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 16px;
-  }
-  
-  .button {
-    background-color: #671e36;
-    border: none;
-    border-radius: 8px;
-    padding: 8px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .button img {
-    width: 16px;
-    height: 16px;
-  }
-  
-  .text-wrapper,
-  .text-wrapper-2,
-  .text-wrapper-4,
-  .text-wrapper-5,
-  .text-wrapper-7 {
-    font-weight: 600;
-    color: #1f2937;
-    font-size: 16px;
-    
-  }
-  
-  /* Profile Images and Status Indicator */
-  .img-2, .img-3, .img-4, .img-5, .img-6 {
-    width: 48px;
-    height: 48px;
-    position: absolute;
-    top: 4px;
-    left: 0;
-    border-radius: 9999px;
-    background-size: cover;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    border: none;
-  }
-  
-  .img-2 { background-image: url(../Media/Mason.JPG); }
-  .img-3 { background-image: url(../Media/Alyssa.JPG); }
-  .img-4 { background-image: url(../Media/Katie.JPG); }
-  .img-5 { background-image: url(../Media/Roger.JPG); }
-  .img-6 { background-image: url(../Media/John.JPG); }
-  
-  .div-11, .div-15 {
-    width: 16px;
-    height: 16px;
-    position: absolute;
-    top: 0;
-    left: 36px;
-    background-color: #ebac00;
-    border-radius: 9999px;
-    border: none;
-  }
-  
-  /* Overlap containers for avatars */
-  .overlap-group-2,
-  .overlap-group-3 {
-    position: relative;
-    width: 52px;
-    height: 52px;
-    top: -4px;
-  }
-  
-  /* Icon wrapper */
-  .frame, .frame-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 16px;
-    height: 16px;
-    position: absolute;
-    top: 12px;
-    left: 12px;
-  }
-  
-  .img {
-    width: 16px;
-    height: 16px;
-    position: relative;
-  }
-  
-  @media screen and (max-width: 768px) {
-    .div-wrapper {
-      flex-direction: column;
-    }
-    .div-3, .div-19 {
-      width: 100%;
-    }
-  }
-  
+}

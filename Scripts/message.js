@@ -39,3 +39,22 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
   
+  document.addEventListener("DOMContentLoaded", () => {
+    const searchInput = document.querySelector(".input");
+  
+    if (searchInput) {
+      searchInput.addEventListener("input", () => {
+        const searchTerm = searchInput.value.toLowerCase();
+  
+        document.querySelectorAll(".chat-entry").forEach(entry => {
+          const name = entry.querySelector(".text-wrapper-2")?.textContent.toLowerCase() || "";
+          const message = entry.querySelector(".hey-i-m-interested")?.textContent.toLowerCase() || "";
+  
+          // Check if the name or message contains the search term
+          const match = name.includes(searchTerm) || message.includes(searchTerm);
+          entry.style.display = match ? "flex" : "none";
+        });
+      });
+    }
+  });
+  

@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  initCalendar();
+  // initCalendar();
   handlePopups();
   setupNavigation();
   loadAppointments();
