@@ -22,45 +22,58 @@ document.addEventListener("DOMContentLoaded", async () => {
     // Load initial JSON posts if localStorage is empty
     async function loadInitialPosts() {
       const storedPosts = getPostsFromStorage();
-  
-  
-      try {
-        const res = await fetch("./Docs/communitypost.json");
-        const jsonPosts = await res.json();
-        savePostsToStorage(jsonPosts);
-        return jsonPosts;
-      } catch (e) {
-        console.error("Failed to load posts.json:", e);
-        return [];
+      
+  try {
+    const res = await fetch("./Docs/communitypost.json");
+    const jsonPosts = await res.json();
+
+    // Merge and filter duplicates by ID
+    const merged = [...storedPosts];
+    const existingIds = new Set(storedPosts.map(p => p.id));
+    for (const p of jsonPosts) {
+      if (!existingIds.has(p.id)) {
+        merged.push(p);
       }
     }
+
+    savePostsToStorage(merged);
+    return merged;
+  } catch (e) {
+    console.error("Failed to load communitypost.json:", e);
+    return storedPosts;
+  }
+}
   
     let posts = await loadInitialPosts();
   
-    postBtn.addEventListener("click", () => {
-      const content = postInput.textContent.trim();
-      if (!content) return;
-  
-      const newPost = {
-        id: Date.now(),
-        name: "You",
-        status: "just now",
-        content,
-        category: currentFilter,
-        image: selectedImage ? URL.createObjectURL(selectedImage) : null,
-        location: locationInput.value,
-        avatar:"Media/Katie.jpg",
-        likes: 0,
-        comments: [],
-      };
-  
-      posts.unshift(newPost);
-      savePostsToStorage(posts);
-      renderPosts();
-      postInput.textContent = "";
-      locationInput.value = "";
-      selectedImage = null;
-    });
+
+// --- Inside your postBtn.addEventListener("click", () => { ... })
+postBtn.addEventListener("click", async () => {
+  const content = postInput.textContent.trim();
+  if (!content) return;
+
+  const newPost = {
+    id: Date.now(),
+    name: "You",
+    status: "just now",
+    content,
+    category: currentFilter,
+    image: selectedImage ? URL.createObjectURL(selectedImage) : null,
+    location: locationInput.value,
+    avatar: "Media/Katie.jpg",
+    likes: 0,
+    comments: [],
+  };
+
+  posts.unshift(newPost);
+  savePostsToStorage(posts);
+ // await postToServer(newPost); //  Simulate saving to backend
+  renderPosts();
+
+  postInput.textContent = "";
+  locationInput.value = "";
+  selectedImage = null;
+});
   
     filters.forEach((btn) => {
       btn.addEventListener("click", () => {
@@ -170,4 +183,17 @@ document.addEventListener("DOMContentLoaded", async () => {
   
     renderPosts();
   });
+  // async function postToServer(post) {
+  //   try {
+  //     await fetch("./Docs/communitypost.json", {
+  //       method: "POST", // Simulated – requires real server
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //       body: JSON.stringify(post),
+  //     });
+  //   } catch (err) {
+  //     console.warn("Simulated post to JSON (not saved, no backend):", post);
+  //   }
+  // }
   
