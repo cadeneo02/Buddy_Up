@@ -1,0 +1,43 @@
+[
+    {
+      "id": "user1",
+      "name": "Mike Peters",
+      "avatarUrl": "Media/Roger.jpg",
+      "status": "online",
+      "preview": "Hey, I'm interested in being your roommate...",
+      "messages": [
+        { "text": "Hey, I'm interested in being your roommate...", "time": "10:15 AM" }
+      ]
+    },
+    {
+        "id": "user2",
+        "name": "Emma Tompson",
+        "avatarUrl": "Media/Alyssa.jpg",
+        "status": "Away",
+        "preview": "Is the room available...",
+        "messages": [
+          { "text": "Hey, I'm interested in being your roommate is the room still available...", "time": "11:15 AM" }
+        ]
+      },
+      {
+        "id": "user3",
+        "name": "Seth Rogers ",
+        "avatarUrl": "Media/Mason.jpg",
+        "status": "online",
+        "preview": "Location??",
+        "messages": [
+          { "text": "Hey, Where is the room located? Can I visit", "time": "10:15 AM" }
+        ]
+      },
+      {
+        "id": "user4",
+        "name": "Alyssa Chan",
+        "avatarUrl": "Media/Katie.jpg",
+        "status": "online",
+        "preview": "When can I visit",
+        "messages": [
+          { "text": "Hey, when can I come to see the apartment.", "time": "10:15 AM" }
+        ]
+      }
+  ]
+  

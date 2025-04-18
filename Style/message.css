@@ -32,7 +32,6 @@
   margin-left: 16px; 
   color: #555; 
   font-weight: 600;
- 
 }
 
 .div-wrapper {
@@ -86,8 +85,14 @@
   flex-direction: row;
   align-items: flex-start;
   gap: 12px;
-  padding: 8px 0;
+  padding: 8px 12px;
   border-bottom: 1px solid #eee;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.chat-entry:hover {
+  background-color: #f3f3f3;
 }
 
 .div-10 {
@@ -169,6 +174,7 @@
   border: 1px solid #e0e0e0;
   border-radius: 6px;
 }
+
 .overlap-group-2,
 .overlap-group-3 {
   position: relative;
@@ -193,7 +199,17 @@
   height: 16px;
   position: relative;
 }
-
+.chat-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 9999px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 4px;
+  left: 0;
+}
 @media screen and (max-width: 768px) {
   .div-wrapper {
     flex-direction: column;

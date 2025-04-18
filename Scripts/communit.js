@@ -52,6 +52,7 @@ postBtn.addEventListener("click", async () => {
   const content = postInput.textContent.trim();
   if (!content) return;
 
+  const imageData = selectedImage ? await convertToBase64(selectedImage) : null;
   const newPost = {
     id: Date.now(),
     name: "You",
@@ -180,6 +181,15 @@ postBtn.addEventListener("click", async () => {
         });
       });
     }
+    async function convertToBase64(file) {
+      return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onload = () => resolve(reader.result);
+        reader.onerror = error => reject(error);
+      });
+    }
+  
   
     renderPosts();
   });

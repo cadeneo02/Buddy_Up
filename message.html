@@ -1,28 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Defines character encoding for text -->
     <meta charset="UTF-8" />
-    <!-- Responsive mobile design -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Sets webpage title -->
     <title>Buddy Up</title>
-    <!-- Linking stylesheet -->
     <link rel="stylesheet" href="./Style/message.css" />
     <link rel="stylesheet" href="Style/global.css" />
-    <!-- Link js -->
     <script defer src="Scripts/message.js"></script>
-    <script defer src="Scripts/script.js"></script>
-    <!--Font-awesome link  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    />    
+    <script defer src="Scripts/popuphandler.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
   </head>
 <body>
- <!-- Navigation -->
- <nav>
-  <a class="navlink" href="index.html">&larr; Home</a>
-  <span class="navmessage">Messages</span>
-</nav>
+  <!-- Navigation -->
+  <nav>
+    <a class="navlink" href="index.html">&larr; Home</a>
+    <span class="navmessage">Messages</span>
+  </nav>
   <div class="messages">
     <div class="body">
       <div class="div-wrapper">
@@ -33,94 +26,37 @@
             <div class="overlap-group-wrapper">
               <div class="overlap-group">
                 <input class="input" placeholder="Search messages..." type="text" />
-                <!-- <div class="frame"><img class="img" src="Media/search.png" alt="search" /></div> -->
               </div>
             </div>
           </div>
-
-          <div class="div-9">
-            <div class="chat-entry">
-              <div class="div-10">
-                <div class="overlap-group-2">
-                  <div class="img-2"></div>
-                  <div class="div-11"></div>
-                </div>
-              </div>
-              <div class="div-12">
-                <div class="text-wrapper-2">Mike Peters</div>
-                <p class="hey-i-m-interested">Hey, I'm interested in being your roommate...</p>
-                <div class="text-wrapper-3">2m ago</div>
-              </div>
-            </div>
-            <div class="chat-entry">
-              <div class="div-10">
-                <div class="overlap-group-2">
-                  <div class="img-3"></div>
-                  <div class="div-11"></div>
-                </div>
-              </div>
-              <div class="div-12">
-                <div class="text-wrapper-2">Emma Tompson</div>
-                <p class="hey-i-m-interested">Thank you...</p>
-                <div class="text-wrapper-3">2m ago</div>
-              </div>
-            </div>
-            <div class="chat-entry">
-              <div class="div-10">
-                <div class="overlap-group-2">
-                  <div class="img-4"></div>
-                  <div class="div-11"></div>
-                </div>
-              </div>
-              <div class="div-12">
-                <div class="text-wrapper-2">Alyssa Chan</div>
-                <p class="hey-i-m-interested">Is the apartment still available?...</p>
-                <div class="text-wrapper-3">2 days</div>
-              </div>
-            </div>
-            <div class="chat-entry">
-              <div class="div-10">
-                <div class="overlap-group-2">
-                  <div class="img-5"></div>
-                  <div class="div-11"></div>
-                </div>
-              </div>
-              <div class="div-12">
-                <div class="text-wrapper-2">Seth Rogers</div>
-                <p class="hey-i-m-interested">Hi!!! I saw your post regarding an apartment. Can I see it?</p>
-                <div class="text-wrapper-3">Yesterday</div>
-              </div>
-            </div>
-          </div>
+          <!-- Dynamic User List -->
+          <div class="div-9"></div>
         </div>
-
 
         <!-- Right Panel: Chat Conversation -->
         <div class="div-19">
-          <div class = "chat-entry">
           <div class="div-10">
             <div class="overlap-group-2">
               <div class="img-6"></div>
               <div class="div-11"></div>
             </div>
           </div>
-          <div class="div-12">
+          <div class="div-20">
             <div class="div-21">
-              <div class="text-wrapper-2">Mike Peters</div>
-              <div class="text-wrapper-9">Online</div>
+              <div class="text-wrapper-2">Select a chat</div>
+              <div class="text-wrapper-9">...</div>
             </div>
           </div>
-        </div>
+
           <div class="div-22">
             <!-- Messages dynamically added here -->
           </div>
 
           <div class="div-27">
-            <div class="div-28">
+            <div class="div-28" style="display: flex; align-items: flex-start; gap: 12px;">
               <div class="div-29">
                 <div class="overlap-group-4">
                   <input class="input-2" placeholder="Type your message..." type="text" />
-                  <!-- <div class="frame-wrapper"><img class="img" src="Media/chat.png" alt="chat" /></div> -->
                 </div>
               </div>
               <div class="button">
@@ -135,69 +71,66 @@
       </div>
     </div>
   </div>
-
    <!-- Footer Section -->
-   <footer class="footer">
-    <div class="footer-container">
-      <div class="footer-info">
-        <a href="#" class="popup-trigger" data-popup="about-popup">About</a>
-        <a href="#" class="popup-trigger" data-popup="hours-popup">Hours</a>
-        <a href="#" class="popup-trigger" data-popup="contact-popup"
-          >Contact</a
-        >
-      </div>
-
-      <div class="footer-logo">
-        <img src="Media/Buddy_Up_Logo.PNG" alt="Buddy Up Logo" />
-        <p>Buddy Up</p>
-      </div>
-
-      <div class="footer-socials">
-        <a href="https://facebook.com" target="_blank"
-          ><img src="Media/Facebook_Icon.PNG" alt="Facebook"
-        /></a>
-        <a href="https://instagram.com" target="_blank"
-          ><img src="Media/Instagram_Icon.PNG" alt="Instagram"
-        /></a>
-        <a href="https://tiktok.com" target="_blank"
-          ><img src="Media/Tik_Tok_Icon.PNG" alt="TikTok"
-        /></a>
-        <a href="https://twitter.com" target="_blank"
-          ><img src="Media/X_Icon.PNG" alt="Twitter"
-        /></a>
-      </div>
+ <footer class="footer">
+  <div class="footer-container">
+    <div class="footer-info">
+      <a href="#" class="popup-trigger" data-popup="about-popup">About</a>
+      <a href="#" class="popup-trigger" data-popup="hours-popup">Hours</a>
+      <a href="#" class="popup-trigger" data-popup="contact-popup"
+        >Contact</a
+      >
     </div>
-    <p class="footer-copyright">©2025 Buddy Up</p>
-  </footer>
 
-  <!-- Popup Overlays -->
-  <div class="popup-overlay" id="about-popup">
-    <div class="popup-content">
-      <span class="close-popup">&times;</span>
-      <h2>About Buddy Up</h2>
-      <p>
-        Buddy Up is a platform that helps you connect with other Loyola
-        students & find the home that is best tailored to your needs.
-      </p>
+    <div class="footer-logo">
+      <img src="Media/Buddy_Up_Logo.PNG" alt="Buddy Up Logo" />
+      <p>Buddy Up</p>
+    </div>
+
+    <div class="footer-socials">
+      <a href="https://facebook.com" target="_blank"
+        ><img src="Media/Facebook_Icon.PNG" alt="Facebook"
+      /></a>
+      <a href="https://instagram.com" target="_blank"
+        ><img src="Media/Instagram_Icon.PNG" alt="Instagram"
+      /></a>
+      <a href="https://tiktok.com" target="_blank"
+        ><img src="Media/Tik_Tok_Icon.PNG" alt="TikTok"
+      /></a>
+      <a href="https://twitter.com" target="_blank"
+        ><img src="Media/X_Icon.PNG" alt="Twitter"
+      /></a>
     </div>
   </div>
+  <p class="footer-copyright">©2025 Buddy Up</p>
+</footer>
 
-  <div class="popup-overlay" id="hours-popup">
-    <div class="popup-content">
-      <span class="close-popup">&times;</span>
-      <h2>Operating Hours</h2>
-      <p>Monday - Friday: 9 AM - 6 PM<br />Saturday - Sunday: 10 AM - 4 PM</p>
-    </div>
+<!-- Popup Overlays -->
+<div class="popup-overlay" id="about-popup">
+  <div class="popup-content">
+    <span class="close-popup">&times;</span>
+    <h2>About Buddy Up</h2>
+    <p>
+      Buddy Up is a platform that helps you connect with other Loyola
+      students & find the home that is best tailored to your needs.
+    </p>
   </div>
+</div>
 
-  <div class="popup-overlay" id="contact-popup">
-    <div class="popup-content">
-      <span class="close-popup">&times;</span>
-      <h2>Contact Us</h2>
-      <p>Email: support@buddyup.com<br />Phone: (123) 456-7890</p>
-    </div>
+<div class="popup-overlay" id="hours-popup">
+  <div class="popup-content">
+    <span class="close-popup">&times;</span>
+    <h2>Operating Hours</h2>
+    <p>Monday - Friday: 9 AM - 6 PM<br />Saturday - Sunday: 10 AM - 4 PM</p>
   </div>
+</div>
 
+<div class="popup-overlay" id="contact-popup">
+  <div class="popup-content">
+    <span class="close-popup">&times;</span>
+    <h2>Contact Us</h2>
+    <p>Email: support@buddyup.com<br />Phone: (123) 456-7890</p>
+  </div>
+</div>
 </body>
 </html>
-
