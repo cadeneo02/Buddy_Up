@@ -94,6 +94,11 @@ body {
   height: 16px;
 }
 
+.post-creator .location-input{
+display: none; 
+margin-top: 0.5rem;
+}
+
 .post-creator .actions .post {
   background-color: var(--accent-color);
   color: white;
@@ -175,7 +180,15 @@ body {
 .post .content {
   margin-top: 1rem;
 }
-
+.post-img {
+  width: 100px;
+  max-width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-top: 0.5rem;
+  border-radius: 0.5rem;
+  display: block;
+}
 .post .content span {
   display: block;
   margin-top: 0.5rem;

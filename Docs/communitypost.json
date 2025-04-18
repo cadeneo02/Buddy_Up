@@ -1,0 +1,87 @@
+[
+    {
+      "id": 1713379200000,
+      "name": "Alex",
+      "status": "2 minutes ago",
+      "content": "Excited to start the new semester! \ud83c\udf89",
+      "category": "All Posts",
+      "image": "Media/1400WDevonAvenue.jpg",
+      "avatar": "Media/Katie.jpg",
+      "location": "Loyola Campus",
+      "likes": 2,
+      "comments": [
+        {
+          "text": "Good luck!"
+        },
+        {
+          "text": "Let's go!"
+        }
+      ]
+    },
+    {
+      "id": 1713379200001,
+      "name": "Taylor",
+      "status": "1 hour ago",
+      "content": "Roommate needed for fall semester. DM me!",
+      "category": "Roommates",
+      "image": null,
+      "avatar": "Media/John.jpg",
+      "location": "Near Sheridan Red Line",
+      "likes": 5,
+      "comments": [
+        {
+          "text": "Still available?"
+        }
+      ]
+    },
+    {
+      "id": 1713379200002,
+      "name": "Jordan",
+      "status": "yesterday",
+      "content": "Join our study group for finals next week.",
+      "category": "Tips",
+      "image": "Media/chat.png",
+    "avatar": "Media/Mason.jpg",
+      "location": "Library Room B",
+      "likes": 3,
+      "comments": []
+    },
+    {
+      "id": 1713379200003,
+      "name": "Roger",
+      "status": "yesterday",
+      "content": "Hi Everyone, excited to share that undergrad community is hosting an event to welcome all the juniors. More details out soon...",
+      "category": "Event",
+      "image": null,
+      "avatar": "Media/Roger.jpg",
+        "location": "Loyola Campus",
+      "likes": 2,
+      "comments": [
+        {
+          "text": "Good luck!"
+        },
+        {
+          "text": "Let's go!"
+        }
+      ]
+    },
+    {
+      "id": 1713379200004,
+      "name": "Alyssa",
+      "status": "2 minutes ago",
+      "content": "Looking for a Roommate to share 2BHK house. For pictures and more message me.",
+      "category": "Roommate",
+      "image": null,
+      "avatar": "Media/Alyssa.jpg",
+      "location": "Loyola Campus",
+      "likes": 2,
+      "comments": [
+        {
+          "text": "Hey! I am interested."
+        },
+        {
+          "text": "Location?"
+        }
+      ]
+    }
+  ]

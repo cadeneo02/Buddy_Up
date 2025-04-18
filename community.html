@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="Style/global.css" />
     <link rel="stylesheet" href="Style/community.css" />
-    <script src = "Scripts/communit.js"></script>
     <title>Student Community</title>
   </head>
   <body>
@@ -16,17 +15,20 @@
           <p>Connect with verified Loyola students and share your experiences</p>
         </div>
       </header>
+
       <section class="post-creator">
         <div class="container">
           <div class="avatar" style="background-image: url('Media/Katie.jpg')"></div>
-          <div class="input"><p>Share something with the community...</p></div>
+          <div class="input" contenteditable="true">Share something with the community...</div>
           <div class="actions">
-            <button><img src="Media/photo.png" alt="Photo" /><span>Photo</span></button>
+            <button class="photo-trigger"><img src="Media/photo.png" alt="Photo" /><span>Photo</span></button>
             <button><img src="Media/location.png" alt="Location" /><span>Location</span></button>
+            <input type="text" id = "location-input" class="location-input" placeholder="Add location..."/>
             <button class="post">Post</button>
           </div>
         </div>
       </section>
+
       <nav class="filters">
         <div class="container">
           <button class="active">All Posts</button>
@@ -35,129 +37,12 @@
           <button>Tips</button>
         </div>
       </nav>
+
       <main class="posts">
-        <div class="container">
-          <article class="post">
-            <div class="user">
-              <div class="avatar" style="background-image: url('Media/Alyssa.JPG')"></div>
-              <div class="info">
-                <span class="name">Lisa</span>
-                <span class="status">online</span>
-              </div>
-              <img src="Media/online.png" alt="status" class="status-icon" />
-            </div>
-            <div class="content">
-              <p>Looking for a roommate! My 2BR in Rogers Park is perfect for students.</p>
-              <span>DM if interested! 🏠</span>
-            </div>
-            <div class="interactions">
-              <button><img src="Media/like.png" alt="Like" /><span>Like</span></button>
-              <button><img src="Media/comment.png" alt="Comment" /><span>Comment</span></button>
-              <button><img src="Media/share.png" alt="Share" /><span>Share</span></button>
-            </div>
-          </article>
-          <article class="post">
-            <div class="user">
-              <div class="avatar" style="background-image: url('Media/Alyssa.JPG')"></div>
-              <div class="info">
-                <span class="name">Lisa</span>
-                <span class="status">online</span>
-              </div>
-              <img src="Media/online.png" alt="status" class="status-icon" />
-            </div>
-            <div class="content">
-              <p>Looking for a roommate! My 2BR in Rogers Park is perfect for students.</p>
-              <span>DM if interested! 🏠</span>
-            </div>
-            <div class="interactions">
-              <button><img src="Media/like.png" alt="Like" /><span>Like</span></button>
-              <button><img src="Media/comment.png" alt="Comment" /><span>Comment</span></button>
-              <button><img src="Media/share.png" alt="Share" /><span>Share</span></button>
-            </div>
-          </article>
-          <article class="post">
-            <div class="user">
-              <div class="avatar" style="background-image: url('Media/Alyssa.JPG')"></div>
-              <div class="info">
-                <span class="name">Lisa</span>
-                <span class="status">online</span>
-              </div>
-              <img src="Media/online.png" alt="status" class="status-icon" />
-            </div>
-            <div class="content">
-              <p>Looking for a roommate! My 2BR in Rogers Park is perfect for students.</p>
-              <span>DM if interested! 🏠</span>
-            </div>
-            <div class="interactions">
-              <button><img src="Media/like.png" alt="Like" /><span>Like</span></button>
-              <button><img src="Media/comment.png" alt="Comment" /><span>Comment</span></button>
-              <button><img src="Media/share.png" alt="Share" /><span>Share</span></button>
-            </div>
-          </article>
-        </div>
+        <div class="container"></div>
       </main>
     </div>
-     <!-- Footer Section -->
-   <footer class="footer">
-    <div class="footer-container">
-      <div class="footer-info">
-        <a href="#" class="popup-trigger" data-popup="about-popup">About</a>
-        <a href="#" class="popup-trigger" data-popup="hours-popup">Hours</a>
-        <a href="#" class="popup-trigger" data-popup="contact-popup"
-          >Contact</a
-        >
-      </div>
 
-      <div class="footer-logo">
-        <img src="Media/Buddy_Up_Logo.PNG" alt="Buddy Up Logo" />
-        <p>Buddy Up</p>
-      </div>
-
-      <div class="footer-socials">
-        <a href="https://facebook.com" target="_blank"
-          ><img src="Media/Facebook_Icon.PNG" alt="Facebook"
-        /></a>
-        <a href="https://instagram.com" target="_blank"
-          ><img src="Media/Instagram_Icon.PNG" alt="Instagram"
-        /></a>
-        <a href="https://tiktok.com" target="_blank"
-          ><img src="Media/Tik_Tok_Icon.PNG" alt="TikTok"
-        /></a>
-        <a href="https://twitter.com" target="_blank"
-          ><img src="Media/X_Icon.PNG" alt="Twitter"
-        /></a>
-      </div>
-    </div>
-    <p class="footer-copyright">©2025 Buddy Up</p>
-  </footer>
-
-  <!-- Popup Overlays -->
-  <div class="popup-overlay" id="about-popup">
-    <div class="popup-content">
-      <span class="close-popup">&times;</span>
-      <h2>About Buddy Up</h2>
-      <p>
-        Buddy Up is a platform that helps you connect with other Loyola
-        students & find the home that is best tailored to your needs.
-      </p>
-    </div>
-  </div>
-
-  <div class="popup-overlay" id="hours-popup">
-    <div class="popup-content">
-      <span class="close-popup">&times;</span>
-      <h2>Operating Hours</h2>
-      <p>Monday - Friday: 9 AM - 6 PM<br />Saturday - Sunday: 10 AM - 4 PM</p>
-    </div>
-  </div>
-
-  <div class="popup-overlay" id="contact-popup">
-    <div class="popup-content">
-      <span class="close-popup">&times;</span>
-      <h2>Contact Us</h2>
-      <p>Email: support@buddyup.com<br />Phone: (123) 456-7890</p>
-    </div>
-  </div>
-
+    <script src="Scripts/communit.js"></script>
   </body>
 </html>
