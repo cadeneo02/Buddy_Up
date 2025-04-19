@@ -673,3 +673,194 @@ h2 {
 .close-popup:hover {
   color: hsl(44, 100%, 46%);
 }
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+  .header-container,
+  .footer-container {
+    flex-wrap: wrap; /* Keep horizontal flow */
+    justify-content: space-between;
+    padding: 0 10px;
+  }
+
+  .header-nav,
+  .footer-info,
+  .footer-socials {
+    gap: 15px;
+  }
+
+  .footer-logo {
+    margin-top: 10px;
+  }
+
+  .footer-copyright {
+    margin-top: 20px;
+    text-align: center;
+  }
+}
+
+/* Popup Styling */
+.popup-window {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  z-index: 1000;
+}
+
+.popup-contents {
+  text-align: center;
+}
+
+.close-popup {
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  float: right;
+}
+
+/* Active link styles */
+.header-nav a {
+  position: relative;
+}
+
+.header-nav a.active {
+  color: hsl(44, 100%, 46%);
+}
+
+/* Header Scroll Effects */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: all 0.4s ease;
+}
+
+.header-scrolled {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+.header-hidden {
+  transform: translateY(-100%);
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-logo {
+    margin-top: 0px;
+    order: 1;
+  }
+
+  .footer-socials {
+    order: 2;
+    margin-bottom: 20px;
+  }
+
+  .footer-info {
+    order: 3;
+    margin-bottom: 20px;
+  }
+
+  .footer-copyright {
+    order: 4;
+    align-self: flex-end;
+    margin-bottom: 0;
+    text-align: right;
+    width: 100%;
+  }
+}
+
+/* Mobile Header Styles */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* Show the menu button on mobile */
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: white;
+    position: absolute;
+    right: 10px;
+    top: 35%;
+    transform: translateY(-50%);
+  }
+
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 150px;
+    height: 100%;
+    background-color: hsl(340, 55%, 26%);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
+  }
+
+  .mobile-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+  }
+
+  .mobile-menu.active {
+    right: 0; /* Slide the menu into view */
+  }
+
+  .menu-close {
+    display: block; /* Show the close button on mobile */
+    align-self: flex-end;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: white;
+  }
+}
+
+/* Hide Menu and Close Buttons on Larger Screens */
+@media (min-width: 769px) {
+  .menu-toggle,
+  .menu-close {
+    display: none; /* Hide the buttons on larger screens */
+  }
+}
+
+.section-container {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.mobile-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  text-align: right; /* Align text to the right */
+}
+
+.menu-close {
+  align-self: flex-end; /* Align the close button to the right */
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: white;
+  margin-bottom: 20px; /* Add spacing below the close button */
+}
