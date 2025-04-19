@@ -222,3 +222,357 @@
     flex-direction: column;
   }
 }
+
+/* Active link styles */
+.header-nav a {
+  position: relative;
+}
+
+.header-nav a.active {
+  color: hsl(44, 100%, 46%);
+}
+
+/* Header */
+.header {
+  background-color: hsl(340, 55%, 26%);
+  color: white;
+  padding: 20px 0;
+  width: 100%;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Allows slight wrapping on narrow screens */
+  max-width: 1500px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-logo img {
+  width: 60px;
+}
+
+.header-logo p {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.header-nav {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  padding-right: 10px;
+}
+
+.header-nav a {
+  color: white;
+  font-size: 15px;
+  text-decoration: none;
+  transition: color 0.3s linear;
+}
+
+.header-nav a:hover {
+  color: hsl(44, 100%, 46%);
+}
+
+/* heading */
+h2 {
+  text-align: center;
+  font-size: 1.75rem;
+}
+
+/* Hover effect for header navigation */
+.header-nav a:hover {
+  color: hsl(44, 100%, 46%); /* Gold */
+}
+
+/* Footer */
+.footer {
+  background-color: hsl(340, 55%, 26%);
+  color: white;
+  padding: 30px 0;
+  text-align: center;
+  width: 100%;
+  position: relative;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Prevents stacking allows wrapping if needed */
+  max-width: 1000px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.footer-info {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer-info a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  transition: color 0.3s linear;
+  cursor: pointer;
+}
+
+.footer-info a:hover {
+  color: hsl(44, 100%, 46%);
+}
+
+.footer-logo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.footer-logo img {
+  width: 60px;
+}
+
+.footer-logo p {
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 6px;
+}
+
+.footer-socials {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.footer-socials img {
+  width: 32px;
+  height: 32px;
+}
+
+.footer-copyright {
+  font-size: 15px;
+  position: absolute;
+  bottom: 5px;
+  right: 20px;
+  font-style: italic;
+  text-align: right;
+}
+
+/* Popup Overlays */
+.popup-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background: white;
+  border-radius: 10px;
+  padding: 25px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+  text-align: center;
+}
+
+.popup-content h2 {
+  margin-top: 0;
+  color: hsl(340, 55%, 26%);
+  font-size: 24px;
+}
+
+.popup-content p {
+  color: #182123;
+  font-size: 16px;
+}
+
+.close-popup {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  color: hsl(340, 85%, 29%);
+  transition: color 0.3s linear;
+}
+
+.close-popup:hover {
+  color: hsl(44, 100%, 46%);
+}
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+  .header-container,
+  .footer-container {
+    flex-wrap: wrap; /* Keep horizontal flow */
+    justify-content: space-between;
+    padding: 0 10px;
+  }
+
+  .header-nav,
+  .footer-info,
+  .footer-socials {
+    gap: 15px;
+  }
+
+  .footer-logo {
+    margin-top: 10px;
+  }
+
+  .footer-copyright {
+    margin-top: 20px;
+    text-align: center;
+  }
+}
+
+/* Footer */
+.footer {
+  background-color: hsl(340, 55%, 26%);
+  color: white;
+  padding: 30px 0;
+  text-align: center;
+  width: 100%;
+  position: relative;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Prevents stacking allows wrapping if needed */
+  max-width: 1000px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.footer-info {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.footer-info a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  transition: color 0.3s linear;
+  cursor: pointer;
+}
+
+.footer-info a:hover {
+  color: hsl(44, 100%, 46%);
+}
+
+.footer-logo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.footer-logo img {
+  width: 60px;
+}
+
+.footer-logo p {
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 6px;
+}
+
+.footer-socials {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.footer-socials img {
+  width: 32px;
+  height: 32px;
+}
+
+.footer-copyright {
+  font-size: 15px;
+  position: absolute;
+  bottom: 5px;
+  right: 20px;
+  font-style: italic;
+  text-align: right;
+}
+
+/* Popup Overlays */
+.popup-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background: white;
+  border-radius: 10px;
+  padding: 25px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+  text-align: center;
+}
+
+.popup-content h2 {
+  margin-top: 0;
+  color: hsl(340, 55%, 26%);
+  font-size: 24px;
+}
+
+.popup-content p {
+  color: #182123;
+  font-size: 16px;
+}
+
+.close-popup {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  color: hsl(340, 85%, 29%);
+}
+
+.close-popup:hover {
+  color: hsl(44, 100%, 46%);
+}
