@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Sets webpage title -->
     <title>Listing Detail</title>
-    <!-- Linking stylesheet -->
+    <!-- global stylesheet -->
     <link rel="stylesheet" href="./Style/styles.css" />
     <!-- Listing Stylesheet -->
     <link rel="stylesheet" href="./Style/listing.css" />
@@ -33,58 +33,63 @@
         <div id="listing-image">
           <img src="" alt="Listing Image" id="listing-img" />
         </div>
+      </section>
+      <section class="listing-body-content">
         <div class="list-title-cont">
           <h2 id="listing-title">Listing Title</h2>
 
           <p id="listing-price">Price</p>
         </div>
-        <p id="listing-address" class="list-address">Address:</p>
-        <ul class="list-button-cont">
-          <li class="list-small-desc" id="listing-room"></li>
-          <li class="list-small-desc" id="listing-size">450 sq ft</li>
-        </ul>
-        <div class="property-features">
+        <div class="listing-add-cont">
+          <p id="listing-address" class="list-address">Address:</p>
+          <ul class="list-button-cont">
+            <li class="list-small-desc" id="listing-room"></li>
+            <li class="list-small-desc" id="listing-size">450 sq ft</li>
+          </ul>
+        </div>
+        <div class="property-features list-properties">
           <h4 class="list-prop">Property Features</h4>
           <ul id="listing-features"></ul>
         </div>
-        <div class="property-amenities">
+        <div class="property-amenities list-properties">
           <h4>Building Amenities</h4>
           <ul id="listing-amenities"></ul>
         </div>
 
-        <div class="listing-add-details">
+        <div class="listing-add-details list-properties">
           <h4>Additional Details</h4>
+
           <div class="lease-details">
-            <p class="lease">Lease Term</p>
+            <h5 class="lease">Lease Term</h5>
             <p id="listing-lease"></p>
           </div>
           <div class="lease-details">
-            <p class="lease-security">Security Deposit</p>
+            <h5 class="lease-security">Security Deposit</h5>
             <p id="listing-security"></p>
           </div>
           <div class="lease-details">
-            <p class="lease-utilities">Utilities</p>
+            <h5 class="lease-utilities">Utilities</h5>
             <p id="listing-utilities"></p>
           </div>
           <div class="lease-details">
-            <p class="leaseing-availability">Available From</p>
+            <h5 class="leaseing-availability">Available From</h5>
             <p id="listing-availability">August 2025</p>
           </div>
           <div class="lease-details">
-            <p class="lease-pet-policy">Pet Policy</p>
+            <h5 class="lease-pet-policy">Pet Policy</h5>
             <p id="listing-pet-policy">Cats allowed</p>
           </div>
           <div class="lease-details">
-            <p class="lease-parking">Parking</p>
+            <h5 class="lease-parking">Parking</h5>
             <p id="listing-parking">Available ($150/mo)</p>
           </div>
         </div>
-        <div class="description-cont">
+        <div class="description-cont list-properties">
           <h4>Building Description</h4>
           <p id="listing-description">Description:</p>
         </div>
 
-        <div class="listing-location-cont">
+        <div class="listing-location-cont list-properties">
           <h4>Location</h4>
           <div id="leaflet-cont">
             <div id="listing-map"></div>
