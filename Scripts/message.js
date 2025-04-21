@@ -114,7 +114,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Initialization
-  fetch("Docs/messages.json")
+  fetch("Docs/Messages.json")
     .then(res => res.json())
     .then(jsonData => {
       loadFromLocalStorage();
@@ -125,5 +125,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
       saveToLocalStorage();
       loadChatList();
+    }).catch((error) => {
+      console.error("Failed to load header:", error);
     });
 });
