@@ -1,9 +1,9 @@
+// Initialize the data
 document.addEventListener("DOMContentLoaded", function () {
   const listings = [
     {
       id: 1,
-      name: "Lake Shore Studio",
-      title: "Lake Shore Studio",
+      title: "1400 W. Devon Avenue",
       address: "1400 W. Devon Avenue",
       image: "Media/1400WDevonAvenue.jpg",
       price: "$1,175 /mo",
@@ -39,10 +39,9 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       id: 2,
-      name: "Lake Shore Studio",
-      title: "Lake Shore Studios",
+      title: "1135 W Sheridan Rd",
       image: "Media/1135WSheridanRd.jpg",
-      price: "$2,599 /mo",
+      price: "$2,599 /month",
       room: "2 Bed, 2 Bath",
       size: "500 sq ft",
       class: "Graduate",
@@ -74,10 +73,9 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       id: 3,
-      name: "Lake Shore Studio",
-      title: "Lake Shore Studio",
+      title: "6401 N Sheridan Rd",
       image: "Media/6401NSheridanRd.jpg",
-      price: "$2,355 /mo",
+      price: "$2,355 /month",
       room: "2 Bed, 1 Bath",
       size: "450 sq ft",
       class: "Undergraduate",
@@ -110,10 +108,9 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       id: 4,
-      name: "Lake Shore Studio",
-      title: "Lake Shore Studio",
+      title: "6725 N Sheridan Rd",
       image: "Media/6725NSheridanRd.jpg",
-      price: "$1,566 /mo",
+      price: "$1,566 /month",
       room: "1 Bed, 1 Bath",
       size: "450 sq ft",
       class: "Undergraduate",
@@ -145,8 +142,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       id: 5,
-      name: "Lake Shore Studio",
-      title: "Lake Shore Studio",
+      title: "6565 N Lakewood Ave",
       image: "Media/6565NLakewoodAve.jpg",
       price: "$1,650 /mo",
       room: "1 Bed, 1 Bath",
