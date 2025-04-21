@@ -1,6 +1,8 @@
 # Front-end Style Guide
 
-## Layout
+## Figma Link
+
+[Figma Link](https://www.figma.com/design/mdu4jYNoUzwN5eP5BPzwTX/Frontend?node-id=175-183&t=iayf6lVsUjXvQAaQ-0) by Jeremiah Lateef
 
 ### Screen size
 
@@ -19,9 +21,9 @@
 ### Secondary
 
 - Snow White: #f0f0f1
-- Heading Black: #050500
-- Paragraph Black: #182123
-- Grey: #505050
+- Text Primary Color:hsl(215, 28%, 17%)
+- Text Secondary Color:#4b5562
+- Text Secondary Color: #F9FAFB
 
 ### Hover
 
@@ -32,9 +34,14 @@
 
 ### Font
 
-- Size (paragraph): 18px
-- Size (heading): 36px
-- Family: Sans Serif;
+- Heading 1: 40px
+- Heading 2: 32px
+- Heading 3: 24px
+- Heading 4: 20px
+- Heading 5: 12px
+- Heading 6: 8px
+- Paragraph: 16px
+- Family: 'Inter', Sans Serif;
 - Weights: 300, 400, 600
 
 ## Animation
