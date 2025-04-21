@@ -28,13 +28,14 @@
   <body>
     <!--Main-->
     <main class="main">
-      <section id="listing-detail-section" class="clean-layout">
-        <!-- <img src="" alt="" class="listing-img-cont" /> -->
+      <div class="article">
         <div id="listing-image">
           <img src="" alt="Listing Image" id="listing-img" />
         </div>
-      </section>
-      <section class="listing-body-content">
+      </div>
+      <section id="listing-detail-section" class="clean-layout">
+        <!-- <img src="" alt="" class="listing-img-cont" /> -->
+
         <div class="list-title-cont">
           <h2 id="listing-title">Listing Title</h2>
 
@@ -42,9 +43,9 @@
         </div>
         <div class="listing-add-cont">
           <p id="listing-address" class="list-address">Address:</p>
-          <ul class="list-button-cont">
+          <ul class="list-cont">
             <li class="list-small-desc" id="listing-room"></li>
-            <li class="list-small-desc" id="listing-size">450 sq ft</li>
+            <li class="list-small-desc" id="listing-size"></li>
           </ul>
         </div>
         <div class="property-features list-properties">
@@ -96,8 +97,8 @@
 
         <div class="listing-location-cont list-properties">
           <h4>Location</h4>
-          <div id="leaflet-cont">
-            <div id="listing-map"></div>
+          <div id="leaflet-cont" style="position: relative; z-index: 0">
+            <div id="listing-map" class=".list-map"></div>
             <p id="listing-distance">
               miles from Lakeshore Campus, Loyola University Chicago.
             </p>
@@ -113,7 +114,7 @@
           <!-- Put Save button at the top -->
           <button id="save-listing" class="btn btn-secondary btn-contact">
             <i class="fa-solid fa-message btn-icon-list"></i>
-            Contact Landlord
+            Contact Student
           </button>
         </div>
       </section>
