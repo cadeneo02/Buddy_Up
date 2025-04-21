@@ -61,7 +61,7 @@ postBtn.addEventListener("click", async () => {
     status: "just now",
     content,
     category: currentFilter,
-    image: selectedImage ? URL.createObjectURL(selectedImage) : null,
+    image: imageData ? URL.createObjectURL(imageData) : null,
     location: locationInput.value,
     avatar: "Media/John.JPG",
     likes: 0,
