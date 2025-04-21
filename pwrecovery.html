@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buddy Up - Forgot Password</title>
+    <link rel="stylesheet" href="./Style/pwrecovery.css">
+</head>
+<body>
+    <div class="reset-container">
+        <div class="reset-header">
+            <h2>Reset Password</h2>
+            <p class="reset-subtitle">Enter your email to receive a password reset link</p>
+        </div>
+        
+        <div id="error-message" class="error-message"></div>
+        <div id="success-message" class="success-message"></div>
+        
+        <form id="reset-form" class="reset-form">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input
+                    type="email"
+                    id="email"
+                    required
+                    placeholder="Enter your email"
+                >
+            </div>
+            
+            <button 
+                type="submit" 
+                class="reset-button"
+                id="reset-button"
+            >
+                Send Reset Link
+            </button>
+        </form>
+        
+        <div class="reset-footer">
+            <p>Remember your password? <span class="login-link" onclick="window.location.href='index.html'">Log in</span></p>
+        </div>
+    </div>
+</body>
+<script defer src="Scripts/pwrecovery.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</html>
