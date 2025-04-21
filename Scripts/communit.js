@@ -45,8 +45,11 @@ document.addEventListener("DOMContentLoaded", async () => {
   
     let posts = await loadInitialPosts();
   
+postInput.addEventListener("click" ,async()=>{
 
-// --- Inside your postBtn.addEventListener("click", () => { ... })
+  postInput.textContent = "";
+});
+// --- Inside  postBtn.addEventListener("click", () => { ... })
 postBtn.addEventListener("click", async () => {
   const content = postInput.textContent.trim();
   if (!content) return;
