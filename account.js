@@ -1,58 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buddy Up - Login</title>
-
-</head>
-<body>
-    <div class="login-container">
-        <div class="login-header">
-            <h2>Welcome to Buddy Up!</h2>
-            <p class="login-subtitle">Find your perfect activity partner</p>
-        </div>
-        
-        <div id="error-message" class="error-message"></div>
-        
-        <form id="login-form" class="login-form">
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input
-                    type="email"
-                    id="email"
-                    required
-                    placeholder="Enter your email"
-                >
-            </div>
-            
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input
-                    type="password"
-                    id="password"
-                    required
-                    placeholder="Enter your password"
-                    minlength="6"
-                >
-            </div>
-            
-            <button 
-                type="submit" 
-                class="login-button"
-                id="login-button"
-            >
-                Login
-            </button>
-        </form>
-        
-        <div class="login-footer">
-            <p>Don't have an account? <span class="signup-link" onclick="window.location.href='signup.html'">Sign up</span></p>
-            <p class="forgot-password" onclick="window.location.href='forgot-password.html'">Forgot password?</p>
-        </div>
-    </div>
-
-    <script>
         document.addEventListener('DOMContentLoaded', function() {
             const loginForm = document.getElementById('login-form');
             const errorMessage = document.getElementById('error-message');
@@ -107,6 +52,3 @@
                 }
             });
         });
-    </script>
-</body>
-</html>
