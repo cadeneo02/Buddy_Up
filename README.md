@@ -16,9 +16,7 @@ Docs folder with json used to fetch data in community and message htmls
 styleguide contains the common style practice followed throughout
 readme - containing project description
 Each folder contains readme with file's informations
-
 A seprate file containg detailed project structure - ProjectStructure.txt.
-
 
 
 ## Development Process
