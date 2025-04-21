@@ -51,3 +51,4 @@
 - Don't also use it as a class, for example, .main, .div, .article, .section.
 
 - There is a very high possibility that more than one person will choose to style the aforementioned elements and classes. If that occurs, we would have multiple styling issues due to specificity. The element with the highest specificity will override all the others. If anyone has used any of these elements or classes, please go back and change it.
+- Use seprate style files for respective pages to avoid styling conflicts
