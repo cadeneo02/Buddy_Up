@@ -1,5 +1,6 @@
-.clean-layout {
-  padding: 0 1rem;
+.clean-layout,
+.listing-schedule {
+  padding: 0 2rem;
 }
 #listing-image {
   width: 100%;
@@ -59,7 +60,7 @@
 }
 .list-properties p {
   font-size: 14px;
-  color: #4b5563;
+  color: #1f2937;
 }
 .list-properties li {
   list-style: none;
