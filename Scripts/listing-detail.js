@@ -68,8 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "Package Reception",
         "Bike Storage",
       ],
-      description:
-        "Spacious and modern apartments in the heart of Edgewater. We have floor plans to suit every need; 1-3 bedroom lux apartment homes. Each unit offers in-unit laundry, modern kitchens with stainless steel appliances, walk-in closets and elevated finishes throughout. The Arcade's location cannot be beat; we are steps away from the Red Line, retail, restaurants, transit, the Lakefront and Loyola University. You'll also enjoy amenities such as high speed WIFI, controlled access entry, package room, gym, heated garage, grilling station, fire pit, and sundeck. Call today to schedule a tour!",
+      description: `Spacious and modern apartments in the heart of Edgewater. We have floor plans to suit every need; 1-3 bedroom lux apartment homes. Each unit offers in-unit laundry, modern kitchens with stainless steel appliances, walk-in closets and elevated finishes throughout. The Arcade's location cannot be beat; we are steps away from the Red Line, retail, restaurants, transit, the Lakefront and Loyola University. You'll also enjoy amenities such as high speed WIFI, controlled access entry, package room, gym, heated garage, grilling station, fire pit, and sundeck. Call today to schedule a tour!`,
       address: "1135 W Sheridan Rd, Chicago, IL 60660",
       url: "https://www.zillow.com/apartments/chicago-il/arcade-residences/CjjC4p/",
     },
@@ -140,8 +139,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "Package Reception",
         "Bike Storage",
       ],
-      description:
-        "Lease options currently range from 12 - 17 months. Prices and special offers are valid for new residents only. Pricing, lease options, and availability are subject to change at any time.",
+      description: `Lease options currently range from 12 - 17 months. Prices and special offers are valid for new residents only. Pricing, lease options, and availability are subject to change at any time.`,
       address: "6725 N Sheridan Rd, Chicago, IL 60626",
       url: "https://www.zillow.com/apartments/chicago-il/sheridan-terrace-6725-n-sheridan-rd/5Xfcjm/",
     },
