@@ -81,6 +81,28 @@
   margin: 0 !important; */
 }
 
+@media screen and (min-width: 768px) {
+  .list-details-cont {
+    display: flex;
+    align-items: center;
+    column-gap: 30rem;
+  }
+}
+.btn-schedule,
+.btn-contact {
+  width: 100%;
+  margin: 1rem !important;
+  display: flex;
+  flex-direction: column;
+  font-family: "Inter", sans-serif;
+}
+.btn-contact:hover {
+  background-color: #671e36;
+}
+.btn-icon-list {
+  display: block;
+  margin: 0.5rem;
+}
 /* Mapping Styling */
 
 #listing-map {

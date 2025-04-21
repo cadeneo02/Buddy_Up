@@ -58,30 +58,35 @@
 
         <div class="listing-add-details list-properties">
           <h4>Additional Details</h4>
-
-          <div class="lease-details">
-            <h5 class="lease">Lease Term</h5>
-            <p id="listing-lease"></p>
-          </div>
-          <div class="lease-details">
-            <h5 class="lease-security">Security Deposit</h5>
-            <p id="listing-security"></p>
-          </div>
-          <div class="lease-details">
-            <h5 class="lease-utilities">Utilities</h5>
-            <p id="listing-utilities"></p>
-          </div>
-          <div class="lease-details">
-            <h5 class="leaseing-availability">Available From</h5>
-            <p id="listing-availability">August 2025</p>
-          </div>
-          <div class="lease-details">
-            <h5 class="lease-pet-policy">Pet Policy</h5>
-            <p id="listing-pet-policy">Cats allowed</p>
-          </div>
-          <div class="lease-details">
-            <h5 class="lease-parking">Parking</h5>
-            <p id="listing-parking">Available ($150/mo)</p>
+          <div class="list-details-cont">
+            <div class="list-column">
+              <div class="lease-details">
+                <h5 class="lease">Lease Term</h5>
+                <p id="listing-lease"></p>
+              </div>
+              <div class="lease-details">
+                <h5 class="lease-security">Security Deposit</h5>
+                <p id="listing-security"></p>
+              </div>
+              <div class="lease-details">
+                <h5 class="lease-utilities">Utilities</h5>
+                <p id="listing-utilities"></p>
+              </div>
+            </div>
+            <div class="list-column">
+              <div class="lease-details">
+                <h5 class="leaseing-availability">Available From</h5>
+                <p id="listing-availability">August 2025</p>
+              </div>
+              <div class="lease-details">
+                <h5 class="lease-pet-policy">Pet Policy</h5>
+                <p id="listing-pet-policy">Cats allowed</p>
+              </div>
+              <div class="lease-details">
+                <h5 class="lease-parking">Parking</h5>
+                <p id="listing-parking">Available ($150/mo)</p>
+              </div>
+            </div>
           </div>
         </div>
         <div class="description-cont list-properties">
@@ -101,11 +106,13 @@
       </section>
       <section class="listing-schedule">
         <div class="action-buttons">
-          <button id="view-full-listing" class="btn btn-primary">
+          <button id="view-full-listing" class="btn btn-primary btn-schedule">
+            <i class="fa-solid fa-calendar-plus btn-icon-list"></i>
             Schedule Viewing
           </button>
           <!-- Put Save button at the top -->
-          <button id="save-listing" class="btn btn-secondary">
+          <button id="save-listing" class="btn btn-secondary btn-contact">
+            <i class="fa-solid fa-message btn-icon-list"></i>
             Contact Landlord
           </button>
         </div>
