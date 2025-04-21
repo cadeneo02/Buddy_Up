@@ -2,7 +2,7 @@
     {
       "id": "user1",
       "name": "Mike Peters",
-      "avatarUrl": "Media/Roger.jpg",
+      "avatarUrl": "Media/Roger.JPG",
       "status": "online",
       "preview": "Hey, I'm interested in being your roommate...",
       "messages": [
@@ -12,7 +12,7 @@
     {
         "id": "user2",
         "name": "Emma Tompson",
-        "avatarUrl": "Media/Alyssa.jpg",
+        "avatarUrl": "Media/Alyssa.JPG",
         "status": "Offline",
         "preview": "Is the room available...",
         "messages": [
@@ -22,7 +22,7 @@
       {
         "id": "user3",
         "name": "Seth Rogers ",
-        "avatarUrl": "Media/Mason.jpg",
+        "avatarUrl": "Media/Mason.JPG",
         "status": "online",
         "preview": "Location??",
         "messages": [
@@ -32,7 +32,7 @@
       {
         "id": "user4",
         "name": "Alyssa Chan",
-        "avatarUrl": "Media/Katie.jpg",
+        "avatarUrl": "Media/Katie.JPG",
         "status": "online",
         "preview": "When can I visit",
         "messages": [
