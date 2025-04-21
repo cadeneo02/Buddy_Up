@@ -2,6 +2,9 @@
 
 ## Title of the App: Buddy Up
 
+## Design Files
+[Figma link](https://www.figma.com/design/mdu4jYNoUzwN5eP5BPzwTX/Frontend?node-id=0-1&t=ITkrMM5pLOjexMQV-1)
+
 ## Description of the project.
 
 We set out to build a project that will connect Loyola students with apartments close to campus, and for students looking for roommates from students that attend Loyola.
