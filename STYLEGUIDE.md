@@ -2,7 +2,7 @@
 
 ## Figma Link
 
-[Figma Link](https://www.figma.com/design/mdu4jYNoUzwN5eP5BPzwTX/Frontend?node-id=175-183&t=iayf6lVsUjXvQAaQ-0) by Jeremiah Lateef
+[Figma Link](https://www.figma.com/design/mdu4jYNoUzwN5eP5BPzwTX/Frontend?node-id=0-1&t=ITkrMM5pLOjexMQV-1) by Jeremiah Lateef
 
 ### Screen size
 
