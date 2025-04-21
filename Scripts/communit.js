@@ -217,6 +217,8 @@ postBtn.addEventListener("click", async () => {
   
     renderPosts();
   });
+
+  //In case of using a database and backend we can uncomment and modify the below code 
   // async function postToServer(post) {
   //   try {
   //     await fetch("./Docs/communitypost.json", {
