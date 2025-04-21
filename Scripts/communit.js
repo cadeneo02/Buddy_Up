@@ -26,7 +26,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   try {
     const res = await fetch("./Docs/communitypost.json");
     const jsonPosts = await res.json();
-
     // Merge and filter duplicates by ID
     const merged = [...storedPosts];
     const existingIds = new Set(storedPosts.map(p => p.id));
@@ -120,7 +119,6 @@ postBtn.addEventListener("click", async () => {
               <span class="name">${post.name}</span>
               <span class="status">${post.status}</span>
             </div>
-            <img src="Media/online.png" alt="status" class="status-icon" />
           </div>
           <div class="content">
             <p>${post.content}</p>
@@ -130,7 +128,7 @@ postBtn.addEventListener("click", async () => {
           <div class="interactions">
             <button class="like" data-id="${post.id}"><img src="Media/like.png" /><span>Like (${post.likes})</span></button>
             <button class="comment-toggle" data-id="${post.id}"><img src="Media/comment.png" /><span>Comment (${post.comments.length})</span></button>
-            <button class="share"><img src="Media/share.png" /><span>Share</span></button>
+            <button class="share" data-id="${post.id}"><img src="Media/share.png" /><span>Share</span></button>
           </div>
           <div class="comment-box" style="display: none; margin-top: 0.5rem;">
             <input type="text" placeholder="Write a comment..." class="comment-input" data-id="${post.id}" />
@@ -180,7 +178,33 @@ postBtn.addEventListener("click", async () => {
           }
         });
       });
+
+      document.querySelectorAll(".share").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const postEl = btn.closest(".post");
+          const text = postEl.querySelector(".content p")?.textContent || "Check this out!";
+          const url = window.location.href;
+      
+          if (navigator.share) {
+            navigator.share({
+              title: "Student Community Post",
+              text: text,
+              url: url
+            }).then(() => {
+              console.log("Post shared successfully");
+            }).catch((err) => {
+              console.error("Error sharing post:", err);
+            });
+          } else {
+            // Fallback: copy post text to clipboard
+            navigator.clipboard.writeText(`${text}\n${url}`);
+            alert("Post copied to clipboard. Share it anywhere!");
+          }
+        });
+      });
     }
+   
+    
     async function convertToBase64(file) {
       return new Promise((resolve, reject) => {
         const reader = new FileReader();
@@ -196,7 +220,7 @@ postBtn.addEventListener("click", async () => {
   // async function postToServer(post) {
   //   try {
   //     await fetch("./Docs/communitypost.json", {
-  //       method: "POST", // Simulated – requires real server
+  //       method: "POST", // for a proper backend
   //       headers: {
   //         "Content-Type": "application/json",
   //       },

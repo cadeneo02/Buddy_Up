@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="div-10">
           <div class="overlap-group-2">
            <div class="chat-avatar" style="background-image: url('${user.avatarUrl}')"></div>
-            <div class="div-11"></div>
+            <div class="div-11 ${user.status === 'online' ? 'online' : 'offline'}"></div>
           </div>
         </div>
         <div class="div-12">
@@ -53,14 +53,22 @@ document.addEventListener("DOMContentLoaded", () => {
     chatContainer.innerHTML = "";
     const user = allChats[userId];
 
-    rightHeader.innerHTML = `
-      <div class="text-wrapper-2">${user.name}</div>
-      <div class="text-wrapper-9">${user.status}</div>
-    `;
-
+    
+  rightHeader.innerHTML = 
+  `<div class="div-10">
+    <div class="overlap-group-2">
+      <div class="chat-avatar" style="background-image: url('${user.avatarUrl}')"></div>
+      <div class="div-11 ${user.status === 'online' ? 'online' : 'offline'}"></div>
+    </div>
+  </div>
+  <div class="div-12">
+    <div class="text-wrapper-2">${user.name}</div>
+    <div class="text-wrapper-9">${user.status}</div>
+  </div>
+  `;
     user.messages.forEach(msg => {
       const bubble = document.createElement("div");
-      bubble.className = "div-23";
+      bubble.className = "chat-bubble " + (msg.from === "me" ? "sent" : "received");
       bubble.innerHTML = `
         <div class="div-24" style="margin-top: 8px;">
           <div class="p-2">
@@ -81,7 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const time = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
 
-    const newMsg = { text, time };
+    const newMsg = { text, time, from: "me" };
     allChats[currentUserId].messages.push(newMsg);
     allChats[currentUserId].preview = text;
     messageInput.value = "";

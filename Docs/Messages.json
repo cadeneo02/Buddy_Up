@@ -13,7 +13,7 @@
         "id": "user2",
         "name": "Emma Tompson",
         "avatarUrl": "Media/Alyssa.jpg",
-        "status": "Away",
+        "status": "Offline",
         "preview": "Is the room available...",
         "messages": [
           { "text": "Hey, I'm interested in being your roommate is the room still available...", "time": "11:15 AM" }

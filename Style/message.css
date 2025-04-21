@@ -153,7 +153,7 @@
 .img-3 { background-image: url(../Media/Alyssa.JPG); }
 .img-4 { background-image: url(../Media/Katie.JPG); }
 .img-5 { background-image: url(../Media/Roger.JPG); }
-.img-6 { background-image: url(../Media/John.JPG); }
+
 
 .div-11, .div-15 {
   width: 16px;
@@ -161,7 +161,6 @@
   position: absolute;
   top: 0;
   left: 36px;
-  background-color: #ebac00;
   border-radius: 9999px;
   border: none;
 }
@@ -199,6 +198,12 @@
   height: 16px;
   position: relative;
 }
+.chat-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
 .chat-avatar {
   width: 48px;
   height: 48px;
@@ -210,6 +215,43 @@
   top: 4px;
   left: 0;
 }
+.div-11 {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 0;
+  left: 36px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+.div-11.online {
+  background-color: #4caf50;
+}
+
+.div-11.offline {
+  background-color: #ebac00;
+  ;
+}
+.chat-bubble {
+  margin: 8px 0;
+  max-width: 80%;
+  padding: 8px;
+  border-radius: 12px;
+  background-color: #f0f0f0;
+  clear: both;
+}
+
+.chat-bubble.sent {
+  margin-left: auto;
+  text-align: right;
+}
+
+.chat-bubble.received {
+  margin-right: auto;
+  text-align: left;
+}
+
 @media screen and (max-width: 768px) {
   .div-wrapper {
     flex-direction: column;
