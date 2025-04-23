@@ -15,8 +15,8 @@ document.addEventListener("DOMContentLoaded", function () {
       securityDeposit: "$1200",
       utilities: "Not included",
       availableFrom: "August 2025",
-      petPolicy: "Cats allowed",
-      parking: "Available ($150/mo)",
+      petPolicy: "Cats and dogs allowed",
+      creditCheck: "No",
       distance: "miles from Loyola University Chicago",
       features: [
         "In-unit Laundry",
@@ -50,8 +50,8 @@ document.addEventListener("DOMContentLoaded", function () {
       securityDeposit: "$1200",
       utilities: "Not included",
       availableFrom: "August 2025",
-      petPolicy: "Cats allowed",
-      parking: "Available ($150/mo)",
+      petPolicy: "Only service animals are allowed.",
+      creditCheck: "Yes",
       distance: "miles from Loyola University Chicago",
       features: [
         "In-unit Laundry",
@@ -84,8 +84,8 @@ document.addEventListener("DOMContentLoaded", function () {
       securityDeposit: "$1200",
       utilities: "Not included",
       availableFrom: "August 2025",
-      petPolicy: "Cats allowed",
-      parking: "Available ($150/mo)",
+      petPolicy: "Cats and dogs only.",
+      creditCheck: "Yes",
       distance: "miles from Loyola University Chicago",
       features: [
         "In-unit Laundry",
@@ -120,7 +120,7 @@ document.addEventListener("DOMContentLoaded", function () {
       utilities: "Not included",
       availableFrom: "August 2025",
       petPolicy: "Cats allowed",
-      parking: "Available ($150/mo)",
+      creditCheck: "Yes",
       distance: "miles from Loyola University Chicago",
       features: [
         "In-unit Laundry",
@@ -153,8 +153,8 @@ document.addEventListener("DOMContentLoaded", function () {
       securityDeposit: "$1200",
       utilities: "Not included",
       availableFrom: "August 2025",
-      petPolicy: "Cats allowed",
-      parking: "Available ($150/mo)",
+      petPolicy: "Only animals less than 50 pounds.",
+      creditCheck: "No",
       distance: "miles from Loyola University Chicago",
       features: [
         "In-unit Laundry",
@@ -199,7 +199,9 @@ document.addEventListener("DOMContentLoaded", function () {
       listing.availableFrom;
     document.getElementById("listing-pet-policy").textContent =
       listing.petPolicy;
-    document.getElementById("listing-parking").textContent = listing.parking;
+
+    document.getElementById("listing-credit-check").textContent =
+      listing.creditCheck;
 
     const featuresListing = document.getElementById("listing-features");
 
