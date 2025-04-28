@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const listingId = parseInt(urlParams.get("id"));
   const listing = listings.find((listing) => listing.id === listingId);
 
+  // Retrieve the ids of listing headings and the content
   if (listing) {
     document.getElementById("listing-title").textContent = listing.title;
     document.getElementById("listing-img").src = listing.image;
@@ -26,6 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("listing-credit-check").textContent =
       listing.creditCheck;
 
+    // Added the icon check dynamically
     const featuresListing = document.getElementById("listing-features");
 
     listing.features.forEach((feature) => {
@@ -110,4 +112,40 @@ document.addEventListener("DOMContentLoaded", function () {
       ).textContent = `${distanceMiles} miles from Loyola University Chicago `;
     });
   }
+
+  // Switch Tabs
+  const tabButtons = document.querySelectorAll(".tab-button");
+  const tabContents = document.querySelectorAll(".tab-content");
+
+  tabButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const tab = button.getAttribute("data-tab");
+
+      // Remove active from all
+      tabButtons.forEach((btn) => btn.classList.remove("active"));
+      tabContents.forEach((content) => content.classList.remove("active"));
+
+      // Add active to clicked button and related content
+      button.classList.add("active");
+      document.getElementById(tab).classList.add("active");
+    });
+  });
+
+  // Handle form submissions
+  document
+    .getElementById("contact-form")
+    .addEventListener("submit", function (event) {
+      event.preventDefault();
+      alert("Message Sent Successfully!");
+      this.reset();
+    });
+
+  document
+    .getElementById("schedule-form")
+    .addEventListener("submit", function (event) {
+      event.preventDefault();
+      const date = document.getElementById("viewing-date").value;
+      alert("Viewing Scheduled for " + date);
+      this.reset();
+    });
 });
