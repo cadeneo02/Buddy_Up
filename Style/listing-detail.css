@@ -93,17 +93,28 @@
   margin: 0 !important;
 }
 
-.btn-schedule,
-.btn-contact {
+.tab-button {
   width: 100%;
-  margin: 1rem !important;
   display: flex;
   flex-direction: column;
   font-family: "Inter", sans-serif;
+
+  padding: 12px 24px;
+  margin: 0 5px;
+  border: 2px solid #671e36;
+  border-radius: 8px;
+  background-color: transparent;
+  color: #671e36;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
 }
-.btn-contact:hover {
-  background-color: #671e36;
+/* .btn-contact:hover {
+  background-color: hsl(43, 97.4%, 60%);
 }
+.btn-schedule:hover {
+  background-color: #8a2847;
+} */
 .btn-icon-list {
   display: block;
   margin: 0.5rem;
@@ -176,4 +187,101 @@
   .list-properties {
     width: 80%;
   }
+}
+
+/* Forms Css */
+.tab-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.tab-button.active {
+  background-color: #671e36;
+  color: #fff;
+}
+
+/* Form container */
+.forms-cont {
+  background: none;
+  box-shadow: none;
+}
+.form-cont {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Tab content */
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* Form elements */
+.input-cont {
+  border: none;
+  padding: 0;
+}
+
+legend {
+  font-size: 24px;
+  font-weight: bold;
+  color: #671e36;
+  margin-bottom: 16px;
+}
+
+.list-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+input[type="text"] {
+  width: 100%;
+}
+.list-input,
+.list-text {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.list-text {
+  resize: vertical;
+}
+
+/* Buttons inside forms */
+.primary-btn {
+  background-color: #671e36;
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.primary-btn:hover {
+  background-color: #8a2f52;
+}
+
+.secondary-btn {
+  background-color: #ebac00;
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.secondary-button:hover {
+  background-color: #d99a00;
 }
