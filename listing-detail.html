@@ -106,18 +106,62 @@
         </div>
       </section>
       <section class="listing-schedule">
-        <div class="action-buttons">
-          <button id="view-full-listing" class="btn btn-primary btn-schedule">
+        <div class="action-buttons  tab-buttons">
+          <button id="view-full-listing" class="  tab-button active" data-tab="schedule">
             <i class="fa-solid fa-calendar-plus btn-icon-list"></i>
             Schedule Viewing
           </button>
           <!-- Put Save button at the top -->
-          <button id="save-listing" class="btn btn-secondary btn-contact">
+          <button id="save-listing" class=" tab-button" data-tab="contact">
             <i class="fa-solid fa-message btn-icon-list"></i>
             Contact Landlord
           </button>
         </div>
         <!-- Forms -->
+        <article class="forms-cont">
+
+
+<div class="form-cont">
+<div id="schedule" class="tab-content active">
+    <form id="schedule-form" class="list-properties">
+      <div class="input-cont">
+        <h4>Schedule Viewing</h4>
+
+        <label for="schedule-name" class="list-label">Your Name</label>
+        <input type="text" id="schedule-name" class="list-input" name="schedule-name" required>
+
+        <label for="schedule-email" class="list-label">Your Email</label>
+        <input type="email" id="schedule-email" class="list-input" name="schedule-email" required>
+
+        <label for="schedule-date" class="list-label">Select Date</label>
+        <input type="date" id="schedule-date" class="list-input" name="schedule-date" required>
+
+        <button type="submit" class="secondary-btn">Book Viewing</button>
+      </div>
+    </form>
+  </div>
+
+  <div id="contact" class="tab-content">
+    <form id="contact-form" class="list-properties">
+      <div class="input-cont">
+        <h4>Contact Landlord</h4>
+
+        <label for="contact-name" class="list-label">Your Name</label>
+        <input type="text" id="contact-name" class="list-input" name="contact-name" required>
+
+        <label for="contact-email" class="list-label">Your Email</label>
+        <input type="email" id="contact-email" class="list-input" name="contact-email" required>
+
+        <label for="contact-message" class="list-label">Message</label>
+        <textarea id="contact-message" class="list-text" name="contact-message" rows="4" required></textarea>
+
+        <button type="submit" class="primary-btn">Send Message</button>
+      </div>
+    </form>
+  </div>
+
+  
+        </article>
       </section>
     </main>
 
@@ -190,6 +234,7 @@
     <!-- Leaflet JS Script for mapping -->
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <!-- Listing detail data -->
-    <script src="./Scripts/listing-data.js"></script>
+     <script src="./Scripts/listing-data.js"></script>
+
   </body>
 </html>
